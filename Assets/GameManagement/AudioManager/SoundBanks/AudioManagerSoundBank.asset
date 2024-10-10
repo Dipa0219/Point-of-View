@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e2e2716c753741c588900f53b1607bc, type: 3}
+  m_Name: AudioManagerSoundBank
+  m_EditorClassIdentifier: 
+  MenuMusicLoop:
+  - {fileID: 8300000, guid: cc6213be4fc204b48ba13024c4cc598a, type: 3}
+  GameMusicLoop:
+  - {fileID: 8300000, guid: 8428b7fa86aec46f2992da8272d30fef, type: 3}
+  FireSfx:
+  - {fileID: 8300000, guid: ca0043348877c4429b91027a692e9fca, type: 3}
+  - {fileID: 8300000, guid: 449992efeb38a48c699540c1eabb306a, type: 3}

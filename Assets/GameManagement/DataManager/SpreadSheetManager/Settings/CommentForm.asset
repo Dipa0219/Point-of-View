@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c602ba1af1a85403f9bac6fe9b274622, type: 3}
+  m_Name: CommentForm
+  m_EditorClassIdentifier: 
+  url: https://docs.google.com/forms/u/0/d/e/1FAIpQLSfy-8EtBOj-vT1PZaqAktVckgVj-2IQqYA1q45xJ_k4tN05jQ/formResponse
+  idEntryField: entry.304566665
+  dataEntryField: entry.1585055696
+  Description: 'Simple example to save comments from users who
+
+    played the game'
