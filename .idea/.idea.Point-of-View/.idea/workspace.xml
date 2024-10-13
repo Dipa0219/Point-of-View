@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="badca242-fdb1-4ea6-a262-536f158cd4a5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Point-of-View/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Point-of-View/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/CameraSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/CameraSwitcher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Movement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Material 1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Material 1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Material.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Material.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-    </list>
+    <list default="true" id="badca242-fdb1-4ea6-a262-536f158cd4a5" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +89,7 @@
       <workItem from="1728552806735" duration="126000" />
       <workItem from="1728553001030" duration="353000" />
       <workItem from="1728554895482" duration="13476000" />
-      <workItem from="1728843113650" duration="4276000" />
+      <workItem from="1728843113650" duration="4787000" />
     </task>
     <servers />
   </component>
