@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class CameraSwitcher : MonoBehaviour
 {
+    [SerializeField] private Movement cube1;
+    [SerializeField] private Movement cube2;
     public Camera camera1;
     public Camera camera2;
 
@@ -15,6 +17,8 @@ public class CameraSwitcher : MonoBehaviour
         camera1.GameObject().SetActive(true);
         camera2.enabled = false;
         camera2.GameObject().SetActive(false);
+        cube1.SetActive(false);
+        cube2.SetActive(true);
     }
 
     void Update()
@@ -29,6 +33,8 @@ public class CameraSwitcher : MonoBehaviour
                 camera1.GameObject().SetActive(false);
                 camera2.enabled = true;
                 camera2.GameObject().SetActive(true);
+                cube1.SetActive(true);
+                cube2.SetActive(false);
             }
             else
             {
@@ -36,6 +42,8 @@ public class CameraSwitcher : MonoBehaviour
                 camera1.GameObject().SetActive(true);
                 camera2.enabled = false;
                 camera2.GameObject().SetActive(false);
+                cube1.SetActive(false);
+                cube2.SetActive(true);
             }
         }
     }
