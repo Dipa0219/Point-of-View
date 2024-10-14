@@ -1,16 +1,24 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float speed;
-    public int dir;
+    [SerializeField] private float speed;
+    [SerializeField] private int dir;
     private bool _isActive;
+    private Vector3 _startPosition;
+
+    void Start()
+    {
+        _startPosition = transform.position;
+    }
 
     void Update()
     {
         /*Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;*/
-        
+      
         float fastSpeed = speed * 2f;
         if (_isActive)
         {
@@ -20,6 +28,11 @@ public class Movement : MonoBehaviour
                 transform.Translate(input * (dir * (fastSpeed * Time.deltaTime)));
             else
                 transform.Translate(input * (dir * (speed * Time.deltaTime)));
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            transform.position = _startPosition;
         }
     }
 
