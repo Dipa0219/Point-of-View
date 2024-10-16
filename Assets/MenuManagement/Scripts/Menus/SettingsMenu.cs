@@ -1,10 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using GameManagement.Audio;
+using GameManagement.Data;
 using UnityEngine;
 using UnityEngine.UI;
-using GameManagement.Data;
-using GameManagement.Audio;
 
 namespace MenuManagement
 {
