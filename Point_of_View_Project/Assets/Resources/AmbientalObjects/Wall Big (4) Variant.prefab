@@ -13,6 +13,18 @@ PrefabInstance:
       value: Wall Big (4) Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1778909088941587323, guid: 325a563e3fae10c4f8c7765a6932105a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778909088941587323, guid: 325a563e3fae10c4f8c7765a6932105a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778909088941587323, guid: 325a563e3fae10c4f8c7765a6932105a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778909088941587323, guid: 325a563e3fae10c4f8c7765a6932105a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.3
       objectReference: {fileID: 0}
