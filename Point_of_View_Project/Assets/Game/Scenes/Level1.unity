@@ -612,6 +612,7 @@ GameObject:
   - component: {fileID: 566246648}
   - component: {fileID: 566246647}
   - component: {fileID: 566246646}
+  - component: {fileID: 566246650}
   m_Layer: 0
   m_Name: Pressure plate 1
   m_TagString: Untagged
@@ -705,6 +706,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &566246650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566246645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5b29c08f68e4aa489f4e98f9bf62624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &605754708 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2090927590410866477, guid: 505663bb374ee5441ab1595cc0a2fa0a, type: 3}
@@ -1132,6 +1145,7 @@ GameObject:
   - component: {fileID: 885035135}
   - component: {fileID: 885035134}
   - component: {fileID: 885035133}
+  - component: {fileID: 885035137}
   m_Layer: 0
   m_Name: Pressure plate 2
   m_TagString: Untagged
@@ -1225,6 +1239,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &885035137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885035132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5b29c08f68e4aa489f4e98f9bf62624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &951260975
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,6 +1263,7 @@ GameObject:
   - component: {fileID: 951260977}
   - component: {fileID: 951260976}
   - component: {fileID: 951260979}
+  - component: {fileID: 951260980}
   m_Layer: 0
   m_Name: CameraManager
   m_TagString: Untagged
@@ -1310,6 +1337,20 @@ MonoBehaviour:
   cube2: {fileID: 1181159105}
   camera1: {fileID: 1036063187}
   camera2: {fileID: 240798062}
+--- !u!114 &951260980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951260975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab5631aeee942e459b053c53ff628ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressurePlateManager1: {fileID: 566246650}
+  pressurePlateManager2: {fileID: 885035137}
 --- !u!1 &1036063185
 GameObject:
   m_ObjectHideFlags: 0
