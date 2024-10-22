@@ -17,19 +17,24 @@ namespace MenuManagement
         public void OnRestartPressed()
         {
             // delete the current screen
-            base.OnBackPressed();
+            print("Level manager - pressed restart");
+            //base.OnBackPressed();
             LevelManager.ReloadLevel();
         }
 
         public void OnNextLevelPressed()
         {
-            base.OnBackPressed();
+            print("Level manager - pressed next");
+
+            //base.OnBackPressed();
             LevelManager.LoadNextLevel();
         }
 
         public void OnMainMenuPressed()
         {   
-            base.OnBackPressed();
+            print("Level manager - pressed menu");
+
+            //base.OnBackPressed();
             LevelManager.LoadMainMenuLevel();
         }
         
@@ -37,6 +42,18 @@ namespace MenuManagement
         {
             Time.timeScale = 1f;
         }
+        
+        
+        public void Open()
+        {
+            gameObject.SetActive(true);
+        }
+    
+        public void Close()
+        {
+            gameObject.SetActive(false);
+        }
+
 
     }
 }

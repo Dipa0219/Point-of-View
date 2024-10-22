@@ -51,6 +51,7 @@ public class LevelManager : MonoBehaviour
     public static void ReloadLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //SceneManager.LoadScene("Level_EndgameTest");
     }
 
     public static void LoadMainMenuLevel()

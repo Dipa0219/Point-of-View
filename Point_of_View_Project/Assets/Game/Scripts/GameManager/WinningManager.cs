@@ -2,11 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Wini : MonoBehaviour
 {
     [SerializeField] PressurePlateManager pressurePlateManager1;
     [SerializeField] PressurePlateManager pressurePlateManager2;
+    [SerializeField] EndLevelMenu endLevelMenu;
     private Boolean _isFinished;
     
     // Update is called once per frame
@@ -19,6 +21,8 @@ public class Wini : MonoBehaviour
             if (!_isFinished) {
                 print("YOU WON");
                 _isFinished = true;
+                //SceneManager.LoadScene("LevelCompleted");
+                endLevelMenu.ShowEndLevelMenu();
             }
         }
     }
