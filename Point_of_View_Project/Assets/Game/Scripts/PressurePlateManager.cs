@@ -5,12 +5,33 @@ using UnityEngine;
 
 public class PressurePlateManager : MonoBehaviour
 {
-   private void OnTriggerStay(Collider other)
+   Renderer rend;
+   Boolean _isActive;
+
+   private void Start()
    {
-      if (other.CompareTag("Player"))
-      {
-         float distance = Vector3.Distance(transform.position, other.transform.position);
-         print("Distance:"+ distance );
-      }
+      rend = GetComponent<Renderer>();
+   }
+
+   private void OnCollisionEnter(Collision other)
+   {
+      rend.material.color = Color.red;
+      _isActive = true;
+   }
+
+   private void OnCollisionExit(Collision other)
+   {
+      rend.material.color = Color.white;
+      _isActive = false;
+   }
+
+   public void EndGame()
+   {
+      rend.material.color = Color.green;
+   }
+
+   public Boolean isActive()
+   {
+      return _isActive;
    }
 }
