@@ -662,6 +662,7 @@ GameObject:
   - component: {fileID: 566246647}
   - component: {fileID: 566246646}
   - component: {fileID: 566246650}
+  - component: {fileID: 566246651}
   m_Layer: 0
   m_Name: Pressure plate 1
   m_TagString: Untagged
@@ -767,6 +768,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b29c08f68e4aa489f4e98f9bf62624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &566246651
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566246645}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &605754708 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2090927590410866477, guid: 505663bb374ee5441ab1595cc0a2fa0a, type: 3}
@@ -1182,6 +1204,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 2
+--- !u!114 &858865163 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7137329566955279, guid: 5f10b0a6635465a4b8ec44320c664d9b, type: 3}
+  m_PrefabInstance: {fileID: 7460535517169642915}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db3a1725d57a8a540a0f1b2880ae5eec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &885035132
 GameObject:
   m_ObjectHideFlags: 0
@@ -1875,6 +1908,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.23359478, y: 2, z: 2}
   m_Center: {x: 0.025181234, y: 1.000031, z: -0.039473563}
+--- !u!1 &1448958788
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1448958789}
+  m_Layer: 0
+  m_Name: ---EndLevelUI--------------
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1448958789
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448958788}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1524710561
 GameObject:
   m_ObjectHideFlags: 0
@@ -1995,6 +2059,38 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 605754712}
   m_SourcePrefab: {fileID: 100100000, guid: 505663bb374ee5441ab1595cc0a2fa0a, type: 3}
+--- !u!1 &1844058839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1844058840}
+  m_Layer: 0
+  m_Name: ----------------------------------------------------------------------------------------------------------------------
+    (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1844058840
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844058839}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 87.15965, y: 40.36782, z: 74.6455}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1886587401 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7547280287090569493, guid: 505663bb374ee5441ab1595cc0a2fa0a, type: 3}
@@ -2205,9 +2301,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 240798062}
     - target: {fileID: 1524414988507447234, guid: 5f10b0a6635465a4b8ec44320c664d9b, type: 3}
+      propertyPath: player1
+      value: 
+      objectReference: {fileID: 834788875}
+    - target: {fileID: 1524414988507447234, guid: 5f10b0a6635465a4b8ec44320c664d9b, type: 3}
+      propertyPath: player2
+      value: 
+      objectReference: {fileID: 1181159105}
+    - target: {fileID: 1524414988507447234, guid: 5f10b0a6635465a4b8ec44320c664d9b, type: 3}
       propertyPath: endLevelMenu
       value: 
       objectReference: {fileID: 355411886}
+    - target: {fileID: 1524414988507447234, guid: 5f10b0a6635465a4b8ec44320c664d9b, type: 3}
+      propertyPath: cameraSwitcher
+      value: 
+      objectReference: {fileID: 858865163}
     - target: {fileID: 1524414988507447234, guid: 5f10b0a6635465a4b8ec44320c664d9b, type: 3}
       propertyPath: pressurePlateManager1
       value: 
@@ -2307,4 +2415,6 @@ SceneRoots:
   - {fileID: 304966801}
   - {fileID: 7460535517169642915}
   - {fileID: 1181922776}
+  - {fileID: 1448958789}
   - {fileID: 3068340867284692298}
+  - {fileID: 1844058840}

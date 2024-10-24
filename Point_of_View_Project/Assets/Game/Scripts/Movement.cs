@@ -30,10 +30,7 @@ public class Movement : MonoBehaviour
                 transform.Translate(input * (dir * (speed * Time.deltaTime)));
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            transform.position = _startPosition;
-        }
+        
     }
 
     public void SetActive(bool active)

@@ -9,6 +9,9 @@ public class CameraSwitcher : MonoBehaviour
     [SerializeField] private Movement cube2;
     [SerializeField] private Camera camera1;
     [SerializeField] private Camera camera2;
+    [SerializeField] private Camera initialCamera;
+    private bool _isActive = true;
+
 
     private void Start()
     {
@@ -19,12 +22,30 @@ public class CameraSwitcher : MonoBehaviour
         camera2.GameObject().SetActive(false);
         cube1.SetActive(false);
         cube2.SetActive(true);
-    }
+    }    
+    
+    /*private void Start()
+    {
+        // Ensure only one camera is active at start (for example, camera1)
+        initialCamera.enabled = true;
+        initialCamera.GameObject().SetActive(true);        
+        camera1.enabled = false;
+        camera1.GameObject().SetActive(false);
+        camera2.enabled = false;
+        camera2.GameObject().SetActive(false);
+        cube1.SetActive(false);
+        cube2.SetActive(false);
+    }*/
 
     private void Update()
     {
+        
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            LevelManager.ReloadLevel();
+        }
         // Switch cameras when the "C" key is pressed
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C) && _isActive)
         {
             // Toggle the active camera
             if (camera1.enabled)
@@ -46,5 +67,10 @@ public class CameraSwitcher : MonoBehaviour
                 cube2.SetActive(true);
             }
         }
+    }
+    
+    public void SetActive(bool active)
+    {
+        _isActive = active;
     }
 }

@@ -18,7 +18,8 @@ public class PressurePlateManager : MonoBehaviour
       rend.material.color = Color.red;
       _isActive = true;
    }
-
+   
+   
    private void OnCollisionExit(Collision other)
    {
       rend.material.color = Color.white;
