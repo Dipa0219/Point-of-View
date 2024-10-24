@@ -7,10 +7,10 @@ public class CameraSwitcher : MonoBehaviour
 {
     [SerializeField] private Movement cube1;
     [SerializeField] private Movement cube2;
-    public Camera camera1;
-    public Camera camera2;
+    [SerializeField] private Camera camera1;
+    [SerializeField] private Camera camera2;
 
-    void Start()
+    private void Start()
     {
         // Ensure only one camera is active at start (for example, camera1)
         camera1.enabled = true;
@@ -21,7 +21,7 @@ public class CameraSwitcher : MonoBehaviour
         cube2.SetActive(true);
     }
 
-    void Update()
+    private void Update()
     {
         // Switch cameras when the "C" key is pressed
         if (Input.GetKeyDown(KeyCode.C))
