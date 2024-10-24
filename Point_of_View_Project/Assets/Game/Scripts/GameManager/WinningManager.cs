@@ -28,7 +28,11 @@ public class WinningManager : MonoBehaviour
         player1.SetActive(false);
         player2.SetActive(false);
         cameraSwitcher.SetActive(false);
+        
+        // Saving Timer to later bild the leaderboard
+        String time = timerUI.GetTimeAsString();
         timerUI.UnShowTimerUI();
+        
         //SceneManager.LoadScene("LevelCompleted");
         endLevelMenu.ShowEndLevelMenu();
     }

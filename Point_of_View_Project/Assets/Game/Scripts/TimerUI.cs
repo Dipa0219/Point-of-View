@@ -28,7 +28,7 @@ namespace Game.Scripts
             TimeSpan time = TimeSpan.FromSeconds(_currentTime);
             //_text.text = _currentTime.ToString();
             _text.text = PaddingString(time.Minutes.ToString()) + ":" + PaddingString(time.Seconds.ToString());
-            print(_text.text);
+            //print(_text.text);
         }
 
         private string PaddingString(string a)
@@ -41,7 +41,7 @@ namespace Game.Scripts
         }
 
         public void StartTimer()
-        {
+        {            
             _timerActive = true;
         }
         
@@ -60,6 +60,12 @@ namespace Game.Scripts
         {
             timerUI.SetActive(false);
             StopTimer();
+        }
+        
+        public string GetTimeAsString()
+        {
+            TimeSpan time = TimeSpan.FromSeconds(_currentTime);
+            return PaddingString(time.Minutes.ToString()) + ":" + PaddingString(time.Seconds.ToString());
         }
     }
 
