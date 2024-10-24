@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Game.Scripts;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +13,7 @@ public class WinningManager : MonoBehaviour
     [SerializeField] private Movement player2;
     [SerializeField] private CameraSwitcher cameraSwitcher;
     [SerializeField] private EndLevelMenu endLevelMenu;
+    [SerializeField] private TimerUI timerUI;
     private bool _isFinished;
     
     // Update is called once per frame
@@ -26,6 +28,7 @@ public class WinningManager : MonoBehaviour
         player1.SetActive(false);
         player2.SetActive(false);
         cameraSwitcher.SetActive(false);
+        timerUI.UnShowTimerUI();
         //SceneManager.LoadScene("LevelCompleted");
         endLevelMenu.ShowEndLevelMenu();
     }

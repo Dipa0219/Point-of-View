@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using Game.Scripts;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -11,6 +12,8 @@ public class CameraSwitcher : MonoBehaviour
     [SerializeField] private Camera camera1;
     [SerializeField] private Camera camera2;
     [SerializeField] private Camera initialCamera;
+    [SerializeField] private TimerUI timerUI;
+
     private bool _isActive = true;
 
 
@@ -50,6 +53,7 @@ public class CameraSwitcher : MonoBehaviour
         camera2.GameObject().SetActive(false);
         cube1.SetActive(false);
         cube2.SetActive(true);
+        timerUI.ShowTimerUI();
     }
 
     private void Update()
