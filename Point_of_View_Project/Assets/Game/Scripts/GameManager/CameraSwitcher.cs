@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -13,7 +14,7 @@ public class CameraSwitcher : MonoBehaviour
     private bool _isActive = true;
 
 
-    private void Start()
+      /*private void Start()
     {
         // Ensure only one camera is active at start (for example, camera1)
         camera1.enabled = true;
@@ -22,9 +23,11 @@ public class CameraSwitcher : MonoBehaviour
         camera2.GameObject().SetActive(false);
         cube1.SetActive(false);
         cube2.SetActive(true);
-    }    
+    }    */
     
-    /*private void Start()
+      
+      
+    private void Start()
     {
         // Ensure only one camera is active at start (for example, camera1)
         initialCamera.enabled = true;
@@ -35,7 +38,19 @@ public class CameraSwitcher : MonoBehaviour
         camera2.GameObject().SetActive(false);
         cube1.SetActive(false);
         cube2.SetActive(false);
-    }*/
+    }
+    
+    public void SwitchCameras()
+    {
+        initialCamera.enabled = false;
+        initialCamera.GameObject().SetActive(false); 
+        camera1.enabled = true;
+        camera1.GameObject().SetActive(true);
+        camera2.enabled = false;
+        camera2.GameObject().SetActive(false);
+        cube1.SetActive(false);
+        cube2.SetActive(true);
+    }
 
     private void Update()
     {
@@ -73,4 +88,5 @@ public class CameraSwitcher : MonoBehaviour
     {
         _isActive = active;
     }
+    
 }
