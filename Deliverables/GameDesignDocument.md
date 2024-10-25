@@ -76,4 +76,4 @@ Each world progressively builds on the collaboration mechanics, making the gamep
 - In game physics and right interaction between boxes and player (Giacomo Ballabio)
 - Construction of the first levels and testing tools to make them (Simone Frazzei)
 - User interface during level and completion of levels (Francesco Benelle)
-- 
+
