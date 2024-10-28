@@ -13,9 +13,20 @@ public class CameraSwitcher : MonoBehaviour
     [SerializeField] private Camera camera2;
     [SerializeField] private Camera initialCamera;
     [SerializeField] private TimerUI timerUI;
+    
+    
+    [SerializeField] private Canvas commandsUI;
+    //[SerializeField] private CommandsUI commandsUI;
+    
+    
+    
+    
 
     private bool _isActive = true;
+    private bool _isActiveCommandsUI = false;
 
+    
+    
 
       /*private void Start()
     {
@@ -41,6 +52,8 @@ public class CameraSwitcher : MonoBehaviour
         camera2.GameObject().SetActive(false);
         cube1.SetActive(false);
         cube2.SetActive(false);
+        
+        //commandsUI = GameObject.Find("commandsUI").GetComponent<Canvas>();
     }
     
     public void SwitchCameras()
@@ -54,6 +67,9 @@ public class CameraSwitcher : MonoBehaviour
         cube1.SetActive(false);
         cube2.SetActive(true);
         timerUI.ShowTimerUI();
+        
+        commandsUI.GameObject().SetActive(true);
+        _isActiveCommandsUI = true;
     }
 
     private void Update()
@@ -62,6 +78,12 @@ public class CameraSwitcher : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             LevelManager.ReloadLevel();
+
+            if (_isActiveCommandsUI)
+            {   
+                commandsUI.GameObject().SetActive(false);
+                _isActiveCommandsUI = false;
+            }
         }
         // Switch cameras when the "C" key is pressed
         if (Input.GetKeyDown(KeyCode.C) && _isActive)
@@ -84,6 +106,12 @@ public class CameraSwitcher : MonoBehaviour
                 camera2.GameObject().SetActive(false);
                 cube1.SetActive(false);
                 cube2.SetActive(true);
+            }
+            
+            if (_isActiveCommandsUI)
+            {   
+                commandsUI.GameObject().SetActive(false);
+                _isActiveCommandsUI = false;
             }
         }
     }

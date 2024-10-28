@@ -156,4 +156,5 @@ public class EndLevelMenu : MonoBehaviour
         // Load Main Menu Scene (replace "MainMenu" with your main menu scene name)
         SceneManager.LoadScene("MainMenu");
     }
+    
 }
