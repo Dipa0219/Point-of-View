@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,6 +12,11 @@ public class EndLevelMenu : MonoBehaviour
 
     private Button[] buttons;
     private int selectedButtonIndex = 0;
+
+    public GameObject[] stars;
+    
+    private string finalTime;
+    [SerializeField] private TMP_Text text;
 
     private void Start()
     {
@@ -35,10 +41,54 @@ public class EndLevelMenu : MonoBehaviour
         }
     }
 
-    public void ShowEndLevelMenu()
+    public void ShowEndLevelMenu(string time)
     {
+        finalTime = time;
+
+        text.text = text.text + finalTime;
+        
+        int starsEarned = CalculateStars(finalTime);
+        switch (starsEarned)
+        {
+            case 1:
+                stars[0].SetActive(true);
+                stars[1].SetActive(false);
+                stars[2].SetActive(false);
+                break;            
+            case 2:
+                stars[0].SetActive(true);
+                stars[1].SetActive(true);
+                stars[2].SetActive(false);
+                break;            
+            case 3:
+                stars[0].SetActive(true);
+                stars[1].SetActive(true);
+                stars[2].SetActive(true);
+                break;
+            default:
+                stars[0].SetActive(false);
+                stars[1].SetActive(false);
+                stars[2].SetActive(false);
+                break;
+        }
+        
         endLevelMenuUI.SetActive(true);
         buttons[selectedButtonIndex].Select(); // Select the first button
+    }
+
+    private int CalculateStars(string s)
+    {
+        string[] timeParts = s.Split(':');
+        int minutes = int.Parse(timeParts[0]);
+        int seconds = int.Parse(timeParts[1]);
+        
+        if (minutes > 3)
+            return 0;
+        if (minutes > 2)
+            return 1;
+        if (minutes > 1)    
+            return 2; 
+        return 3;
     }
 
     private void HandleNavigation()

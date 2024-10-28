@@ -34,6 +34,6 @@ public class WinningManager : MonoBehaviour
         timerUI.UnShowTimerUI();
         
         //SceneManager.LoadScene("LevelCompleted");
-        endLevelMenu.ShowEndLevelMenu();
+        endLevelMenu.ShowEndLevelMenu(time);
     }
 }
