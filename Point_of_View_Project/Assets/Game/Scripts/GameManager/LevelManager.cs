@@ -30,7 +30,7 @@ public class LevelManager : MonoBehaviour
     {
         _levelPlayed = 0;
         _nextLevel = 1;
-        SceneManager.LoadScene(SceneName(_levelPlayed));
+        SceneManager.LoadScene("Level0");
     }
 
     public static bool CompletedAllLevels()
@@ -45,6 +45,10 @@ public class LevelManager : MonoBehaviour
             _levelPlayed = _nextLevel;
             _nextLevel = _nextLevel + 1;
             SceneManager.LoadScene(SceneName(_levelPlayed));
+        }
+        else
+        {
+            SceneManager.LoadScene("MainMenu");
         }
     }
 

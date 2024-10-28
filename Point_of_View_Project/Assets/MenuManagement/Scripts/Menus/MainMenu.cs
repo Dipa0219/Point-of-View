@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 using UnityEngine.SceneManagement;
@@ -26,24 +27,9 @@ namespace MenuManagement
         
         public void OnPlayPressed()
         {
-            if (fadeToPlay)
-            {
-                StartCoroutine(OnPlayPressedRoutine());
-            }
-            else
-            {
-                LevelManager.LoadNextLevel();
-                GameMenu.Open();
-            }
-        }
-
-        private IEnumerator OnPlayPressedRoutine()
-        {
-            print("ACTIVATE THE TRANSITION FADER");
-            TransitionFader.PlayTransition(transitionFaderPrefab);
+            enabled = false;
+            this.GameObject().SetActive(false);
             LevelManager.LoadFirstLevel();
-            yield return new WaitForSeconds(playDelay);
-            GameMenu.Open();
         }
 
 
