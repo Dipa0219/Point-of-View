@@ -72,7 +72,7 @@ Each world progressively builds on the collaboration mechanics, making the gamep
 
 ### Week 3 (October 29 deadline) ###
 - Conclusion of GDD in order to revise that in the following days (Antonio Di Paola)
-- Implementation of main menu (Francesco Benelle)
+- Implementation of main menu (Francesco Benelle, Antonio Di Paola)
 - In game physics and right interaction between boxes and player (Giacomo Ballabio)
 - Construction of the first levels and testing tools to make them (Simone Frazzei)
 - User interface during level and completion of levels (Francesco Benelle)
