@@ -16,9 +16,22 @@ public class WinningManager : MonoBehaviour
     [SerializeField] private TimerUI timerUI;
     private bool _isFinished;
     
+    [SerializeField] private FallZone fallzone;
+    [SerializeField] private FailedLevel failedLevelUIManager;
+
+    
     // Update is called once per frame
     void Update()
     {
+        if(fallzone.isActive())
+        {
+            failedLevelUIManager.showFailedLevelMenu();
+            player1.SetActive(false);
+            player2.SetActive(false);
+            cameraSwitcher.SetActive(false);
+            timerUI.UnShowTimerUI();
+        }
+        
         if (!pressurePlateManager1.isActive() || !pressurePlateManager2.isActive()) return;
         pressurePlateManager1.EndGame();
         pressurePlateManager2.EndGame();
