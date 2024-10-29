@@ -20,9 +20,16 @@ public class FallZone : MonoBehaviour
     }
     
        
-   private void OnCollisionEnter(Collision other)
+   private void OnCollisionEnter(Collision collision)
    {
-        _isActive = true;
+       print("Collided ");
+       print("Collided with: " + collision.gameObject.tag);
+       if (collision.gameObject.tag == "Player")
+       {
+           print("Collided with Player");
+           _isActive = true;
+       }
+        //_isActive = true;
    }
    
       
