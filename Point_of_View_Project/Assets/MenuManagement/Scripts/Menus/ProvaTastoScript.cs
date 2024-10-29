@@ -12,12 +12,20 @@ public class NewBehaviourScript : MonoBehaviour
     public Button button1;
     public Button button2;
     public Button button3;
-    // Start is called before the first frame update
+    
+    private Button[] buttons;
+    private int selectedButtonIndex = 0;
+
     void Start()
     {
+        buttons = new Button[] { button1, button2, button3 };
+        
         button1.onClick.AddListener(LoadLevel("Level1"));
         button2.onClick.AddListener(LoadLevel("Level2"));
         button3.onClick.AddListener(LoadLevel("Level_EndgameTest"));
+        
+        buttons[selectedButtonIndex].Select();
+
     }
 
     private UnityAction LoadLevel(string s)
@@ -34,7 +42,17 @@ public class NewBehaviourScript : MonoBehaviour
     
     private void HandleNavigation()
     {
-        // Activate selected button on Enter or Spacebar
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            selectedButtonIndex = (selectedButtonIndex - 1 + buttons.Length) % buttons.Length;
+            buttons[selectedButtonIndex].Select();
+        }
+        else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            selectedButtonIndex = (selectedButtonIndex + 1) % buttons.Length;
+            buttons[selectedButtonIndex].Select();
+        }
+        
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
         {
             button1.onClick.Invoke();
