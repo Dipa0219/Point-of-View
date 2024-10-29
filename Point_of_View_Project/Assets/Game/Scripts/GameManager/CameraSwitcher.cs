@@ -26,7 +26,7 @@ public class CameraSwitcher : MonoBehaviour
     private bool _isActiveCommandsUI = false;
 
     
-    
+    [SerializeField] private CanvasGroup commandsUICanvasGroup;
 
       /*private void Start()
     {
@@ -54,6 +54,12 @@ public class CameraSwitcher : MonoBehaviour
         cube2.SetActive(false);
         
         //commandsUI = GameObject.Find("commandsUI").GetComponent<Canvas>();
+        
+        commandsUICanvasGroup = commandsUI.GetComponent<CanvasGroup>();
+        if (commandsUICanvasGroup == null)
+        {
+            commandsUICanvasGroup = commandsUI.gameObject.AddComponent<CanvasGroup>();
+        }
     }
     
     public void SwitchCameras()
@@ -74,16 +80,24 @@ public class CameraSwitcher : MonoBehaviour
 
     private void Update()
     {
+        if (Input.anyKeyDown || Input.GetMouseButtonDown(0))
+        {
+            if (_isActiveCommandsUI)
+            {
+                StartCoroutine(FadeOutAndDeactivate());
+            }
+        }        
+        
         
         if (Input.GetKeyDown(KeyCode.R))
         {
             LevelManager.ReloadLevel();
 
-            if (_isActiveCommandsUI)
+            /*if (_isActiveCommandsUI)
             {   
                 commandsUI.GameObject().SetActive(false);
                 _isActiveCommandsUI = false;
-            }
+            }*/
         }
         // Switch cameras when the "C" key is pressed
         if (Input.GetKeyDown(KeyCode.C) && _isActive)
@@ -108,17 +122,36 @@ public class CameraSwitcher : MonoBehaviour
                 cube2.SetActive(true);
             }
             
-            if (_isActiveCommandsUI)
+            /*if (_isActiveCommandsUI)
             {   
                 commandsUI.GameObject().SetActive(false);
                 _isActiveCommandsUI = false;
-            }
+            }*/
         }
     }
     
     public void SetActive(bool active)
     {
         _isActive = active;
+    }
+    
+    
+    private IEnumerator FadeOutAndDeactivate()
+    {
+        float duration = 1f; 
+        float startAlpha = commandsUICanvasGroup.alpha;
+        float time = 0;
+    
+        while (time < duration)
+        {
+            time += Time.deltaTime;
+            commandsUICanvasGroup.alpha = Mathf.Lerp(startAlpha, 0, time / duration);
+            yield return null;
+        }
+    
+        commandsUICanvasGroup.alpha = 0;
+        commandsUI.gameObject.SetActive(false);
+        _isActiveCommandsUI = false;
     }
     
 }
