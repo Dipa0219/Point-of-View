@@ -40,11 +40,7 @@ Each world progressively builds on the collaboration mechanics, making the gamep
 
 ## Media list ##
 
-...
-
-## Technical specification (if applicable) ##
-
-...
+We will update in future when we have pratical idea
 
 ## Team ##
 1. Antonio Di Paola (Developer)
@@ -65,7 +61,7 @@ Each world progressively builds on the collaboration mechanics, making the gamep
 - Mobile platform implementation (Horizontal, vertical, treadmill, rotating) (Francesco Benelle, Giacomo Ballabio)
 - Button mechanic and organization of package to move (Antonio Di Paola, Simone Frazzei)
 
-### Team meeting ###
+### Team meeting (October 24)###
 - Discussion and brainstorming about GDD
 - First graphic representation of the most part of the levels
 - Coding together regarding physics interaction, user interfaces and menus
@@ -76,4 +72,10 @@ Each world progressively builds on the collaboration mechanics, making the gamep
 - In game physics and right interaction between boxes and player (Giacomo Ballabio)
 - Construction of the first levels and testing tools to make them (Simone Frazzei)
 - User interface during level and completion of levels (Francesco Benelle)
+
+### <ins> GDD deadline (November 4 deadline) 
+
+### <ins> Beta submission deadline (December 8 deadline) 
+
+### <ins> Prototype submission deadline (January 8 deadline)
 
