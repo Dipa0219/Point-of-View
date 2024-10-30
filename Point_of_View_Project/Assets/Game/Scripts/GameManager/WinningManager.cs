@@ -9,8 +9,6 @@ public class WinningManager : MonoBehaviour
 {
     [SerializeField] private PressurePlateManager pressurePlateManager1;
     [SerializeField] private PressurePlateManager pressurePlateManager2;
-    [SerializeField] private Movement player1;
-    [SerializeField] private Movement player2;
     [SerializeField] private CameraSwitcher cameraSwitcher;
     [SerializeField] private EndLevelMenu endLevelMenu;
     [SerializeField] private TimerUI timerUI;
@@ -26,9 +24,7 @@ public class WinningManager : MonoBehaviour
         if(fallzone.isActive())
         {
             failedLevelUIManager.showFailedLevelMenu();
-            player1.SetActive(false);
-            player2.SetActive(false);
-            cameraSwitcher.SetActive(false);
+            cameraSwitcher.DisableSwitcher();
             timerUI.UnShowTimerUI();
         }
         
@@ -38,9 +34,7 @@ public class WinningManager : MonoBehaviour
         if (_isFinished) {return;}
         print("YOU WON");
         _isFinished = true;
-        player1.SetActive(false);
-        player2.SetActive(false);
-        cameraSwitcher.SetActive(false);
+        cameraSwitcher.DisableSwitcher();
         
         // Saving Timer to later bild the leaderboard
         String time = timerUI.GetTimeAsString();

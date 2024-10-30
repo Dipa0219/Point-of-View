@@ -18,10 +18,6 @@ public class CameraSwitcher : MonoBehaviour
     [SerializeField] private Canvas commandsUI;
     //[SerializeField] private CommandsUI commandsUI;
     
-    
-    
-    
-
     private bool _isActive = true;
     private bool _isActiveCommandsUI = false;
 
@@ -130,9 +126,11 @@ public class CameraSwitcher : MonoBehaviour
         }
     }
     
-    public void SetActive(bool active)
+    public void DisableSwitcher()
     {
-        _isActive = active;
+        _isActive = false;
+        cube1.SetActive(false);
+        cube2.SetActive(false);
     }
     
     

@@ -22,19 +22,19 @@ public class Movement : MonoBehaviour
         if(_isActive)
         {
             // Aggiungiamo una forza a sinistra se premiamo A
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.LeftArrow))
                 rb.AddForce(Vector3.left * forceAmount, ForceMode.Force);
 
             // Aggiungiamo una forza a destra se premiamo D
-            if (Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.D)|| Input.GetKey(KeyCode.RightArrow))
                 rb.AddForce(Vector3.right * forceAmount, ForceMode.Force);
 
             // Aggiungiamo una forza verso l'alto se premiamo W
-            if (Input.GetKey(KeyCode.W))
+            if (Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.UpArrow))
                 rb.AddForce(Vector3.forward * forceAmount, ForceMode.Force);
 
             // Aggiungiamo una forza verso il basso se premiamo S
-            if (Input.GetKey(KeyCode.S))
+            if (Input.GetKey(KeyCode.S)|| Input.GetKey(KeyCode.DownArrow))
                 rb.AddForce(Vector3.back * forceAmount, ForceMode.Force);
         }
 
