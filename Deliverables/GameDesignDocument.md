@@ -73,6 +73,21 @@ We will update in future when we have pratical idea
 - Construction of the first levels and testing tools to make them (Simone Frazzei)
 - User interface during level and completion of levels (Francesco Benelle)
 
+### Team meeting (October 29)
+- Conclusion and last check on GDD
+- Discussed programs regarding the following week
+- Fixed menus and prepared first two levels
+
+### Week 4 (November 5 deadline)
+
+- Fixing collision between robot and environment (Antonio Di Paola)
+- Code cleaning and better organization (Antonio Di Paola)
+- Fixing physics after modification made during previous week (Giacomo Ballabio)
+- Construction of all remaining levels (Simone Frazzei)
+- Starting reasoning about textures for level building (Simone Frazzei)
+- Conclusion of all UIs (Francesco Benelle)
+- Preparation of local saves (Francesco Benelle)
+
 ### <ins> GDD deadline (November 4 deadline) 
 
 ### <ins> Beta submission deadline (December 8 deadline) 
