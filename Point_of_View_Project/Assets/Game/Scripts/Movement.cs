@@ -4,35 +4,43 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField] private float speed;
-    [SerializeField] private int dir;
+
+    private Rigidbody rb; // Riferimento al Rigidbody
+    [SerializeField]private float forceAmount = 10f; // Valore della forza applicata
+    [SerializeField]private float maxSpeed = 10f; // Valore della velocità massima
     private bool _isActive;
-    private Vector3 _startPosition;
 
     void Start()
     {
-        _startPosition = transform.position;
+        // Otteniamo il componente Rigidbody dell'oggetto
+        rb = GetComponent<Rigidbody>();
+        rb.maxLinearVelocity = maxSpeed;
     }
 
     void Update()
     {
-        /*Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;*/
-      
-        float fastSpeed = speed * 2f;
-        if (_isActive)
+        if(_isActive)
         {
-            // Horizontal Movement
-            Vector3 input = new Vector3(-Input.GetAxis("Horizontal"), 0, -Input.GetAxis("Vertical"));
-            if (Input.GetKey(KeyCode.LeftShift))
-                transform.Translate(input * (dir * (fastSpeed * Time.deltaTime)));
-            else
-                transform.Translate(input * (dir * (speed * Time.deltaTime)));
+            // Aggiungiamo una forza a sinistra se premiamo A
+            if (Input.GetKey(KeyCode.A))
+                rb.AddForce(Vector3.left * forceAmount, ForceMode.Force);
+
+            // Aggiungiamo una forza a destra se premiamo D
+            if (Input.GetKey(KeyCode.D))
+                rb.AddForce(Vector3.right * forceAmount, ForceMode.Force);
+
+            // Aggiungiamo una forza verso l'alto se premiamo W
+            if (Input.GetKey(KeyCode.W))
+                rb.AddForce(Vector3.forward * forceAmount, ForceMode.Force);
+
+            // Aggiungiamo una forza verso il basso se premiamo S
+            if (Input.GetKey(KeyCode.S))
+                rb.AddForce(Vector3.back * forceAmount, ForceMode.Force);
         }
 
         
     }
-
+    
     public void SetActive(bool active)
     {
         _isActive = active;
