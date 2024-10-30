@@ -6,8 +6,8 @@ public class Movement : MonoBehaviour
 {
 
     private Rigidbody rb; // Riferimento al Rigidbody
-    [SerializeField]private float forceAmount = 10f; // Valore della forza applicata
-    [SerializeField]private float maxSpeed = 10f; // Valore della velocità massima
+    [SerializeField] private float forceAmount = 10f; // Valore della forza applicata
+    [SerializeField] private float maxSpeed = 10f; // Valore della forza applicata
     private bool _isActive;
 
     void Start()
@@ -45,4 +45,5 @@ public class Movement : MonoBehaviour
     {
         _isActive = active;
     }
+
 }
