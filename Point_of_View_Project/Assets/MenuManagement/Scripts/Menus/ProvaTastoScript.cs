@@ -9,22 +9,61 @@ using UnityEngine.UI;
 public class NewBehaviourScript : MonoBehaviour
 {
     
-    public Button button1;
-    public Button button2;
-    public Button button3;
+    public Button b0_1;
+    public Button b0_2;
+    public Button b0_3;    
+    public Button b1_1;
+    public Button b1_2;
+    public Button b1_3;    
+    public Button b2_1;
+    public Button b2_2;
+    public Button b2_3;
     
-    private Button[] buttons;
-    private int selectedButtonIndex = 0;
+    private Button[] buttons_World1;
+    private Button[] buttons_World2;
+    private Button[] buttons_World3;
+    
+    private int selectedButtonCol = 0;
+    private int selectedButtonRow = 0;
+    
+    private int buttonLength = 3;
 
     void Start()
     {
-        buttons = new Button[] { button1, button2, button3 };
+        buttons_World1 = new Button[] { b0_1, b0_2, b0_3 };
+        buttons_World2 = new Button[] { b1_1, b1_2, b1_3 };
+        buttons_World3 = new Button[] { b2_1, b2_2, b2_3 };
         
-        button1.onClick.AddListener(LoadLevel("Level1"));
-        button2.onClick.AddListener(LoadLevel("Level2"));
-        button3.onClick.AddListener(LoadLevel("Level_EndgameTest"));
+        b0_1.onClick.AddListener(LoadLevel("0-1"));
+        b0_2.onClick.AddListener(LoadLevel("0-2"));
+        b0_3.onClick.AddListener(LoadLevel("0-3")); 
         
-        buttons[selectedButtonIndex].Select();
+        
+        b1_1.onClick.AddListener(LoadLevel("Level_EndgameTest"));
+        b1_2.onClick.AddListener(LoadLevel("Level_EndgameTest"));
+        b1_3.onClick.AddListener(LoadLevel("Level_EndgameTest")); 
+        
+        b2_1.onClick.AddListener(LoadLevel("Level_EndgameTest"));
+        b2_2.onClick.AddListener(LoadLevel("Level_EndgameTest"));
+        b2_3.onClick.AddListener(LoadLevel("Level_EndgameTest"));  
+        
+        /*   PER QUANDO CI SARANNO I LIVELLI VERI
+        
+        b1_1.onClick.AddListener(LoadLevel("1-1"));
+        b1_2.onClick.AddListener(LoadLevel("1-2"));
+        b1_3.onClick.AddListener(LoadLevel("1-3")); 
+        
+        b2_1.onClick.AddListener(LoadLevel("2-1"));
+        b2_2.onClick.AddListener(LoadLevel("2-2"));
+        b2_3.onClick.AddListener(LoadLevel("2-3"));
+        */
+        
+        if(selectedButtonRow == 0)
+            buttons_World1[selectedButtonCol].Select();
+        else if(selectedButtonRow == 1)
+            buttons_World2[selectedButtonCol].Select();
+        else
+            buttons_World3[selectedButtonCol].Select();
 
     }
 
@@ -42,22 +81,84 @@ public class NewBehaviourScript : MonoBehaviour
     
     private void HandleNavigation()
     {
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            selectedButtonIndex = (selectedButtonIndex - 1 + buttons.Length) % buttons.Length;
-            buttons[selectedButtonIndex].Select();
+            if(selectedButtonRow == 0)
+            {
+                selectedButtonCol = (selectedButtonCol - 1 + buttonLength) % buttonLength;
+                buttons_World1[selectedButtonCol].Select();
+            }
+            else if(selectedButtonRow == 1)
+            {
+                selectedButtonCol = (selectedButtonCol - 1 + buttonLength) % buttonLength;
+                buttons_World2[selectedButtonCol].Select();
+            }
+            else
+            {
+                selectedButtonCol = (selectedButtonCol - 1 + buttonLength) % buttonLength;
+                buttons_World3[selectedButtonCol].Select();
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+        else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
-            selectedButtonIndex = (selectedButtonIndex + 1) % buttons.Length;
-            buttons[selectedButtonIndex].Select();
+            if(selectedButtonRow == 0)
+            {
+                selectedButtonCol = (selectedButtonCol + 1) % buttonLength;
+                buttons_World1[selectedButtonCol].Select();
+            }
+            else if(selectedButtonRow == 1)
+            {
+                selectedButtonCol = (selectedButtonCol + 1) % buttonLength;
+                buttons_World2[selectedButtonCol].Select();
+            }
+            else
+            {
+                selectedButtonCol = (selectedButtonCol + 1) % buttonLength;
+                buttons_World3[selectedButtonCol].Select();
+            }
+        }else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            if(selectedButtonRow == 0)
+            {
+                selectedButtonRow = 1;
+                buttons_World2[selectedButtonCol].Select();
+            }else if(selectedButtonRow == 1)
+            {
+                selectedButtonRow = 2;
+                buttons_World3[selectedButtonCol].Select();
+            }else
+            {
+                selectedButtonRow = 0;
+                buttons_World1[selectedButtonCol].Select();
+            }
+        }else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            if(selectedButtonRow == 0)
+            {
+                selectedButtonRow = 2;
+                buttons_World3[selectedButtonCol].Select();
+            }else if(selectedButtonRow == 1)
+            {
+                selectedButtonRow = 0;
+                buttons_World1[selectedButtonCol].Select();
+            }else
+            {
+                selectedButtonRow = 1;
+                buttons_World2[selectedButtonCol].Select();
+            }
         }
         
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
         {
-            button1.onClick.Invoke();
-            button2.onClick.Invoke();
-            button3.onClick.Invoke();
+            b0_1.onClick.Invoke();
+            b0_2.onClick.Invoke();
+            b0_3.onClick.Invoke();
+            b1_1.onClick.Invoke();
+            b1_2.onClick.Invoke();
+            b1_3.onClick.Invoke();
+            b2_1.onClick.Invoke();
+            b2_2.onClick.Invoke();
+            b2_3.onClick.Invoke();
         }
     }
 
