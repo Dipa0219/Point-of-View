@@ -60,11 +60,14 @@ public class MainMenuScript : MonoBehaviour
         // Activate selected button on Enter or Spacebar
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
         {
+            buttons[selectedButtonIndex].onClick.Invoke();
+            /*
             levelsButton.onClick.Invoke();
             LeaderboardButton.onClick.Invoke();
             SettingsButton.onClick.Invoke();
             QuitButton.onClick.Invoke();
             CreditsButton.onClick.Invoke();
+            */
         }
     }
 
