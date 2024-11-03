@@ -61,7 +61,7 @@ We will update in future when we have pratical idea
 - Mobile platform implementation (Horizontal, vertical, treadmill, rotating) (Francesco Benelle, Giacomo Ballabio)
 - Button mechanic and organization of package to move (Antonio Di Paola, Simone Frazzei)
 
-### Team meeting (October 24)###
+### Team meeting (October 24) ###
 - Discussion and brainstorming about GDD
 - First graphic representation of the most part of the levels
 - Coding together regarding physics interaction, user interfaces and menus
