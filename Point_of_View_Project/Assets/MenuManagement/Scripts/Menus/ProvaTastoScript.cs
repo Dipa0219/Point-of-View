@@ -47,6 +47,8 @@ public class NewBehaviourScript : MonoBehaviour
         b2_2.onClick.AddListener(LoadLevel("Level_EndgameTest"));
         b2_3.onClick.AddListener(LoadLevel("Level_EndgameTest"));  
         
+       
+        
         /*   PER QUANDO CI SARANNO I LIVELLI VERI
         
         b1_1.onClick.AddListener(LoadLevel("1-1"));
@@ -150,6 +152,17 @@ public class NewBehaviourScript : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
         {
+            if(selectedButtonRow == 0)
+            {
+                buttons_World1[selectedButtonCol].onClick.Invoke();
+            }else if(selectedButtonRow == 1)
+            {
+                buttons_World2[selectedButtonCol].onClick.Invoke();
+            }else
+            {
+                buttons_World3[selectedButtonCol].onClick.Invoke();
+            }
+            /*
             b0_1.onClick.Invoke();
             b0_2.onClick.Invoke();
             b0_3.onClick.Invoke();
@@ -159,6 +172,7 @@ public class NewBehaviourScript : MonoBehaviour
             b2_1.onClick.Invoke();
             b2_2.onClick.Invoke();
             b2_3.onClick.Invoke();
+            */
         }
     }
 
