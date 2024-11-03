@@ -13,29 +13,48 @@ public class Movement : MonoBehaviour
     void Start()
     {
         // Otteniamo il componente Rigidbody dell'oggetto
+        print(transform.position+ ", " + transform.rotation);
         rb = GetComponent<Rigidbody>();
         rb.maxLinearVelocity = maxSpeed;
     }
 
     void Update()
     {
+        bool _isMoving = false;
         if(_isActive)
         {
             // Aggiungiamo una forza a sinistra se premiamo A
             if (Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.LeftArrow))
-                rb.AddForce(Vector3.left * forceAmount, ForceMode.Force);
+            {
+                rb.AddForce(transform.rotation * Vector3.left  * forceAmount , ForceMode.Force);
+                _isMoving = true;
+            }
 
             // Aggiungiamo una forza a destra se premiamo D
             if (Input.GetKey(KeyCode.D)|| Input.GetKey(KeyCode.RightArrow))
-                rb.AddForce(Vector3.right * forceAmount, ForceMode.Force);
+            {
+                _isMoving = true;
+                rb.AddForce(transform.rotation * Vector3.right * forceAmount, ForceMode.Force);
+            }
 
             // Aggiungiamo una forza verso l'alto se premiamo W
             if (Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.UpArrow))
-                rb.AddForce(Vector3.forward * forceAmount, ForceMode.Force);
+            {
+                _isMoving = true;
+                rb.AddForce(transform.rotation * Vector3.forward * forceAmount, ForceMode.Force);
+            }
 
             // Aggiungiamo una forza verso il basso se premiamo S
             if (Input.GetKey(KeyCode.S)|| Input.GetKey(KeyCode.DownArrow))
-                rb.AddForce(Vector3.back * forceAmount, ForceMode.Force);
+            {
+                _isMoving = true;
+                rb.AddForce(transform.rotation * Vector3.back * forceAmount, ForceMode.Force);
+            }
+
+            if (!_isMoving)
+            {
+                rb.velocity= Vector3.zero;
+            }
         }
 
         
