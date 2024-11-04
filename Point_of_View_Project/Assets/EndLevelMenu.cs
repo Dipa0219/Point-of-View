@@ -1,3 +1,4 @@
+using SaveManager;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -73,7 +74,14 @@ public class EndLevelMenu : MonoBehaviour
         }
         
         endLevelMenuUI.SetActive(true);
-        buttons[selectedButtonIndex].Select(); // Select the first button
+        
+        if (buttons != null && buttons.Length > 0 && selectedButtonIndex >= 0 && selectedButtonIndex < buttons.Length)
+            buttons[selectedButtonIndex].Select(); // Select the first button
+        
+        print("active scene: ");
+        print(SceneManager.GetActiveScene().name);
+        
+        //SaveSystem.UpdateLevel(SceneManager.GetActiveScene().name, true, starsEarned, finalTime);
     }
 
     private int CalculateStars(string s)

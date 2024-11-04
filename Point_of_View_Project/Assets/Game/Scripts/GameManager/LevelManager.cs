@@ -30,7 +30,7 @@ public class LevelManager : MonoBehaviour
     {
         _levelPlayed = 0;
         _nextLevel = 1;
-        SceneManager.LoadScene("Level0");
+        SceneManager.LoadScene("0-1");
     }
 
     public static bool CompletedAllLevels()
@@ -48,7 +48,7 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("MainMenu_WIP");
         }
     }
 
@@ -60,7 +60,7 @@ public class LevelManager : MonoBehaviour
 
     public static void LoadMainMenuLevel()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainMenu_WIP");
         MainMenu.Open();
     }
 }
