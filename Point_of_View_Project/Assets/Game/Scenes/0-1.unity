@@ -2714,7 +2714,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceAmount: 10
-  maxSpeed: 10
+  maxSpeed: 15
+  direction: -1
 --- !u!65 &834788876
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4093,7 +4094,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceAmount: 10
-  maxSpeed: 10
+  maxSpeed: 15
+  direction: 1
 --- !u!54 &1181159106
 Rigidbody:
   m_ObjectHideFlags: 0

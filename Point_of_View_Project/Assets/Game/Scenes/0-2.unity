@@ -7168,6 +7168,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5972575377905251087, guid: 567062b4383f00440a043f8a65c89853, type: 3}
+      propertyPath: direction
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 6172842893914534122, guid: 567062b4383f00440a043f8a65c89853, type: 3}
       propertyPath: m_Name
       value: Cube (1)
