@@ -1,5 +1,6 @@
 ﻿namespace SaveManager
 {
+    [System.Serializable]
     public class LevelState
     {
         int levelNumber;
