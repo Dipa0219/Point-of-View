@@ -6,32 +6,32 @@ namespace Game.Scripts.GameManager
 {
     public class InitialCameraManager : MonoBehaviour
     {
-        public float speed;
-        public float delay = 0.1f; // Delay time at each waypoint
-        public int startingPoint;
-        public Transform[] waypoints;
-        public GameObject target;
+        [SerializeField] private float speed;
+        [SerializeField] private float delay = 0.1f; // Delay time at each waypoint
+        [SerializeField] private int startingPoint;
+        [SerializeField] private Transform[] waypoints;
+        [SerializeField] private GameObject target;
         
         [SerializeField] private CameraSwitcher cameraSwitcher;
 
 
-        private int i;
-        private bool isWaiting; // To check if the platform is waiting at a waypoint
+        private int _i;
+        private bool _isWaiting; // To check if the platform is waiting at a waypoint
 
         // Start is called before the first frame update
         void Start()
         {
             transform.position = waypoints[startingPoint].position;
-            i = startingPoint;
+            _i = startingPoint;
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (!isWaiting)
+            if (!_isWaiting)
             {
                 // Move the platform if it's not waiting
-                if (Vector3.Distance(transform.position, waypoints[i].position) < 0.02f)
+                if (Vector3.Distance(transform.position, waypoints[_i].position) < 0.02f)
                 {
                     StartCoroutine(WaitAtWaypoint()); // Start waiting at the waypoint
                 }
@@ -39,7 +39,7 @@ namespace Game.Scripts.GameManager
                 {
                     // Move the platform towards the next waypoint
                     transform.position =
-                        Vector3.MoveTowards(transform.position, waypoints[i].position, speed * Time.deltaTime);
+                        Vector3.MoveTowards(transform.position, waypoints[_i].position, speed * Time.deltaTime);
                 }
             }
         }
@@ -47,28 +47,18 @@ namespace Game.Scripts.GameManager
         // Coroutine to handle waiting at waypoints
         IEnumerator WaitAtWaypoint()
         {
-            isWaiting = true; // Stop movement
+            _isWaiting = true; // Stop movement
             yield return new WaitForSeconds(delay); // Wait for the delay duration
 
             // Move to the next waypoint
-            i++;
-            if (i >= waypoints.Length)
+            _i++;
+            if (_i >= waypoints.Length)
             {
                 cameraSwitcher.SwitchCameras();
-                i = 0; // Loop back to the first waypoint
+                _i = 0; // Loop back to the first waypoint
             }
 
-            isWaiting = false; // Resume movement
-        }
-
-        private void OnCollisionEnter(Collision collision)
-        {
-            collision.transform.SetParent(transform);
-        }
-
-        private void OnCollisionExit(Collision collision)
-        {
-            collision.transform.SetParent(null);
+            _isWaiting = false; // Resume movement
         }
     }
 

@@ -23,18 +23,6 @@ public class CameraSwitcher : MonoBehaviour
 
     
     [SerializeField] private CanvasGroup commandsUICanvasGroup;
-
-      /*private void Start()
-    {
-        // Ensure only one camera is active at start (for example, camera1)
-        camera1.enabled = true;
-        camera1.GameObject().SetActive(true);
-        camera2.enabled = false;
-        camera2.GameObject().SetActive(false);
-        cube1.SetActive(false);
-        cube2.SetActive(true);
-    }    */
-    
       
       
     private void Start()
