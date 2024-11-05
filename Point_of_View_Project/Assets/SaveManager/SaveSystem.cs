@@ -18,7 +18,7 @@ namespace SaveManager
         }
         
         
-        public GameData LoadGameData() {
+        public static GameData LoadGameData() {
             GameData gameData = ScriptableObject.CreateInstance<GameData>();
 
             if (CheckIfDataExists()) {
@@ -37,7 +37,7 @@ namespace SaveManager
         }
         
         
-        public GameData UpdateLevel(String levelName, bool isCompleted, int stars, string completionTime) {
+        public static GameData UpdateLevel(String levelName, bool isCompleted, int stars, string completionTime) {
             GameData gameData = ScriptableObject.CreateInstance<GameData>();
             gameData = LoadGameData();
             
@@ -48,7 +48,7 @@ namespace SaveManager
             return gameData;
         }
                 
-        public GameData UpdatePreferences(Preferences preferences) {
+        public static GameData UpdatePreferences(Preferences preferences) {
             GameData gameData = ScriptableObject.CreateInstance<GameData>();
             gameData = LoadGameData();
             
