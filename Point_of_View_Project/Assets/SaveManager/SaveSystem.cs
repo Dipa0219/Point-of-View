@@ -12,16 +12,16 @@ namespace SaveManager
 
         
         
-        public void SaveGameData(GameData gameData) {
+        public static void SaveGameData(GameData gameData) {
             string json = JsonUtility.ToJson(gameData);
             File.WriteAllText(Path.Combine(Application.persistentDataPath, SaveFileName), json);
         }
         
         
-        public GameData LoadGameData() {
+        public static GameData LoadGameData() {
             GameData gameData = ScriptableObject.CreateInstance<GameData>();
 
-            if (File.Exists(_saveFilePath)) {
+            if (CheckIfDataExists()) {
                 string json = File.ReadAllText(_saveFilePath);
                 JsonUtility.FromJsonOverwrite(json, gameData);
             } else {
@@ -32,12 +32,12 @@ namespace SaveManager
         }
         
         
-        public bool CheckIfDataExists() {
+        public static bool CheckIfDataExists() {
             return File.Exists(_saveFilePath);
         }
         
         
-        public GameData UpdateLevel(String levelName, bool isCompleted, int stars, string completionTime) {
+        public static GameData UpdateLevel(String levelName, bool isCompleted, int stars, string completionTime) {
             GameData gameData = ScriptableObject.CreateInstance<GameData>();
             gameData = LoadGameData();
             
@@ -48,7 +48,7 @@ namespace SaveManager
             return gameData;
         }
                 
-        public GameData UpdatePreferences(Preferences preferences) {
+        public static GameData UpdatePreferences(Preferences preferences) {
             GameData gameData = ScriptableObject.CreateInstance<GameData>();
             gameData = LoadGameData();
             
@@ -60,9 +60,17 @@ namespace SaveManager
         }
         
         
-        public GameData InitializeDefaultData(GameData gameData) {
+        public static GameData InitializeDefaultData(GameData gameData) {
             
             return gameData.InitializeDefaultData();
+        }
+
+        public static void SaveName(string s)
+        {
+            GameData gameData = ScriptableObject.CreateInstance<GameData>();
+            gameData = InitializeDefaultData(gameData);
+            gameData.SetPlayerName(s);
+            SaveGameData(gameData);
         }
     }
 }

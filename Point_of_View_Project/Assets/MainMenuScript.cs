@@ -1,4 +1,5 @@
 using System;
+using SaveManager;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -20,6 +21,12 @@ public class MainMenuScript : MonoBehaviour
     
     void Start()
     {
+        if (!SaveSystem.CheckIfDataExists())
+        {
+            SceneManager.LoadScene("InsertName_WIP");
+        }
+        
+        
         buttons = new Button[] { levelsButton, LeaderboardButton, SettingsButton, CreditsButton, QuitButton };
 
         
