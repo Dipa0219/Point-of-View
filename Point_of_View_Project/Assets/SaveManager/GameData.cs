@@ -132,6 +132,11 @@
             return minutes * 60 + seconds;
         }
         
+        public void SetPlayerName(string name)
+        {
+            playerName = name;
+        }
+        
         
     }
 }
