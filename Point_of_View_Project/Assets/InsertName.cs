@@ -29,6 +29,7 @@ public class InsertName : MonoBehaviour
         
         
         //SaveManager.SaveSystem.SaveName(_nickname);
-        //UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu_WIP");
+        
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu_WIP");
     }
 }
