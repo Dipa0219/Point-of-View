@@ -63,7 +63,7 @@
             switch (world)
             {
                 case 1:
-                    if(LevelSHouldBeUpdated(world1Levels[level - 1], isCompleted, stars, completionTime))
+                    if(LevelShouldBeUpdated(world1Levels[level - 1], isCompleted, stars, completionTime))
                     {
                         world1Levels[level - 1].SetCompleted(isCompleted);
                         world1Levels[level - 1].SetStars(stars);
@@ -71,7 +71,7 @@
                     }
                     break;
                 case 2:
-                    if(LevelSHouldBeUpdated(world2Levels[level - 1], isCompleted, stars, completionTime))
+                    if(LevelShouldBeUpdated(world2Levels[level - 1], isCompleted, stars, completionTime))
                     {
                         world2Levels[level - 1].SetCompleted(isCompleted);
                         world2Levels[level - 1].SetStars(stars);
@@ -79,7 +79,7 @@
                     }
                     break;
                 case 3:
-                    if(LevelSHouldBeUpdated(world3Levels[level - 1], isCompleted, stars, completionTime))
+                    if(LevelShouldBeUpdated(world3Levels[level - 1], isCompleted, stars, completionTime))
                     {
                         world3Levels[level - 1].SetCompleted(isCompleted);
                         world3Levels[level - 1].SetStars(stars);
@@ -96,25 +96,25 @@
         }
         
      
-        public void LevelSHouldBeUpdated(LevelState levelState, bool isCompleted, int stars, string completionTime)
+        public bool LevelShouldBeUpdated(LevelState levelState, bool isCompleted, int stars, string completionTime)
         {
             if(isCompleted == false)
                 return false;
             
-            if(levelState.getCompleted() == false && isCompleted == true)
+            if(levelState.GetCompleted() == false && isCompleted == true)
                 return true;
             
-            if(levelState.getCompleted() == true && isCompleted == true)
+            if(levelState.GetCompleted() == true && isCompleted == true)
             {
-                if(levelstate.getStars() < stars)
+                if(levelState.GetStars() < stars)
                 {
                     return true;   
-                 }else if(levelstate.getStars() > stars)
+                 }else if(levelState.GetStars() > stars)
                  {
                      return false;
-                 }else if(levelstate.getStars() == stars)
+                 }else if(levelState.GetStars() == stars)
                  {
-                     if(TimeToNumber(levelstate.getTime()) > TimeToNumber(completionTime))
+                     if(TimeToNumber(levelState.GetTime()) > TimeToNumber(completionTime))
                      {
                          return true;
                      }
