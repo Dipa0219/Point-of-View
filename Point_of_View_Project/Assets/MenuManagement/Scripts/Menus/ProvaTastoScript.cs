@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using SaveManager;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -30,10 +31,35 @@ public class NewBehaviourScript : MonoBehaviour
 
     void Start()
     {
+        /*if (!SaveSystem.CheckIfDataExists())
+        {
+            SceneManager.LoadScene("InsertName_WIP");
+            return;
+        }
+        
+        GameData gameData = ScriptableObject.CreateInstance<GameData>();
+        gameData = SaveSystem.LoadGameData();
+        */
+        
         buttons_World1 = new Button[] { b0_1, b0_2, b0_3 };
         buttons_World2 = new Button[] { b1_1, b1_2, b1_3 };
         buttons_World3 = new Button[] { b2_1, b2_2, b2_3 };
         
+        
+        b0_2.interactable = true;
+        b0_3.interactable = true;
+        b1_1.interactable = true;
+        b1_2.interactable = false;
+        b1_3.interactable = false;
+        b2_1.interactable = false;
+        b2_2.interactable = false;
+        b2_3.interactable = false;
+        
+        
+        /*if (gameData.GetLevel(0, 0).GetCompleted() == true)
+        {
+            b0_2.interactable = true;
+        }*/
         b0_1.onClick.AddListener(LoadLevel("0-1"));
         b0_2.onClick.AddListener(LoadLevel("0-2"));
         b0_3.onClick.AddListener(LoadLevel("0-3")); 
@@ -88,16 +114,28 @@ public class NewBehaviourScript : MonoBehaviour
             if(selectedButtonRow == 0)
             {
                 selectedButtonCol = (selectedButtonCol - 1 + buttonLength) % buttonLength;
+                if (buttons_World1[selectedButtonCol].interactable == false)
+                {
+                    selectedButtonCol = 0;
+                }
                 buttons_World1[selectedButtonCol].Select();
             }
             else if(selectedButtonRow == 1)
             {
                 selectedButtonCol = (selectedButtonCol - 1 + buttonLength) % buttonLength;
+                if (buttons_World2[selectedButtonCol].interactable == false)
+                {
+                    selectedButtonCol = 0;
+                }
                 buttons_World2[selectedButtonCol].Select();
             }
             else
             {
                 selectedButtonCol = (selectedButtonCol - 1 + buttonLength) % buttonLength;
+                if (buttons_World3[selectedButtonCol].interactable == false)
+                {
+                    selectedButtonCol = 0;
+                }
                 buttons_World3[selectedButtonCol].Select();
             }
         }
@@ -106,28 +144,57 @@ public class NewBehaviourScript : MonoBehaviour
             if(selectedButtonRow == 0)
             {
                 selectedButtonCol = (selectedButtonCol + 1) % buttonLength;
+                if (buttons_World1[selectedButtonCol].interactable == false)
+                {
+                    selectedButtonCol = 0;
+                }                
                 buttons_World1[selectedButtonCol].Select();
             }
             else if(selectedButtonRow == 1)
             {
                 selectedButtonCol = (selectedButtonCol + 1) % buttonLength;
+                if (buttons_World2[selectedButtonCol].interactable == false)
+                {
+                    selectedButtonCol = 0;
+                }
                 buttons_World2[selectedButtonCol].Select();
             }
             else
             {
                 selectedButtonCol = (selectedButtonCol + 1) % buttonLength;
+                if (buttons_World3[selectedButtonCol].interactable == false)
+                {
+                    selectedButtonCol = 0;
+                }
                 buttons_World3[selectedButtonCol].Select();
             }
         }else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             if(selectedButtonRow == 0)
             {
-                selectedButtonRow = 1;
-                buttons_World2[selectedButtonCol].Select();
+                
+                if (buttons_World2[selectedButtonCol].interactable == false)
+                {
+                    buttons_World1[selectedButtonCol].Select();
+                }
+                else
+                {
+                    selectedButtonRow = 1;
+                    buttons_World2[selectedButtonCol].Select(); 
+                }
+
             }else if(selectedButtonRow == 1)
             {
-                selectedButtonRow = 2;
-                buttons_World3[selectedButtonCol].Select();
+                if (buttons_World3[selectedButtonCol].interactable == false)
+                {
+                    buttons_World2[selectedButtonCol].Select();
+                }
+                else
+                {
+                    selectedButtonRow = 2;
+                    buttons_World3[selectedButtonCol].Select(); 
+                }
+
             }else
             {
                 selectedButtonRow = 0;
@@ -137,12 +204,26 @@ public class NewBehaviourScript : MonoBehaviour
         {
             if(selectedButtonRow == 0)
             {
-                selectedButtonRow = 2;
-                buttons_World3[selectedButtonCol].Select();
+                if (buttons_World3[selectedButtonCol].interactable == false)
+                {
+                    buttons_World1[selectedButtonCol].Select();
+                }
+                else
+                {
+                    selectedButtonRow = 2;
+                    buttons_World3[selectedButtonCol].Select();
+                }
             }else if(selectedButtonRow == 1)
             {
-                selectedButtonRow = 0;
-                buttons_World1[selectedButtonCol].Select();
+                if (buttons_World1[selectedButtonCol].interactable == false)
+                {
+                    buttons_World2[selectedButtonCol].Select();
+                }
+                else
+                {
+                    selectedButtonRow = 0;
+                    buttons_World1[selectedButtonCol].Select();
+                }
             }else
             {
                 selectedButtonRow = 1;

@@ -136,7 +136,23 @@
         {
             playerName = name;
         }
-        
-        
+
+
+        public LevelState GetLevel(int world, int num)
+        {
+            switch (world)
+            {
+                case 1:
+                    return world1Levels[num];
+                case 2:
+                    return world2Levels[num];
+                case 3:
+                    return world3Levels[num];
+                default:
+                    return null;
+            }
+        }
+
+
     }
 }
