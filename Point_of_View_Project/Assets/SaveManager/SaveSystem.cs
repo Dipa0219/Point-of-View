@@ -31,6 +31,12 @@ namespace SaveManager
             return gameData;
         }
         
+        
+        public bool CheckIfDataExists() {
+            return File.Exists(_saveFilePath);
+        }
+        
+        
         public GameData UpdateLevel(String levelName, bool isCompleted, int stars, string completionTime) {
             GameData gameData = ScriptableObject.CreateInstance<GameData>();
             gameData = LoadGameData();
