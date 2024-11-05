@@ -53,17 +53,85 @@
             return this;
         }
 
+        
         public void UpdateLevel(string levelName, bool isCompleted, int stars, string completionTime)
         {
-            throw new NotImplementedException();
+            var parts = levelName.Split('-');
+            int world = int.Parse(parts[0]);
+            int level = int.Parse(parts[1]);
+            
+            switch (world)
+            {
+                case 1:
+                    if(LevelSHouldBeUpdated(world1Levels[level - 1], isCompleted, stars, completionTime))
+                    {
+                        world1Levels[level - 1].SetCompleted(isCompleted);
+                        world1Levels[level - 1].SetStars(stars);
+                        world1Levels[level - 1].SetTime(completionTime);
+                    }
+                    break;
+                case 2:
+                    if(LevelSHouldBeUpdated(world2Levels[level - 1], isCompleted, stars, completionTime))
+                    {
+                        world2Levels[level - 1].SetCompleted(isCompleted);
+                        world2Levels[level - 1].SetStars(stars);
+                        world2Levels[level - 1].SetTime(completionTime);
+                    }
+                    break;
+                case 3:
+                    if(LevelSHouldBeUpdated(world3Levels[level - 1], isCompleted, stars, completionTime))
+                    {
+                        world3Levels[level - 1].SetCompleted(isCompleted);
+                        world3Levels[level - 1].SetStars(stars);
+                        world3Levels[level - 1].SetTime(completionTime);
+                    }
+                    break;
+            }
         }
 
+        
         public void UpdatePreferences(Preferences preferences)
         {
             throw new NotImplementedException();
         }
         
+     
+        public void LevelSHouldBeUpdated(LevelState levelState, bool isCompleted, int stars, string completionTime)
+        {
+            if(isCompleted == false)
+                return false;
+            
+            if(levelState.getCompleted() == false && isCompleted == true)
+                return true;
+            
+            if(levelState.getCompleted() == true && isCompleted == true)
+            {
+                if(levelstate.getStars() < stars)
+                {
+                    return true;   
+                 }else if(levelstate.getStars() > stars)
+                 {
+                     return false;
+                 }else if(levelstate.getStars() == stars)
+                 {
+                     if(TimeToNumber(levelstate.getTime()) > TimeToNumber(completionTime))
+                     {
+                         return true;
+                     }
+                 }
+            }
+            return false;
+        }
+        
+        
+        public int TimeToNumber(string time)
+        {
+            var parts = time.Split(':');
+            int minutes = int.Parse(parts[0]);
+            int seconds = int.Parse(parts[1]);
+            return minutes * 60 + seconds;
+        }
+        
+        
     }
-    
-    
 }

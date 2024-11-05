@@ -63,19 +63,6 @@ namespace SaveManager
         public GameData InitializeDefaultData(GameData gameData) {
             
             return gameData.InitializeDefaultData();
-            
-            /*gameData.playerName = "Player";
-            gameData.levels = new LevelData[20];
-        
-            for (int i = 0; i < gameData.levels.Length; i++) {
-                gameData.levels[i] = new LevelData {
-                    isCompleted = false,
-                    stars = 0,
-                    completionTime = "00:00:00"
-                };
-            }
-            
-            */
         }
     }
 }
