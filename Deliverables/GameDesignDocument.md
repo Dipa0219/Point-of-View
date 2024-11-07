@@ -42,6 +42,33 @@ Each world progressively builds on the collaboration mechanics, making the gamep
 
 We will update in future when we have pratical idea
 
+## Mechanics ##
+
+As we anticipated during the section "Worlds" during our gameplay we will focus in particularly on two different mechanics: buttons and boxes, moving platforms.
+
+### Possible uses ###
+
+Button and boxes
+
+- Boxes used to fill an hole to create a pathway for the players
+- Boxes used to keep activated a button
+- Boxes used to block a moving object
+- Boxes can be an obstacle for the view and, because you can't remove it, you have to deal with problem
+- Buttons used to open a door
+- Buttons that can control if an object moves
+- Buttons that may create a box
+- Buttons that creates a new pathway
+
+Moving platforms
+
+- Can be used to give the possibility to go over a certain obstacle
+- Can be used to reduce the time to complete the level with the correct speed
+- Can be used to create an obstacle if they move in a opposite direction
+- Can be also an obstacle if they ends in a hole and so the player has to pay attention during his movement
+- Can be used to create a moving view for the player on the moving platform
+- Can rotate the player in order to create to new view and new possible interactions
+- Can add verticality to the level by moving up and down
+
 ## Team ##
 1. Antonio Di Paola (Developer)
 2. Simone Frazzei (Developer) 
