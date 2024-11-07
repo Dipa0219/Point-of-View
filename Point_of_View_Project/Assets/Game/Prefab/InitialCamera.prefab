@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba3aa49b9c484bdebd92e79a405cb5ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 80
   delay: 0.05
   startingPoint: 0
   waypoints:
