@@ -6,15 +6,15 @@ using UnityEngine.UI;
 
 public class EndLevelMenu : MonoBehaviour
 {
-    public GameObject endLevelMenuUI; // Assign in the Inspector
-    public Button nextLevelButton;
-    public Button reloadLevelButton;
-    public Button mainMenuButton;
+    [SerializeField] private GameObject endLevelMenuUI; // Assign in the Inspector
+    [SerializeField] private Button nextLevelButton;
+    [SerializeField] private Button reloadLevelButton;
+    [SerializeField] private Button mainMenuButton;
 
     private Button[] buttons;
     private int selectedButtonIndex = 0;
 
-    public GameObject[] stars;
+    [SerializeField] private GameObject[] stars;
     
     private string finalTime;
     [SerializeField] private TMP_Text text;

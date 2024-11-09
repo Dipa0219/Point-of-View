@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ConveyorBelt : MonoBehaviour
 {
-    public float speed;
-    public Vector3 direction;
-    public List<GameObject> onBelt;
+    [SerializeField] private float speed;
+    [SerializeField] private Vector3 direction;
+    [SerializeField] private List<GameObject> onBelt;
 
     // Start is called before the first frame update
     void Start()

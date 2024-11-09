@@ -4,8 +4,8 @@ using UnityEngine.UI;
 
 public class InsertName : MonoBehaviour
 {
-    public TMP_InputField nameInputField;
-    public Button ConfirmButton;
+    [SerializeField] private TMP_InputField nameInputField;
+    [SerializeField] private Button ConfirmButton;
 
     private string _nickname;
     

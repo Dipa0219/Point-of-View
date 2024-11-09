@@ -9,11 +9,11 @@ using UnityEngine.UI;
 public class MainMenuScript : MonoBehaviour
 {
     
-    public Button levelsButton;
-    public Button CreditsButton;
-    public Button LeaderboardButton;
-    public Button SettingsButton;
-    public Button QuitButton;
+    [SerializeField] private Button levelsButton;
+    [SerializeField] private Button CreditsButton;
+    [SerializeField] private Button LeaderboardButton;
+    [SerializeField] private Button SettingsButton;
+    [SerializeField] private Button QuitButton;
     
     private Button[] buttons;
     private int selectedButtonIndex = 0;
