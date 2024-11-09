@@ -105,6 +105,8 @@ Moving platforms
 - Discussed programs regarding the following week
 - Fixed menus and prepared first two levels
 
+### <ins> GDD deadline (November 4 deadline) 
+
 ### Week 4 (November 5 deadline)
 
 - Fixing collision between robot and environment (Antonio Di Paola)
@@ -115,7 +117,20 @@ Moving platforms
 - Conclusion of all UIs (Francesco Benelle)
 - Preparation of local saves (Francesco Benelle)
 
-### <ins> GDD deadline (November 4 deadline) 
+### Team meeting (November 5)
+
+- Reasoning about adding music to the game
+- Prepared the local save for the game
+- Discussed about possible texture for the two player
+
+### Week 5 (November 12 deadline)
+
+- Conclusion of physic management (Giacomo Ballabio)
+- Start working on music (Giacomo Ballabio)
+- Saving statement (Francesco Benelle)
+- Texture of the two player (Simone Frazzei)
+- Bug fixing and code cleaning (Antonio Di Paola)
+- Reasoning about light in dark level (Antonio Di Paola)
 
 ### <ins> Beta submission deadline (December 8 deadline) 
 
