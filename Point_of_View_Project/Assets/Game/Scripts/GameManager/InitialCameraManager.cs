@@ -11,6 +11,8 @@ namespace Game.Scripts.GameManager
         [SerializeField] private int startingPoint;
         [SerializeField] private Transform[] waypoints;
         [SerializeField] private GameObject target;
+        [SerializeField] private GameObject[] playerLight;
+        [SerializeField] private GameObject[] ambientLight;
         
         [SerializeField] private CameraSwitcher cameraSwitcher;
 
@@ -55,6 +57,14 @@ namespace Game.Scripts.GameManager
             if (_i >= waypoints.Length)
             {
                 cameraSwitcher.SwitchCameras();
+                for (int j = 0; j < playerLight.Length; j++)
+                {
+                    playerLight[j].SetActive(true);
+                }
+                for (int j = 0; j < ambientLight.Length; j++)
+                {
+                    ambientLight[j].SetActive(false);
+                }
                 _i = 0; // Loop back to the first waypoint
             }
 

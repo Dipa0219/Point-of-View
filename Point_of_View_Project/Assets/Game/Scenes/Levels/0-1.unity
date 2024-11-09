@@ -714,7 +714,7 @@ MonoBehaviour:
     meshQuery:
       layers: 33554440
       maskAndChannels: 8
-    surfaceParameter: 26890
+    surfaceParameter: 26900
     meshQueryIndex: 1
     subMeshQueryIndex: 0
     geometryHashValue: 2429913996131925779
@@ -2713,7 +2713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a937bf1e30e0eb469918bb434bd764c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceAmount: 10
+  forceAmount: 100
   maxSpeed: 15
   direction: -1
 --- !u!65 &834788876
@@ -4093,7 +4093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a937bf1e30e0eb469918bb434bd764c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceAmount: 10
+  forceAmount: 100
   maxSpeed: 15
   direction: 1
 --- !u!54 &1181159106
@@ -4426,7 +4426,7 @@ MonoBehaviour:
     meshQuery:
       layers: 33554440
       maskAndChannels: 8
-    surfaceParameter: 26890
+    surfaceParameter: 26900
     meshQueryIndex: 1
     subMeshQueryIndex: 0
     geometryHashValue: 2429913996131925779
@@ -4950,7 +4950,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 26870
+    surfaceParameter: 26880
     meshQueryIndex: 6
     subMeshQueryIndex: 0
     geometryHashValue: -8356169589415848118
@@ -5214,7 +5214,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 26846
+    surfaceParameter: 26848
     meshQueryIndex: 5
     subMeshQueryIndex: 0
     geometryHashValue: 3887487628683482804

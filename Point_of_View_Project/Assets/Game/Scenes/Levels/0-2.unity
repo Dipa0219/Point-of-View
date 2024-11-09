@@ -2630,7 +2630,7 @@ MonoBehaviour:
     meshQuery:
       layers: 33554440
       maskAndChannels: 8
-    surfaceParameter: 26890
+    surfaceParameter: 26900
     meshQueryIndex: 1
     subMeshQueryIndex: 0
     geometryHashValue: 952645402287212785
@@ -3726,7 +3726,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 26870
+    surfaceParameter: 26880
     meshQueryIndex: 6
     subMeshQueryIndex: 0
     geometryHashValue: -331839548744974
@@ -5968,7 +5968,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 26846
+    surfaceParameter: 26848
     meshQueryIndex: 5
     subMeshQueryIndex: 0
     geometryHashValue: 3852903596870895330
@@ -7155,6 +7155,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1978965660903291816, guid: e56b7b4d5916c654cb4fdab6dca2ae98, type: 3}
+      propertyPath: maxSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978965660903291816, guid: e56b7b4d5916c654cb4fdab6dca2ae98, type: 3}
+      propertyPath: forceAmount
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7169,8 +7177,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5972575377905251087, guid: 567062b4383f00440a043f8a65c89853, type: 3}
+      propertyPath: maxSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972575377905251087, guid: 567062b4383f00440a043f8a65c89853, type: 3}
       propertyPath: direction
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972575377905251087, guid: 567062b4383f00440a043f8a65c89853, type: 3}
+      propertyPath: forceAmount
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6172842893914534122, guid: 567062b4383f00440a043f8a65c89853, type: 3}
       propertyPath: m_Name

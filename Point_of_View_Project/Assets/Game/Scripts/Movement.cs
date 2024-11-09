@@ -20,46 +20,49 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        bool _isMoving = false;
-        if(_isActive)
+        var isMoving = false;
+        if (!_isActive)
         {
-            // Aggiungiamo una forza a sinistra se premiamo A
-            if (Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.LeftArrow))
-            {
-                rb.AddForce(transform.rotation * Vector3.left * (forceAmount * direction), ForceMode.Force);
-                _isMoving = true;
-            }
-
-            // Aggiungiamo una forza a destra se premiamo D
-            if (Input.GetKey(KeyCode.D)|| Input.GetKey(KeyCode.RightArrow))
-            {
-                _isMoving = true;
-                rb.AddForce(transform.rotation * Vector3.right * (forceAmount * direction), ForceMode.Force);
-            }
-
-            // Aggiungiamo una forza verso l'alto se premiamo W
-            if (Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.UpArrow))
-            {
-                _isMoving = true;
-                rb.AddForce(transform.rotation * Vector3.forward * (forceAmount * direction), ForceMode.Force);
-            }
-
-            // Aggiungiamo una forza verso il basso se premiamo S
-            if (Input.GetKey(KeyCode.S)|| Input.GetKey(KeyCode.DownArrow))
-            {
-                _isMoving = true;
-                rb.AddForce(transform.rotation * Vector3.back * (forceAmount * direction), ForceMode.Force);
-            }
-
-            if (!_isMoving)
-            {
-                rb.velocity= Vector3.zero;
-            }
+            rb.velocity = Vector3.zero;
+            return;
+        }
+        // Aggiungiamo una forza a sinistra se premiamo A
+        if (Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.LeftArrow))
+        {
+            rb.AddForce(transform.rotation * Vector3.left * (forceAmount * direction), ForceMode.Force);
+            isMoving = true;
         }
 
-        
+        // Aggiungiamo una forza a destra se premiamo D
+        if (Input.GetKey(KeyCode.D)|| Input.GetKey(KeyCode.RightArrow))
+        {
+            isMoving = true;
+            rb.AddForce(transform.rotation * Vector3.right * (forceAmount * direction), ForceMode.Force);
+        }
+
+        // Aggiungiamo una forza verso l'alto se premiamo W
+        if (Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.UpArrow))
+        {
+            isMoving = true;
+            rb.AddForce(transform.rotation * Vector3.forward * (forceAmount * direction), ForceMode.Force);
+        }
+
+        // Aggiungiamo una forza verso il basso se premiamo S
+        if (Input.GetKey(KeyCode.S)|| Input.GetKey(KeyCode.DownArrow))
+        {
+            isMoving = true;
+            rb.AddForce(transform.rotation * Vector3.back * (forceAmount * direction), ForceMode.Force);
+        }
+
+        if (!isMoving)
+        {
+            rb.velocity= Vector3.zero;
+        }
+
+
     }
-    
+
+
     public void SetActive(bool active)
     {
         _isActive = active;
