@@ -46,7 +46,7 @@ public class LevelNavigator : MonoBehaviour
     void Start()
     {
         
-        /*if (!SaveSystem.CheckIfDataExists())
+        if (!SaveSystem.CheckIfDataExists())
         {
             SceneManager.LoadScene("InsertName_WIP");
             return;
@@ -54,7 +54,6 @@ public class LevelNavigator : MonoBehaviour
         
         gameData = ScriptableObject.CreateInstance<GameData>();
         gameData = SaveSystem.LoadGameData();
-        */
         
                 
         levelButtons = new Button[rows, columns]
@@ -66,28 +65,73 @@ public class LevelNavigator : MonoBehaviour
 
         SetButtonInteractivity();
         AssignLevelListeners();
-        //InitializeStars();
+        InitializeStars();
 
         SelectButton(selectedRow, selectedCol);
     }
 
     private void SetButtonInteractivity()
     {
-        
-        /*if (gameData.GetLevel(0, 0).GetCompleted() == true)
-        {
-            b0_2.interactable = true;
-        }*/
-                
         levelButtons[0, 0].interactable = true;
-        levelButtons[0, 1].interactable = true;
-        levelButtons[0, 2].interactable = true;
-        levelButtons[1, 0].interactable = true;
+        levelButtons[0, 1].interactable = false;
+        levelButtons[0, 2].interactable = false;
+        levelButtons[1, 0].interactable = false;
         levelButtons[1, 1].interactable = false;
         levelButtons[1, 2].interactable = false;
         levelButtons[2, 0].interactable = false;
         levelButtons[2, 1].interactable = false;
         levelButtons[2, 2].interactable = false;
+        
+        if(gameData.GetLevel(1, 0).GetCompleted() == true)
+        {
+            levelButtons[0, 1].interactable = true;
+        } else{
+            return;    
+        }
+        if(gameData.GetLevel(1, 1).GetCompleted() == true)
+        {
+            levelButtons[0, 2].interactable = true;
+        } else{
+            return;    
+        }        
+        if(gameData.GetLevel(1, 2).GetCompleted() == true)
+        {
+            levelButtons[1, 0].interactable = true;
+        } else{
+            return;    
+        }
+        
+        if(gameData.GetLevel(2, 0).GetCompleted() == true)
+        {
+            levelButtons[1, 1].interactable = true;
+        } else{
+            return;    
+        }
+        if(gameData.GetLevel(2, 1).GetCompleted() == true)
+        {
+            levelButtons[1, 2].interactable = true;
+        } else{
+            return;    
+        }
+        if(gameData.GetLevel(2, 2).GetCompleted() == true)
+        {
+            levelButtons[2, 0].interactable = true;
+        } else{
+            return;    
+        }
+        if(gameData.GetLevel(3, 0).GetCompleted() == true)
+        {
+            levelButtons[2, 1].interactable = true;
+        } else{
+            return;    
+        }
+        if(gameData.GetLevel(3, 1).GetCompleted() == true)
+        {
+            levelButtons[2, 2].interactable = true;
+        } else{
+            return;    
+        }
+                
     }
 
     private void AssignLevelListeners()

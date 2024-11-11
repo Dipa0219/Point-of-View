@@ -28,7 +28,7 @@ public class InsertName : MonoBehaviour
         print("Name entered: " + _nickname);
         
         
-        //SaveManager.SaveSystem.SaveName(_nickname);
+        SaveManager.SaveSystem.SaveName(_nickname);
         
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu_WIP");
     }

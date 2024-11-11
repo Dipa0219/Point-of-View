@@ -31,7 +31,7 @@ public class NewBehaviourScript : MonoBehaviour
 
     void Start()
     {
-        /*if (!SaveSystem.CheckIfDataExists())
+        if (!SaveSystem.CheckIfDataExists())
         {
             SceneManager.LoadScene("InsertName_WIP");
             return;
@@ -39,7 +39,7 @@ public class NewBehaviourScript : MonoBehaviour
         
         GameData gameData = ScriptableObject.CreateInstance<GameData>();
         gameData = SaveSystem.LoadGameData();
-        */
+        
         
         buttons_World1 = new Button[] { b0_1, b0_2, b0_3 };
         buttons_World2 = new Button[] { b1_1, b1_2, b1_3 };

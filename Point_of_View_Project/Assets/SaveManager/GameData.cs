@@ -17,6 +17,16 @@
         {
             this.playerName = playerName;
             this.Preferences = preferences;
+            
+            this.world1Levels = new LevelState[NumLevelsPerWorld];
+            this.world2Levels = new LevelState[NumLevelsPerWorld];
+            this.world3Levels = new LevelState[NumLevelsPerWorld];
+            
+            for (int i = 0; i < NumLevelsPerWorld; i++) {
+                world1Levels[i] = new LevelState(i + 1, false, "99:99", 0, 0);
+                world2Levels[i] = new LevelState(i + 1, false, "99:99", 0, 0);
+                world3Levels[i] = new LevelState(i + 1, false, "99:99", 0, 0);
+            }
         }        
         
         public GameData(string playerName, Preferences preferences, LevelState[] w1, LevelState[] w2, LevelState[] w3)
@@ -27,6 +37,8 @@
             this.world1Levels = new LevelState[w1.Length];
             this.world2Levels = new LevelState[w2.Length];
             this.world3Levels = new LevelState[w3.Length];
+            
+            
 
             Array.Copy(w1, this.world1Levels, w1.Length);
             Array.Copy(w2, this.world2Levels, w2.Length);

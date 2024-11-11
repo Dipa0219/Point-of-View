@@ -83,7 +83,7 @@ public class EndLevelMenu : MonoBehaviour
         
         // TODO
         // RIMETTERE QUANDO CI SARÀ IL SISTEMA DI SALVATAGGIO 
-        //SaveSystem.UpdateLevel(SceneManager.GetActiveScene().name, true, starsEarned, finalTime);
+        SaveSystem.UpdateLevel(SceneManager.GetActiveScene().name, true, starsEarned, finalTime);
     }
 
     private int CalculateStars(string s)
@@ -127,7 +127,7 @@ public class EndLevelMenu : MonoBehaviour
     {
         // Load the next level (assuming level indexing in build settings)
         string sceneName = SceneManager.GetActiveScene().name;
-        sceneName = FindNext(sceneName);
+        sceneName = FindNext2(sceneName);
         print("Next level: " + sceneName);
         SceneManager.LoadScene(sceneName);
 
@@ -152,6 +152,24 @@ public class EndLevelMenu : MonoBehaviour
         //int level = int.Parse(levelC.ToString());
         level++;
         return "Level" + level;
+    }
+    
+    private string FindNext2(string sceneName)
+    {
+        var parts = sceneName.Split('-');
+        int world = int.Parse(parts[0]);
+        int level = int.Parse(parts[1]);
+        
+        if(level == 3)
+        {
+            world++;
+            level = 1;
+        }
+        
+        if(world == 2 && level == 3)
+            return "MainMenu_WIP";
+
+        return world + "-" + level;
     }
 
     
