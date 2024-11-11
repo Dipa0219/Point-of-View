@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/MenuManagement/Scenes/SplashScreen.unity
     guid: 454b37217ad604f209687fd98f41ed3e
+  - enabled: 1
+    path: Assets/Game/Scenes/UI/MainMenu_WIP.unity
+    guid: 9e23623b9ff6c6a47ae37018167558ed
   - enabled: 0
     path: Assets/MenuManagement/Scenes/MainMenu.unity
     guid: 293a16051023249bbba2b6e5e5bc8a09
@@ -38,9 +41,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game/Scenes/Levels/0-3.unity
     guid: 525326fef101e214cbc2d520f7cfbc4d
-  - enabled: 1
-    path: Assets/Game/Scenes/UI/MainMenu_WIP.unity
-    guid: 9e23623b9ff6c6a47ae37018167558ed
   - enabled: 1
     path: Assets/Game/Scenes/UI/Credits.unity
     guid: ce1f3b3854841e84ba62d775a62f860e
