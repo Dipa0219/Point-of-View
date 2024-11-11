@@ -72,7 +72,11 @@ public class EndLevelMenu : MonoBehaviour
                 stars[2].SetActive(false);
                 break;
         }
-        
+         
+        // TODO
+        // RIMETTERE QUANDO CI SARÀ IL SISTEMA DI SALVATAGGIO       
+        SaveSystem.UpdateLevel(SceneManager.GetActiveScene().name, true, starsEarned, finalTime);
+
         endLevelMenuUI.SetActive(true);
         
         if (buttons != null && buttons.Length > 0 && selectedButtonIndex >= 0 && selectedButtonIndex < buttons.Length)
@@ -81,9 +85,7 @@ public class EndLevelMenu : MonoBehaviour
         print("active scene: ");
         print(SceneManager.GetActiveScene().name);
         
-        // TODO
-        // RIMETTERE QUANDO CI SARÀ IL SISTEMA DI SALVATAGGIO 
-        SaveSystem.UpdateLevel(SceneManager.GetActiveScene().name, true, starsEarned, finalTime);
+ 
     }
 
     private int CalculateStars(string s)
@@ -156,18 +158,27 @@ public class EndLevelMenu : MonoBehaviour
     
     private string FindNext2(string sceneName)
     {
+        // ADDED FOR TEST ONLY
+        if(sceneName != "0-1")
+            return "MainMenu_WIP";
+        
+        
         var parts = sceneName.Split('-');
         int world = int.Parse(parts[0]);
         int level = int.Parse(parts[1]);
+        
+        if(world == 2 && level == 3)
+            return "MainMenu_WIP";
         
         if(level == 3)
         {
             world++;
             level = 1;
+        }else
+        {
+            level++;
         }
-        
-        if(world == 2 && level == 3)
-            return "MainMenu_WIP";
+
 
         return world + "-" + level;
     }

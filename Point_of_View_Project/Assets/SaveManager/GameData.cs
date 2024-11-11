@@ -23,9 +23,9 @@
             this.world3Levels = new LevelState[NumLevelsPerWorld];
             
             for (int i = 0; i < NumLevelsPerWorld; i++) {
-                world1Levels[i] = new LevelState(i + 1, false, "99:99", 0, 0);
-                world2Levels[i] = new LevelState(i + 1, false, "99:99", 0, 0);
-                world3Levels[i] = new LevelState(i + 1, false, "99:99", 0, 0);
+                world1Levels[i] = new LevelState(i + 1, false, "99:99", 0, 999);
+                world2Levels[i] = new LevelState(i + 1, false, "99:99", 0, 999);
+                world3Levels[i] = new LevelState(i + 1, false, "99:99", 0, 999);
             }
         }        
         
@@ -57,9 +57,9 @@
             Preferences = new Preferences(1, 1, 1, playerName);
             
             for (int i = 0; i < world1Levels.Length; i++) {
-                world1Levels[i] = new LevelState(i + 1, false, "00:00", 0, 0);
-                world2Levels[i] = new LevelState(i + 1, false, "00:00", 0, 0);
-                world3Levels[i] = new LevelState(i + 1, false, "00:00", 0, 0);
+                world1Levels[i] = new LevelState(i + 1, false, "00:00", 0, 999);
+                world2Levels[i] = new LevelState(i + 1, false, "00:00", 0, 999);
+                world3Levels[i] = new LevelState(i + 1, false, "00:00", 0, 999);
             }
 
             return this;
@@ -74,7 +74,7 @@
             
             switch (world)
             {
-                case 1:
+                case 0:
                     if(LevelShouldBeUpdated(world1Levels[level - 1], isCompleted, stars, completionTime))
                     {
                         world1Levels[level - 1].SetCompleted(isCompleted);
@@ -82,7 +82,7 @@
                         world1Levels[level - 1].SetTime(completionTime);
                     }
                     break;
-                case 2:
+                case 1:
                     if(LevelShouldBeUpdated(world2Levels[level - 1], isCompleted, stars, completionTime))
                     {
                         world2Levels[level - 1].SetCompleted(isCompleted);
@@ -90,7 +90,7 @@
                         world2Levels[level - 1].SetTime(completionTime);
                     }
                     break;
-                case 3:
+                case 2:
                     if(LevelShouldBeUpdated(world3Levels[level - 1], isCompleted, stars, completionTime))
                     {
                         world3Levels[level - 1].SetCompleted(isCompleted);
@@ -110,28 +110,29 @@
      
         public bool LevelShouldBeUpdated(LevelState levelState, bool isCompleted, int stars, string completionTime)
         {
-            if(isCompleted == false)
+            if(isCompleted == false) // not completed -> no need to update
                 return false;
             
-            if(levelState.GetCompleted() == false && isCompleted == true)
-                return true;
+            if(levelState.GetCompleted() == false && isCompleted == true) // before not completed now completed -> update
+                 return true;
             
-            if(levelState.GetCompleted() == true && isCompleted == true)
+            if(levelState.GetCompleted() == true && isCompleted == true) 
             {
-                if(levelState.GetStars() < stars)
+                if(levelState.GetStars() < stars) // if new stars are more than the old ones -> update
                 {
                     return true;   
-                 }else if(levelState.GetStars() > stars)
+                 }else if(levelState.GetStars() > stars) // if new stars are less than the old ones -> no need to update
                  {
                      return false;
-                 }else if(levelState.GetStars() == stars)
+                 }else if(levelState.GetStars() == stars) // if new stars are equal to the old ones -> check time
                  {
-                     if(TimeToNumber(levelState.GetTime()) > TimeToNumber(completionTime))
+                     if(TimeToNumber(levelState.GetTime()) > TimeToNumber(completionTime)) // if new time is less than the old one -> update
                      {
                          return true;
                      }
                  }
             }
+            
             return false;
         }
         
