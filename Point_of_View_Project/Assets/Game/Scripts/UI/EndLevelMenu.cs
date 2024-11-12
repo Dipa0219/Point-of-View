@@ -159,8 +159,8 @@ public class EndLevelMenu : MonoBehaviour
     private string FindNext2(string sceneName)
     {
         // ADDED FOR TEST ONLY
-        if(sceneName != "0-1")
-            return "MainMenu_WIP";
+        //if(sceneName != "0-1")
+        //    return "MainMenu_WIP";
         
         
         var parts = sceneName.Split('-');
