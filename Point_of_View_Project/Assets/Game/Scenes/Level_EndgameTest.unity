@@ -773,6 +773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b29c08f68e4aa489f4e98f9bf62624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: e2a3c30f0b5c149dea4b89553c1ec08f, type: 3}
 --- !u!135 &566246651
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1202,8 +1203,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a937bf1e30e0eb469918bb434bd764c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  dir: 1
+  forceAmount: 10
+  maxSpeed: 10
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  boxLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  boxSize: {x: 5, y: 4, z: 5}
+  detectionDistance: 2
 --- !u!65 &834788876
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1412,6 +1421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b29c08f68e4aa489f4e98f9bf62624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: e2a3c30f0b5c149dea4b89553c1ec08f, type: 3}
 --- !u!1 &959619135
 GameObject:
   m_ObjectHideFlags: 0
@@ -1707,8 +1717,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a937bf1e30e0eb469918bb434bd764c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  dir: -1
+  forceAmount: 10
+  maxSpeed: 10
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  boxLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  boxSize: {x: 5, y: 4, z: 5}
+  detectionDistance: 2
 --- !u!54 &1181159106
 Rigidbody:
   m_ObjectHideFlags: 0
