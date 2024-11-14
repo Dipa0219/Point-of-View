@@ -2,7 +2,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace Game.Scripts
+namespace Game.Scripts.UI
 {
     public class TimerUI : MonoBehaviour
     {

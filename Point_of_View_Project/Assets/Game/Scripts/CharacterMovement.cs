@@ -2,7 +2,7 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class CharacterMovement : MonoBehaviour
 {
 
     private Rigidbody rb; // Riferimento al Rigidbody
@@ -60,8 +60,13 @@ public class Movement : MonoBehaviour
         }
 
 
+        
     }
 
+    public void PhysicsUpdate()
+    {
+        
+    }
 
     public void SetActive(bool active)
     {

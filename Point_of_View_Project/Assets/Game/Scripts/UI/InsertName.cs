@@ -2,34 +2,37 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InsertName : MonoBehaviour
+namespace Game.Scripts.UI
 {
-    [SerializeField] private TMP_InputField nameInputField;
-    [SerializeField] private Button ConfirmButton;
+    public class InsertName : MonoBehaviour
+    {
+        [SerializeField] private TMP_InputField nameInputField;
+        [SerializeField] private Button ConfirmButton;
 
-    private string _nickname;
+        private string _nickname;
     
-    void Start()
-    {
-        ConfirmButton.onClick.AddListener(NameEntered);
-    }
-    
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Return))
+        void Start()
         {
-            ConfirmButton.onClick.Invoke();
+            ConfirmButton.onClick.AddListener(NameEntered);
         }
-    }
     
-    public void NameEntered()
-    {
-        _nickname = nameInputField.text;
-        print("Name entered: " + _nickname);
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                ConfirmButton.onClick.Invoke();
+            }
+        }
+    
+        public void NameEntered()
+        {
+            _nickname = nameInputField.text;
+            print("Name entered: " + _nickname);
         
         
-        //SaveManager.SaveSystem.SaveName(_nickname);
+            //SaveManager.SaveSystem.SaveName(_nickname);
         
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu_WIP");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu_WIP");
+        }
     }
 }

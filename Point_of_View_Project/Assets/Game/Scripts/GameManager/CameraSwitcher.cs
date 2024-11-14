@@ -1,143 +1,144 @@
 using System.Collections;
-using System.Collections.Generic;
-using Cinemachine;
-using Game.Scripts;
+using Game.Scripts.UI;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class CameraSwitcher : MonoBehaviour
+namespace Game.Scripts.GameManager
 {
-    [SerializeField] private Movement cube1;
-    [SerializeField] private Movement cube2;
-    [SerializeField] private Camera camera1;
-    [SerializeField] private Camera camera2;
-    [SerializeField] private Camera initialCamera;
-    [SerializeField] private TimerUI timerUI;
+    public class CameraSwitcher : MonoBehaviour
+    {
+        [SerializeField] private CharacterMovement cube1;
+        [SerializeField] private CharacterMovement cube2;
+        [SerializeField] private Camera camera1;
+        [SerializeField] private Camera camera2;
+        [SerializeField] private Camera initialCamera;
+        [SerializeField] private TimerUI timerUI;
     
     
-    [SerializeField] private Canvas commandsUI;
-    //[SerializeField] private CommandsUI commandsUI;
+        [SerializeField] private Canvas commandsUI;
+        //[SerializeField] private CommandsUI commandsUI;
     
-    private bool _isActive = true;
-    private bool _isActiveCommandsUI = false;
+        private bool _isActive = true;
+        private bool _isActiveCommandsUI = false;
 
     
-    [SerializeField] private CanvasGroup commandsUICanvasGroup;
+        [SerializeField] private CanvasGroup commandsUICanvasGroup;
       
       
-    private void Start()
-    {
-        // Ensure only one camera is active at start (for example, camera1)
-        initialCamera.enabled = true;
-        initialCamera.GameObject().SetActive(true);        
-        camera1.enabled = false;
-        camera1.GameObject().SetActive(false);
-        camera2.enabled = false;
-        camera2.GameObject().SetActive(false);
-        cube1.SetActive(false);
-        cube2.SetActive(false);
-        
-        //commandsUI = GameObject.Find("commandsUI").GetComponent<Canvas>();
-        
-        commandsUICanvasGroup = commandsUI.GetComponent<CanvasGroup>();
-        if (commandsUICanvasGroup == null)
+        private void Start()
         {
-            commandsUICanvasGroup = commandsUI.gameObject.AddComponent<CanvasGroup>();
-        }
-    }
-    
-    public void SwitchCameras()
-    {
-        initialCamera.enabled = false;
-        initialCamera.GameObject().SetActive(false); 
-        camera1.enabled = true;
-        camera1.GameObject().SetActive(true);
-        camera2.enabled = false;
-        camera2.GameObject().SetActive(false);
-        cube1.SetActive(false);
-        cube2.SetActive(true);
-        timerUI.ShowTimerUI();
+            // Ensure only one camera is active at start (for example, camera1)
+            initialCamera.enabled = true;
+            initialCamera.GameObject().SetActive(true);        
+            camera1.enabled = false;
+            camera1.GameObject().SetActive(false);
+            camera2.enabled = false;
+            camera2.GameObject().SetActive(false);
+            cube1.SetActive(false);
+            cube2.SetActive(false);
         
-        commandsUI.GameObject().SetActive(true);
-        _isActiveCommandsUI = true;
-    }
-
-    private void Update()
-    {
-        if (Input.anyKeyDown || Input.GetMouseButtonDown(0))
-        {
-            if (_isActiveCommandsUI)
+            //commandsUI = GameObject.Find("commandsUI").GetComponent<Canvas>();
+        
+            commandsUICanvasGroup = commandsUI.GetComponent<CanvasGroup>();
+            if (commandsUICanvasGroup == null)
             {
-                StartCoroutine(FadeOutAndDeactivate());
+                commandsUICanvasGroup = commandsUI.gameObject.AddComponent<CanvasGroup>();
             }
-        }        
-        
-        
-        if (Input.GetKeyDown(KeyCode.R))
+        }
+    
+        public void SwitchCameras()
         {
-            LevelManager.ReloadLevel();
+            initialCamera.enabled = false;
+            initialCamera.GameObject().SetActive(false); 
+            camera1.enabled = true;
+            camera1.GameObject().SetActive(true);
+            camera2.enabled = false;
+            camera2.GameObject().SetActive(false);
+            cube1.SetActive(false);
+            cube2.SetActive(true);
+            timerUI.ShowTimerUI();
+        
+            commandsUI.GameObject().SetActive(true);
+            _isActiveCommandsUI = true;
+        }
 
-            /*if (_isActiveCommandsUI)
+        private void Update()
+        {
+            if (Input.anyKeyDown || Input.GetMouseButtonDown(0))
+            {
+                if (_isActiveCommandsUI)
+                {
+                    StartCoroutine(FadeOutAndDeactivate());
+                }
+            }        
+        
+        
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                LevelManager.ReloadLevel();
+
+                /*if (_isActiveCommandsUI)
             {   
                 commandsUI.GameObject().SetActive(false);
                 _isActiveCommandsUI = false;
             }*/
-        }
-        // Switch cameras when the "C" key is pressed
-        if (Input.GetKeyDown(KeyCode.C) && _isActive)
-        {
-            // Toggle the active camera
-            if (camera1.enabled)
-            {
-                camera1.enabled = false;
-                camera1.GameObject().SetActive(false);
-                camera2.enabled = true;
-                camera2.GameObject().SetActive(true);
-                cube1.SetActive(true);
-                cube2.SetActive(false);
             }
-            else
+            // Switch cameras when the "C" key is pressed
+            if (Input.GetKeyDown(KeyCode.C) && _isActive)
             {
-                camera1.enabled = true;
-                camera1.GameObject().SetActive(true);
-                camera2.enabled = false;
-                camera2.GameObject().SetActive(false);
-                cube1.SetActive(false);
-                cube2.SetActive(true);
-            }
+                // Toggle the active camera
+                if (camera1.enabled)
+                {
+                    camera1.enabled = false;
+                    camera1.GameObject().SetActive(false);
+                    camera2.enabled = true;
+                    camera2.GameObject().SetActive(true);
+                    cube1.SetActive(true);
+                    cube2.SetActive(false);
+                }
+                else
+                {
+                    camera1.enabled = true;
+                    camera1.GameObject().SetActive(true);
+                    camera2.enabled = false;
+                    camera2.GameObject().SetActive(false);
+                    cube1.SetActive(false);
+                    cube2.SetActive(true);
+                }
             
-            /*if (_isActiveCommandsUI)
+                /*if (_isActiveCommandsUI)
             {   
                 commandsUI.GameObject().SetActive(false);
                 _isActiveCommandsUI = false;
             }*/
+            }
         }
-    }
     
-    public void DisableSwitcher()
-    {
-        _isActive = false;
-        cube1.SetActive(false);
-        cube2.SetActive(false);
-    }
-    
-    
-    private IEnumerator FadeOutAndDeactivate()
-    {
-        float duration = 1f; 
-        float startAlpha = commandsUICanvasGroup.alpha;
-        float time = 0;
-    
-        while (time < duration)
+        public void DisableSwitcher()
         {
-            time += Time.deltaTime;
-            commandsUICanvasGroup.alpha = Mathf.Lerp(startAlpha, 0, time / duration);
-            yield return null;
+            _isActive = false;
+            cube1.SetActive(false);
+            cube2.SetActive(false);
         }
     
-        commandsUICanvasGroup.alpha = 0;
-        commandsUI.gameObject.SetActive(false);
-        _isActiveCommandsUI = false;
-    }
     
+        private IEnumerator FadeOutAndDeactivate()
+        {
+            float duration = 1f; 
+            float startAlpha = commandsUICanvasGroup.alpha;
+            float time = 0;
+    
+            while (time < duration)
+            {
+                time += Time.deltaTime;
+                commandsUICanvasGroup.alpha = Mathf.Lerp(startAlpha, 0, time / duration);
+                yield return null;
+            }
+    
+            commandsUICanvasGroup.alpha = 0;
+            commandsUI.gameObject.SetActive(false);
+            _isActiveCommandsUI = false;
+        }
+    
+    }
 }
