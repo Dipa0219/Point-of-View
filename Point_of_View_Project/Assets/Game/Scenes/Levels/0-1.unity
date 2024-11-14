@@ -714,7 +714,7 @@ MonoBehaviour:
     meshQuery:
       layers: 33554440
       maskAndChannels: 8
-    surfaceParameter: 26900
+    surfaceParameter: 26890
     meshQueryIndex: 1
     subMeshQueryIndex: 0
     geometryHashValue: 2429913996131925779
@@ -2604,7 +2604,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 26784
+    surfaceParameter: 26782
     meshQueryIndex: 0
     subMeshQueryIndex: 0
     geometryHashValue: 7296442910963067161
@@ -4426,7 +4426,7 @@ MonoBehaviour:
     meshQuery:
       layers: 33554440
       maskAndChannels: 8
-    surfaceParameter: 26900
+    surfaceParameter: 26890
     meshQueryIndex: 1
     subMeshQueryIndex: 0
     geometryHashValue: 2429913996131925779
@@ -4580,7 +4580,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -407.33334
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2773227604522824215, guid: de2a6b7b09180be4cbd28b594586b4c2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4950,7 +4951,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 26880
+    surfaceParameter: 26870
     meshQueryIndex: 6
     subMeshQueryIndex: 0
     geometryHashValue: -8356169589415848118
@@ -5214,7 +5215,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 26848
+    surfaceParameter: 26846
     meshQueryIndex: 5
     subMeshQueryIndex: 0
     geometryHashValue: 3887487628683482804
@@ -5828,6 +5829,63 @@ MonoBehaviour:
   Version: 1
   owner: {fileID: 910443158}
   helperSurfaces: []
+--- !u!1001 &4635470127279755815
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1880542422567664476, guid: f6e589953cea5e441a3af3d2d48ee7c4, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330381553820779066, guid: f6e589953cea5e441a3af3d2d48ee7c4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 48.366707
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330381553820779066, guid: f6e589953cea5e441a3af3d2d48ee7c4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.7776927
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330381553820779066, guid: f6e589953cea5e441a3af3d2d48ee7c4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -41.815605
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330381553820779066, guid: f6e589953cea5e441a3af3d2d48ee7c4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330381553820779066, guid: f6e589953cea5e441a3af3d2d48ee7c4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330381553820779066, guid: f6e589953cea5e441a3af3d2d48ee7c4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330381553820779066, guid: f6e589953cea5e441a3af3d2d48ee7c4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330381553820779066, guid: f6e589953cea5e441a3af3d2d48ee7c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330381553820779066, guid: f6e589953cea5e441a3af3d2d48ee7c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330381553820779066, guid: f6e589953cea5e441a3af3d2d48ee7c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f6e589953cea5e441a3af3d2d48ee7c4, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -5851,6 +5909,7 @@ SceneRoots:
   - {fileID: 1945275095}
   - {fileID: 304966801}
   - {fileID: 951260978}
+  - {fileID: 4635470127279755815}
   - {fileID: 1181922776}
   - {fileID: 958427430}
   - {fileID: 1566823069}

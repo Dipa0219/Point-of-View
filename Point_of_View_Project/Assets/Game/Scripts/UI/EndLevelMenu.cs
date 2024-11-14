@@ -78,9 +78,7 @@ public class EndLevelMenu : MonoBehaviour
         if (buttons != null && buttons.Length > 0 && selectedButtonIndex >= 0 && selectedButtonIndex < buttons.Length)
             buttons[selectedButtonIndex].Select(); // Select the first button
         
-        print("active scene: ");
-        print(SceneManager.GetActiveScene().name);
-        
+        print("active scene: "+ SceneManager.GetActiveScene().name);
         // TODO
         // RIMETTERE QUANDO CI SARÀ IL SISTEMA DI SALVATAGGIO 
         //SaveSystem.UpdateLevel(SceneManager.GetActiveScene().name, true, starsEarned, finalTime);
@@ -125,6 +123,7 @@ public class EndLevelMenu : MonoBehaviour
     // Button functions
     private void NextLevel()
     {
+        print("Arrivato");
         // Load the next level (assuming level indexing in build settings)
         string sceneName = SceneManager.GetActiveScene().name;
         sceneName = FindNext(sceneName);
@@ -141,17 +140,20 @@ public class EndLevelMenu : MonoBehaviour
     
     private string FindNext(string sceneName)
     {
-        //char levelC = char.Parse(sceneName.Substring(5));
-        //print(levelC);
-        if (sceneName == "Level_EndgameTest" || sceneName == "Level_Build" || sceneName == "LevelCompleted")
+        int levelC = int.Parse(sceneName.Substring(2));
+        int world = int.Parse(sceneName.Substring(0,1));
+        levelC++;
+        if (levelC >=4)
         {
-            return "Level0";
+            levelC = 0;
+            world++;
         }
         
-        int level = int.Parse(sceneName.Substring(5));
-        //int level = int.Parse(levelC.ToString());
-        level++;
-        return "Level" + level;
+        if (world >=3)
+        {
+            return ("MainMenu_WIP");
+        }
+        return world + "-"+levelC;
     }
 
     

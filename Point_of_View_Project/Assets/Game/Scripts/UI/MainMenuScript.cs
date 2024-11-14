@@ -21,10 +21,10 @@ public class MainMenuScript : MonoBehaviour
     
     void Start()
     {
-        if (!SaveSystem.CheckIfDataExists())
+        /*if (!SaveSystem.CheckIfDataExists())
         {
             SceneManager.LoadScene("InsertName_WIP");
-        }
+        }*/
         
         
         buttons = new Button[] { levelsButton, LeaderboardButton, SettingsButton, CreditsButton, QuitButton };

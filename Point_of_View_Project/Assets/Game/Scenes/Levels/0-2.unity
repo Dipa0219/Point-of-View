@@ -796,6 +796,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 524187955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &222978267
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1880542422567664476, guid: f6e589953cea5e441a3af3d2d48ee7c4, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330381553820779066, guid: f6e589953cea5e441a3af3d2d48ee7c4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 48.366707
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330381553820779066, guid: f6e589953cea5e441a3af3d2d48ee7c4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.7776927
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330381553820779066, guid: f6e589953cea5e441a3af3d2d48ee7c4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -41.815605
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330381553820779066, guid: f6e589953cea5e441a3af3d2d48ee7c4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330381553820779066, guid: f6e589953cea5e441a3af3d2d48ee7c4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330381553820779066, guid: f6e589953cea5e441a3af3d2d48ee7c4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330381553820779066, guid: f6e589953cea5e441a3af3d2d48ee7c4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330381553820779066, guid: f6e589953cea5e441a3af3d2d48ee7c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330381553820779066, guid: f6e589953cea5e441a3af3d2d48ee7c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330381553820779066, guid: f6e589953cea5e441a3af3d2d48ee7c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f6e589953cea5e441a3af3d2d48ee7c4, type: 3}
 --- !u!20 &240798062 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 2879441800437821058, guid: e56b7b4d5916c654cb4fdab6dca2ae98, type: 3}
@@ -2630,7 +2687,7 @@ MonoBehaviour:
     meshQuery:
       layers: 33554440
       maskAndChannels: 8
-    surfaceParameter: 26900
+    surfaceParameter: 26890
     meshQueryIndex: 1
     subMeshQueryIndex: 0
     geometryHashValue: 952645402287212785
@@ -3164,7 +3221,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 26784
+    surfaceParameter: 26782
     meshQueryIndex: 0
     subMeshQueryIndex: 0
     geometryHashValue: 567264641019758236
@@ -3726,7 +3783,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 26880
+    surfaceParameter: 26870
     meshQueryIndex: 6
     subMeshQueryIndex: 0
     geometryHashValue: -331839548744974
@@ -5968,7 +6025,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 26848
+    surfaceParameter: 26846
     meshQueryIndex: 5
     subMeshQueryIndex: 0
     geometryHashValue: 3852903596870895330
@@ -7259,6 +7316,7 @@ SceneRoots:
   - {fileID: 1945275095}
   - {fileID: 2069525152}
   - {fileID: 165272771}
+  - {fileID: 222978267}
   - {fileID: 274612459}
   - {fileID: 304966801}
   - {fileID: 951260978}
