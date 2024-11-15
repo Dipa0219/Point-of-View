@@ -23,8 +23,7 @@ namespace SciFi_Warehouse_Kit.Demo.Scripts
         // Update is called once per frame
         private void Update() {
             
-            //_isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-            _isGrounded = _velocity.y == 0;
+            _isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
             
             if (_isGrounded) {
                 Debug.Log("ground check");
