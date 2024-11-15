@@ -12,44 +12,66 @@ namespace SciFi_Warehouse_Kit.Demo.Scripts
         [SerializeField] private Transform groundCheck;
         [SerializeField] private float groundDistance = 0.4f;
         [SerializeField] private LayerMask groundMask;
-        private Vector3 _velocity;
-        private bool _isGrounded;
-        
         [SerializeField] private AudioClip footStepSound;
         [SerializeField] private float footStepDelay;
- 
+        private CharacterController _characterController;
+        private Vector3 _velocity;
+        private bool _isGrounded;
+        private bool _debugGroundCheck;
         private float _nextFootstep;
+
+        private void Start() {
+            _characterController = GetComponent<CharacterController>();
+            
+            if (_characterController != null) {
+                Debug.Log("CharacterController found!");
+                Debug.Log("Radius: " + _characterController.radius);
+                Debug.Log("Height: " + _characterController.height);
+                Debug.Log("Center: " + _characterController.center);
+            }
+            else
+            {
+                Debug.Log("CharacterController not found.");
+            }
+        }
 
         // Update is called once per frame
         private void Update() {
             
-            _isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+            _isGrounded = _characterController.isGrounded;
             
-            if (_isGrounded) {
-                Debug.Log("ground check");
+            if (_isGrounded && !_debugGroundCheck) {
+                _debugGroundCheck = true;
+                Debug.Log("Ground");
             }
-            else {
-                Debug.Log("Oof");
+            
+            if (!_isGrounded && _debugGroundCheck) {
+                _debugGroundCheck = false;
+                Debug.Log("Air");
             }
 
-            if (_isGrounded && _velocity.y <0) {
+            if (_isGrounded && _velocity.y < 0) { 
                 _velocity.y = -2f;
             }
 
             float x = Input.GetAxis("Horizontal");
             float z = Input.GetAxis("Vertical");
-
             Vector3 motion = transform.right * x + transform.forward * z;
+            
+            // Horizontal speed
             controller.Move(motion * (speed * Time.deltaTime));
 
-            if(Input.GetButtonDown("Jump") && _isGrounded) {
+            // JUMP
+            if(Input.GetButtonDown("Jump") /*&& _isGrounded*/) {
                 _velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             }
 
+            // GRAVITY
             if (!_isGrounded) {
                 _velocity.y += gravity * Time.deltaTime;
             }
 
+            // Vertical speed
             controller.Move(_velocity * Time.deltaTime);
 
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W) && _isGrounded) {

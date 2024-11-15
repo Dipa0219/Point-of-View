@@ -5,7 +5,7 @@ using UnityEngine;
 public class PushPhysics : MonoBehaviour
 {
     // this script pushes all rigidbodies that the character touches
-    float pushPower = 2.0f;
+    [SerializeField] private float pushPower = 3.0f;
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
         Rigidbody body = hit.collider.attachedRigidbody;
