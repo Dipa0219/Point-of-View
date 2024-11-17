@@ -3,11 +3,11 @@
     [System.Serializable]
     public class LevelState
     {
-        int levelNumber;
-        bool completed = false;
-        string time = "00:00";
-        int stars = 0;
-        private int starsCameraSwitches = 0;
+        public int levelNumber;
+        public bool completed = false;
+        public string time = "00:00";
+        public int stars = 0;
+        public int starsCameraSwitches = 0;
         
         
         public LevelState(int levelNumber, bool completed, string time, int stars, int starsCameraSwitches)
