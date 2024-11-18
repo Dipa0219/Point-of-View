@@ -70,14 +70,14 @@ namespace MenuManagement
             UpdateAudioManager();
         }
         
-        public override void OnBackPressed()
-        {
-            base.OnBackPressed();
+        //public override void OnBackPressed()
+        //{
+         //   base.OnBackPressed();
             
             // saves the values to disk
             // PlayerPrefs.Save();
-            _dataManager.Save();
-        }
+          //  _dataManager.Save();
+        //}
 
         public void UpdateAudioManager()
         {
@@ -86,6 +86,7 @@ namespace MenuManagement
                 AudioManager.Instance.SetMasterVolume(masterVolumeSlider.value);
                 AudioManager.Instance.SetMusicVolume(musicVolumeSlider.value);
                 AudioManager.Instance.SetSfxVolume(sfxVolumeSlider.value);
+                _dataManager.Save();
             }
         }
     }
