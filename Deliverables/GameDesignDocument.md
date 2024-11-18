@@ -132,6 +132,21 @@ Moving platforms
 - Bug fixing and code cleaning (Antonio Di Paola)
 - Reasoning about light in dark level (Antonio Di Paola)
 
+### Team meeting (November 13)
+
+- Reasoning about level design
+- Discussing about music
+- Reasoning about physics
+
+### Week 6 (November 19 deadline)
+
+- Graphic upgrade in menu (Francesco Benelle)
+- Texture for levels (Simone Frazzei)
+- Level building (Simone Frazzei)
+- Soundtrack in levels (Antonio Di Paola)
+- Level design (Antonio Di Paola)
+- Physics (Trying new models and fixing the one we were using) (Giacomo Ballabio)  
+
 ### <ins> Beta submission deadline (December 8 deadline) 
 
 ### <ins> Prototype submission deadline (January 8 deadline)
