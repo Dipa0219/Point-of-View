@@ -36,6 +36,8 @@ public class MainMenuScript : MonoBehaviour
         SettingsButton.onClick.AddListener(LoadLevel("Settings"));
         QuitButton.onClick.AddListener(Quit);
         
+        LeaderboardButton.interactable = false;
+        
         buttons[selectedButtonIndex].Select();
     }
 
@@ -67,7 +69,8 @@ public class MainMenuScript : MonoBehaviour
         // Activate selected button on Enter or Spacebar
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
         {
-            buttons[selectedButtonIndex].onClick.Invoke();
+            if(buttons[selectedButtonIndex].interactable)
+                buttons[selectedButtonIndex].onClick.Invoke();
             /*
             levelsButton.onClick.Invoke();
             LeaderboardButton.onClick.Invoke();
