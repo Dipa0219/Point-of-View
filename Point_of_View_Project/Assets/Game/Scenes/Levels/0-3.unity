@@ -7471,6 +7471,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f403d2f03fdd1604e8fd004ef72d5ea6, type: 3}
+--- !u!20 &711767716 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1107203942689432752, guid: c20f329e76b7ca446835d8a8f924ef03, type: 3}
+  m_PrefabInstance: {fileID: 1080539945}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &712696854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10249,7 +10254,7 @@ MonoBehaviour:
   cube2: {fileID: 196296446}
   camera1: {fileID: 2027787311}
   camera2: {fileID: 196296445}
-  initialCamera: {fileID: 0}
+  initialCamera: {fileID: 711767716}
   timerUI: {fileID: 482900884}
   commandsUI: {fileID: 1320575058}
   commandsUICanvasGroup: {fileID: 0}
@@ -11461,7 +11466,7 @@ PrefabInstance:
     - target: {fileID: 510093710577966128, guid: c20f329e76b7ca446835d8a8f924ef03, type: 3}
       propertyPath: cameraSwitcher
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 951260979}
     - target: {fileID: 510093710577966128, guid: c20f329e76b7ca446835d8a8f924ef03, type: 3}
       propertyPath: waypoints.Array.size
       value: 6

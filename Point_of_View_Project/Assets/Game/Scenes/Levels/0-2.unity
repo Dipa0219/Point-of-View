@@ -10182,7 +10182,7 @@ MonoBehaviour:
   cube2: {fileID: 248693258}
   camera1: {fileID: 451343441}
   camera2: {fileID: 248693257}
-  initialCamera: {fileID: 0}
+  initialCamera: {fileID: 1336627094}
   timerUI: {fileID: 482900884}
   commandsUI: {fileID: 1320575058}
   commandsUICanvasGroup: {fileID: 0}
@@ -11324,7 +11324,7 @@ PrefabInstance:
     - target: {fileID: 510093710577966128, guid: c20f329e76b7ca446835d8a8f924ef03, type: 3}
       propertyPath: cameraSwitcher
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 951260979}
     - target: {fileID: 510093710577966128, guid: c20f329e76b7ca446835d8a8f924ef03, type: 3}
       propertyPath: waypoints.Array.size
       value: 6
@@ -14854,6 +14854,11 @@ PrefabInstance:
 Canvas:
   m_CorrespondingSourceObject: {fileID: 1254148140082409995, guid: 5f7513a772b991f4aa9b86f27495b930, type: 3}
   m_PrefabInstance: {fileID: 1320575057}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1336627094 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1107203942689432752, guid: c20f329e76b7ca446835d8a8f924ef03, type: 3}
+  m_PrefabInstance: {fileID: 1080539945}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1344058991
 PrefabInstance:

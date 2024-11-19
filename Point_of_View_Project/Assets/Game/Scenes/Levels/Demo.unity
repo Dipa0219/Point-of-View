@@ -13853,6 +13853,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!20 &477276872 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1107203942689432752, guid: c20f329e76b7ca446835d8a8f924ef03, type: 3}
+  m_PrefabInstance: {fileID: 1200924992}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &483024830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29058,7 +29063,7 @@ PrefabInstance:
     - target: {fileID: 510093710577966128, guid: c20f329e76b7ca446835d8a8f924ef03, type: 3}
       propertyPath: cameraSwitcher
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1866741241}
     - target: {fileID: 510093710577966128, guid: c20f329e76b7ca446835d8a8f924ef03, type: 3}
       propertyPath: waypoints.Array.size
       value: 6
@@ -42432,7 +42437,7 @@ MonoBehaviour:
   cube2: {fileID: 1841727304}
   camera1: {fileID: 1448331800}
   camera2: {fileID: 1841727305}
-  initialCamera: {fileID: 0}
+  initialCamera: {fileID: 477276872}
   timerUI: {fileID: 1066517354}
   commandsUI: {fileID: 1711701014}
   commandsUICanvasGroup: {fileID: 0}
