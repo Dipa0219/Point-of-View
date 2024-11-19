@@ -779,6 +779,7 @@ GameObject:
   - component: {fileID: 2728134432037150989}
   - component: {fileID: 8039442661425237239}
   - component: {fileID: 4430027236034010791}
+  - component: {fileID: 2134791226344172064}
   m_Layer: 0
   m_Name: FloatingBot 1
   m_TagString: Untagged
@@ -817,9 +818,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a937bf1e30e0eb469918bb434bd764c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceAmount: 10
-  maxSpeed: 15
-  direction: -1
+  controller: {fileID: 2134791226344172064}
+  speed: 8
+  gravity: -9.81
+  jumpHeight: 0
+  groundCheck: {fileID: 0}
+  groundDistance: 0.4
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
+  footStepSound: {fileID: 0}
+  footStepDelay: 0.35
 --- !u!54 &8039442661425237239
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -870,6 +879,32 @@ CapsuleCollider:
   m_Height: 0.75
   m_Direction: 1
   m_Center: {x: 0, y: 0.16, z: 0}
+--- !u!143 &2134791226344172064
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4653068740505087037}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 0.75
+  m_Radius: 0.15
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4677695640167243805
 GameObject:
   m_ObjectHideFlags: 0
