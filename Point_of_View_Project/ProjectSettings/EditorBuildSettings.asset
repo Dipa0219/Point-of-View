@@ -33,13 +33,13 @@ EditorBuildSettings:
     path: Assets/Game/Scenes/UI/LevelSelection_WIP.unity
     guid: ab37246ba8d35b14588719dd78a0d5e0
   - enabled: 1
-    path: Assets/Game/Scenes/Levels/0-1.unity
+    path: Assets/Game/Scenes/Levels/0-1 (old).unity
     guid: 78b8ccddfd34dcd4a96beaa9ea379c4a
   - enabled: 1
-    path: Assets/Game/Scenes/Levels/0-2.unity
+    path: Assets/Game/Scenes/Levels/0-2 (old).unity
     guid: c778ce83e21a15a40b500b023ff23b49
   - enabled: 1
-    path: Assets/Game/Scenes/Levels/0-3.unity
+    path: Assets/Game/Scenes/Levels/0-3 (old).unity
     guid: 525326fef101e214cbc2d520f7cfbc4d
   - enabled: 1
     path: Assets/Game/Scenes/UI/Credits.unity
