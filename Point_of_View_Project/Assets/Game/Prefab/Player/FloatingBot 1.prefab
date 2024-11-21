@@ -146,7 +146,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f24a9ac741de5124b86a40f8ff83ed19, type: 2}
+  - {fileID: 2100000, guid: ffc721f84241b0b499dd6303816a4af4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -341,7 +341,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1820be55f3e723c4dab79db9e3c277fa, type: 2}
+  - {fileID: 2100000, guid: eb8f40c280fd4344fa391e247de79283, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -466,7 +466,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f24a9ac741de5124b86a40f8ff83ed19, type: 2}
+  - {fileID: 2100000, guid: ffc721f84241b0b499dd6303816a4af4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -822,10 +822,6 @@ MonoBehaviour:
   speed: 7
   gravity: -9.81
   jumpHeight: 0
-  groundDistance: 0.4
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 0
   footStepSound: {fileID: 0}
   footStepDelay: 0.35
 --- !u!54 &8039442661425237239
