@@ -5411,6 +5411,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5584912129796571404}
+  - component: {fileID: 2969352008049487370}
   m_Layer: 0
   m_Name: Master_ctrl01
   m_TagString: Untagged
@@ -5435,6 +5436,20 @@ Transform:
   - {fileID: 3355169350302941093}
   m_Father: {fileID: 8077988105325186248}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2969352008049487370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2654939444144043459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 989dcff52fed0824784e768248ee5870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 0.5
+  speed: 2.5
 --- !u!1 &3657095366909633658
 GameObject:
   m_ObjectHideFlags: 0
@@ -5539,6 +5554,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5803204343973036147}
+  - component: {fileID: 38266507142752416}
   m_Layer: 0
   m_Name: Poddy_Geo01
   m_TagString: Untagged
@@ -5565,6 +5581,20 @@ Transform:
   - {fileID: 5437029142210860186}
   m_Father: {fileID: 8077988105325186248}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &38266507142752416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4192873197301288401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 989dcff52fed0824784e768248ee5870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 0.5
+  speed: 2.5
 --- !u!1 &4263253387470693116
 GameObject:
   m_ObjectHideFlags: 0
