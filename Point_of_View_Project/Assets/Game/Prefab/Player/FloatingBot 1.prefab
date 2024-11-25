@@ -782,7 +782,7 @@ GameObject:
   - component: {fileID: 2134791226344172064}
   m_Layer: 0
   m_Name: FloatingBot 1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -868,12 +868,12 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.15
-  m_Height: 0.75
+  m_Height: 0.93190795
   m_Direction: 1
-  m_Center: {x: 0, y: 0.16, z: 0}
+  m_Center: {x: 0, y: 0.06904599, z: 0}
 --- !u!143 &2134791226344172064
 CharacterController:
   m_ObjectHideFlags: 0

@@ -79,7 +79,7 @@ public class FailedLevel : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
     
-   /* private void OnCollissionEnter(Collision collision)
+   private void OnCollissionEnter(Collision collision)
     {        
         print("Collided ");
         print("Collided with: " + collision.gameObject.tag);
@@ -89,6 +89,6 @@ public class FailedLevel : MonoBehaviour
             buttons[selectedButtonIndex].Select();
         }
     }
-    */
+    
     
 }

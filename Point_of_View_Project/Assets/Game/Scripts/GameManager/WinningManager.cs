@@ -28,6 +28,8 @@ public class WinningManager : MonoBehaviour
             timerUI.UnShowTimerUI();
         }
         
+        
+        
         if (!pressurePlateManager1.isActive() || !pressurePlateManager2.isActive()) return;
         pressurePlateManager1.EndGame();
         pressurePlateManager2.EndGame();
