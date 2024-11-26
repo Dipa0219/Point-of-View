@@ -5066,7 +5066,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: eb8f40c280fd4344fa391e247de79283, type: 2}
+  - {fileID: 2100000, guid: 91cc0cc43e411c74c88f3adf91bec04d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5642,7 +5642,7 @@ GameObject:
   - component: {fileID: 2134791226344172064}
   m_Layer: 0
   m_Name: FloatingBot 3
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

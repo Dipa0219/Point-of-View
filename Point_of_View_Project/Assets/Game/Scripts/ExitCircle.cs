@@ -14,8 +14,6 @@ namespace Game.Scripts
         {
             children = new List<Transform>();
             GetRecursiveChildren(transform);
-            foreach (Transform child in children)
-                Debug.Log(child.name);
         }
 
         private void GetRecursiveChildren(Transform parentTransform)
@@ -32,9 +30,18 @@ namespace Game.Scripts
 
         private void OnTriggerEnter(Collider other)
         {
-            if(other.CompareTag("Player"))
-                Debug.Log("player entered circle");
-            Debug.Log("Entered exit circle");
+            if (!other.CompareTag("Player")) return;
+            Debug.Log("ENTER");
+            children[2].transform.localScale = new Vector3(1, 1.8f, 1);
         }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (!other.CompareTag("Player")) return;
+            Debug.Log("EXIT");
+            children[2].transform.localScale = new Vector3(1, 0.6f, 1);
+        }
+        
+        
     }
 }
