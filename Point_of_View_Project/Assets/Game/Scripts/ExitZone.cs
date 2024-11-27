@@ -3,10 +3,11 @@ using UnityEngine;
 
 namespace Game.Scripts
 {
-    public class ExitCircle : MonoBehaviour
+    public class ExitZone : MonoBehaviour
     {
         
         public List<Transform> children;
+        private bool _active;
 
         void Awake()
         {
@@ -30,7 +31,8 @@ namespace Game.Scripts
         {
             if (!other.CompareTag("Player")) return;
             Debug.Log("ENTER");
-            children[0].transform.localScale = new Vector3(1, 1.8f, 1);
+            children[0].transform.localScale = new Vector3(1, 1.6f, 1);
+            _active = true;
         }
 
         private void OnTriggerExit(Collider other)
@@ -38,8 +40,12 @@ namespace Game.Scripts
             if (!other.CompareTag("Player")) return;
             Debug.Log("EXIT");
             children[0].transform.localScale = new Vector3(1, 0.6f, 1);
+            _active = false;
         }
         
-        
+        public bool IsActive()
+        {
+            return _active;
+        }
     }
 }

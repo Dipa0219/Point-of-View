@@ -1,40 +1,25 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-
-public class FallZone : MonoBehaviour
+namespace Game.Scripts.Environment_element
 {
-    Boolean _isActive;
-
-    void Start()
+    public class FallZone : MonoBehaviour
     {
-        
-    }
+        private bool _active;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
-       
-   private void OnCollisionEnter(Collision collision)
-   {
-       print("Collided ");
-       print("Collided with: " + collision.gameObject.tag);
-       if (collision.gameObject.tag == "Player")
-       {
-           print("Collided with Player");
-           _isActive = true;
-       }
-        //_isActive = true;
-   }
-   
+        private void OnTriggerEnter(Collider other)
+        {
+            Debug.Log("Collided ");
+            Debug.Log("Collided with: " + other.gameObject.tag);
+            if (other.gameObject.CompareTag("Player"))
+            {
+                Debug.Log("Collided with Player");
+                _active = true;
+            }
+        }
       
-   public Boolean isActive()
-   {
-       return _isActive;
-   }
+        public bool IsActive()
+        {
+            return _active;
+        }
+    }
 }
