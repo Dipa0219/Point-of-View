@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/MenuManagement/Scenes/MainMenu.unity
     guid: 293a16051023249bbba2b6e5e5bc8a09
   - enabled: 0
-    path: Assets/Game/Scenes/PillarMaze.unity
-    guid: c94770d1a4b9f467f9571f410a825253
-  - enabled: 0
     path: Assets/Game/Scenes/LevelCompleted.unity
     guid: 406afadf3f94cc2428d35ad133c3b209
   - enabled: 1

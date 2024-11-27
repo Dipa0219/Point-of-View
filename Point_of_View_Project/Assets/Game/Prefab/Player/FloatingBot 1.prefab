@@ -5679,7 +5679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 2134791226344172064}
-  speed: 7
+  speed: 6
   gravity: -9.81
   jumpHeight: 0
   footStepSound: {fileID: 0}

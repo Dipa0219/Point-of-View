@@ -17,10 +17,12 @@ namespace Game.Scripts
         private bool _debugGroundCheck;
         private float _nextFootstep;
         private bool _isActive;
+        private AudioSource _audioSource;
 
         private void Start() {
             _characterController = GetComponent<CharacterController>();
-        
+            _audioSource = GetComponent<AudioSource>();
+
             /*
             if (_characterController != null) {
                 Debug.Log("CharacterController found!");
@@ -49,7 +51,8 @@ namespace Game.Scripts
                 _debugGroundCheck = false;
                 //Debug.Log("Air");
             }
-
+            
+            // Reset vertical speed
             if (_isGrounded && _velocity.y < 0)
             {
                 _velocity.y = -2f;
@@ -70,7 +73,7 @@ namespace Game.Scripts
                     _nextFootstep -= Time.deltaTime;
                     if (_nextFootstep <= 0)
                     {
-                        GetComponent<AudioSource>().PlayOneShot(footStepSound, 0.7f);
+                        _audioSource.PlayOneShot(footStepSound, 0.7f);
                         _nextFootstep += footStepDelay;
                     }
                 }
@@ -78,7 +81,7 @@ namespace Game.Scripts
         
 
             // JUMP
-            if (Input.GetButtonDown("Jump") /*&& _isGrounded*/)
+            if (Input.GetButtonDown("Jump") && _isGrounded)
             {
                 _velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             }
