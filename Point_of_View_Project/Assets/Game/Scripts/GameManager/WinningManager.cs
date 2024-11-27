@@ -15,9 +15,7 @@ namespace Game.Scripts.GameManager
     
         [SerializeField] private FallZone fallZone;
         [SerializeField] private FailedLevel failedLevelUIManager;
-
-    
-        // Update is called once per frame
+        
         void Update()
         {
             if(fallZone.IsActive())
@@ -28,7 +26,8 @@ namespace Game.Scripts.GameManager
             }
         
             if (!manager1.IsActive() || !manager2.IsActive()) return;
-            if (_isFinished) {return;}
+            if (_isFinished) return;
+            
             print("YOU WON");
             _isFinished = true;
             cameraSwitcher.DisableSwitcher();
