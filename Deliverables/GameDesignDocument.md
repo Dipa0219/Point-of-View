@@ -145,7 +145,18 @@ Moving platforms
 - Level building (Simone Frazzei)
 - Soundtrack in levels (Antonio Di Paola)
 - Level design (Antonio Di Paola)
-- Physics (Trying new models and fixing the one we were using) (Giacomo Ballabio)  
+- Physics (Trying new models and fixing the one we were using) (Giacomo Ballabio)
+
+### Team meeting
+- Preparing the meeting with professors
+- Reasoning about difficulty on levels
+- Building of a good scene to show to teachers
+
+### Week 7 (November 26 deadline)
+- Physics bug fixing (Giacomo Ballabio)
+- Level design and fixing level difficulty (Antonio Di Paola)
+- Message to show in level and info menu (Francesco Benelle)
+- Fixing end level platforms (Simone Frazzei)
 
 ### <ins> Beta submission deadline (December 8 deadline) 
 
