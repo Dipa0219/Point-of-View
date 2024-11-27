@@ -263,6 +263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1202150531014877356}
+  - component: {fileID: 7509541813634776844}
   - component: {fileID: 2308476565726342273}
   - component: {fileID: 5576773747100644521}
   m_Layer: 0
@@ -289,6 +290,20 @@ Transform:
   - {fileID: 1675208762017024052}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 180}
+--- !u!114 &7509541813634776844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6697804511484726328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f56ae5fd8205ce4688142b30930dbf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  speed: 0
 --- !u!65 &2308476565726342273
 BoxCollider:
   m_ObjectHideFlags: 0

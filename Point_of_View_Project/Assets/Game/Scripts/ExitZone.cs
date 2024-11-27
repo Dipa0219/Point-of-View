@@ -9,7 +9,7 @@ namespace Game.Scripts
         private List<Transform> _children;
         private bool _active;
 
-        void Awake()
+        private void Awake()
         {
             _children = new List<Transform>();
             GetRecursiveChildren(transform);
