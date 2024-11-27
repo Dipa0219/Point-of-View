@@ -45,6 +45,7 @@ namespace Game.Scripts
             if (!other.CompareTag("Player")) return;
             Debug.Log("ENTER");
             GoToNextWaypoint();
+            // TODO activate colliders in Base
         }
         
         private void OnTriggerExit(Collider other)
@@ -62,11 +63,11 @@ namespace Game.Scripts
             // }
     
             // Directly translate the camera to the next waypoint
-            Transform target = waypoints[_currentWaypoint];
-            Vector3 direction = target.position - transform.position;
-    
-            // Translate instantly to the position of the next waypoint
-            transform.Translate(direction, Space.World);
+            // Transform target = waypoints[_currentWaypoint];
+            // Vector3 direction = target.position - transform.position;
+            //
+            // // Translate instantly to the position of the next waypoint
+            // transform.Translate(direction, Space.World);
             
             _currentWaypoint++;
         }

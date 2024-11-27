@@ -8,11 +8,11 @@ namespace Game.Scripts.Environment_element
 
         private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("Collided ");
-            Debug.Log("Collided with: " + other.gameObject.tag);
+            // Debug.Log("Collided ");
+            // Debug.Log("Collided with: " + other.gameObject.tag);
             if (other.gameObject.CompareTag("Player"))
             {
-                Debug.Log("Collided with Player");
+                // Debug.Log("Collided with Player");
                 _active = true;
             }
         }
