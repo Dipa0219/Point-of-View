@@ -44,6 +44,7 @@ namespace Game.Scripts.GameManager
             {
                 hasStopped = true;
                 StartLevel(); // Stop when the last waypoint is reached
+                return;
             }
     
             // Directly translate the camera to the next waypoint
