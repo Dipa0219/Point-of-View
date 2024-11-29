@@ -83,9 +83,13 @@ namespace Game.Scripts
             // Debug.Log("MOVING");
             transform.position = Vector3.MoveTowards(transform.position, waypoints[_nextWaypoint].position, speed * Time.deltaTime);
 
-            if (transform.position != waypoints[_currentWaypoint + 1].position) return;
+            if (transform.position != waypoints[_nextWaypoint].position) return;
 
-            // Deactivate colliders
+            _move = false;
+            
+            foreach (BoxCollider boxCollider in _colliders)
+                boxCollider.enabled = false;
+            
             switch (finalBehaviour) {
                 case FinalBehaviour.Stop:
                     if (_nextWaypoint == waypoints.Length - 1)
@@ -125,9 +129,6 @@ namespace Game.Scripts
                     _stop = true;
                     break;
             }
-
-            foreach (BoxCollider boxCollider in _colliders)
-                boxCollider.enabled = false;
         }
     }
 }
