@@ -18,7 +18,7 @@ namespace Game.Scripts
         
         private List<Transform> _children;
         private BoxCollider[] _colliders;
-        // private Transform _playerTransform;
+        private Transform _playerTransform;
         private int _currentWaypoint;
         private int _nextWaypoint = 1;
         private bool _move;
@@ -47,10 +47,13 @@ namespace Game.Scripts
         private void OnTriggerEnter(Collider other)
         {
             if (!other.CompareTag("Player")) return;
-            Debug.Log("ENTER");
+            Debug.Log("ENTER" + other.name);
+            Debug.Log("1: " + other.transform.position);
             
             // Take transform of the player
-            //_playerTransform = other.transform;
+            _playerTransform = other.transform;
+            Debug.Log(_playerTransform.position);
+            _playerTransform.SetParent(transform);
             
             // Activate colliders
             foreach (BoxCollider boxCollider in _colliders)
@@ -64,6 +67,9 @@ namespace Game.Scripts
         {
             if (!other.CompareTag("Player")) return;
             Debug.Log("EXIT");
+            
+            
+            _playerTransform.SetParent(null);
         }
 
         private void GoToNextWaypoint()
@@ -80,7 +86,6 @@ namespace Game.Scripts
             
             if (_stop || !_move || _currentWaypoint >= waypoints.Length) return;
             
-            // Debug.Log("MOVING");
             transform.position = Vector3.MoveTowards(transform.position, waypoints[_nextWaypoint].position, speed * Time.deltaTime);
 
             if (transform.position != waypoints[_nextWaypoint].position) return;
