@@ -5638,7 +5638,6 @@ GameObject:
   - component: {fileID: 8077988105325186248}
   - component: {fileID: 2728134432037150989}
   - component: {fileID: 8039442661425237239}
-  - component: {fileID: 4430027236034010791}
   - component: {fileID: 2134791226344172064}
   m_Layer: 0
   m_Name: FloatingBot 2
@@ -5682,8 +5681,6 @@ MonoBehaviour:
   speed: 6
   gravity: -9.81
   jumpHeight: 0
-  footStepSound: {fileID: 0}
-  footStepDelay: 0.35
 --- !u!54 &8039442661425237239
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5711,29 +5708,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!136 &4430027236034010791
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4653068740505087037}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.15
-  m_Height: 0.75
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.16, z: 0}
 --- !u!143 &2134791226344172064
 CharacterController:
   m_ObjectHideFlags: 0
