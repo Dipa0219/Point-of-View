@@ -4199,7 +4199,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4653068740505087037, guid: 41647d8fe69220a498c8cbe106d86f84, type: 3}
       propertyPath: m_Name
-      value: FloatingBot 1 (1)
+      value: FloatingBot 1
       objectReference: {fileID: 0}
     - target: {fileID: 8077988105325186248, guid: 41647d8fe69220a498c8cbe106d86f84, type: 3}
       propertyPath: m_LocalPosition.x
