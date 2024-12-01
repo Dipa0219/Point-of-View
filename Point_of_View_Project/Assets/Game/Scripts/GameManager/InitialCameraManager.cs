@@ -17,6 +17,7 @@ namespace Game.Scripts.GameManager
     public class CameraWaypoint : MonoBehaviour
     {
         [SerializeField] private Transform[] waypoints;  // Array of waypoints
+        [SerializeField] private float[] rotation;
         public float rotateSpeed = 1f; // Speed for rotation
         public float rotationAngle = 60f; // Rotation angle at waypoint
         private int currentWaypoint = 0;
@@ -52,8 +53,9 @@ namespace Game.Scripts.GameManager
             Vector3 direction = target.position - transform.position;
     
             // Translate instantly to the position of the next waypoint
+            transform.Rotate(Vector3.up, rotation[currentWaypoint], Space.World);
             transform.Translate(direction, Space.World);
-    
+            
             // Start rotating at the waypoint
             isRotating = true;
             StartCoroutine(RotateAtWaypoint());
