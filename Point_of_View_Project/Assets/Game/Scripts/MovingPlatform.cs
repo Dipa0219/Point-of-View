@@ -48,13 +48,10 @@ namespace Game.Scripts
         private void OnTriggerEnter(Collider other)
         {
             if (!other.CompareTag("Player")) return;
-            Debug.Log("ENTER" + other.name);
-            Debug.Log("1: " + other.transform.position);
             
             // Take transform of the player
-            _playerTransform = other.transform;
-            Debug.Log(_playerTransform.position);
-            _playerTransform.SetParent(transform);
+            //_playerTransform = other.transform;
+            //_playerTransform.SetParent(transform);
             
             // Activate colliders
             foreach (BoxCollider boxCollider in _colliders)
@@ -64,14 +61,12 @@ namespace Game.Scripts
             GoToNextWaypoint();
         }
         
-        private void OnTriggerExit(Collider other)
-        {
-            if (!other.CompareTag("Player")) return;
-            Debug.Log("EXIT");
-            
-            
-            _playerTransform.SetParent(null);
-        }
+        // private void OnTriggerExit(Collider other)
+        // {
+        //     if (!other.CompareTag("Player")) return;
+        //     
+        //     _playerTransform.SetParent(null);
+        // }
 
         private void GoToNextWaypoint()
         {
