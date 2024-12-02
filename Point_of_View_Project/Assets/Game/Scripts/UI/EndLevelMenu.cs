@@ -90,11 +90,13 @@ public class EndLevelMenu : MonoBehaviour
         int minutes = int.Parse(timeParts[0]);
         int seconds = int.Parse(timeParts[1]);
         
-        if (minutes > 3)
+        int secondsCalc = seconds + minutes * 60;
+        
+        if (secondsCalc > 180)
             return 0;
-        if (minutes > 2)
+        if (secondsCalc > 120)
             return 1;
-        if (minutes > 1)    
+        if (secondsCalc > 60)    
             return 2; 
         return 3;
     }
