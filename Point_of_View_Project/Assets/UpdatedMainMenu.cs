@@ -80,10 +80,10 @@ public class LevelNavigator : MonoBehaviour
         }*/
                 
         levelButtons[0, 0].interactable = true;
-        levelButtons[0, 1].interactable = false;
-        levelButtons[0, 2].interactable = false;
-        levelButtons[1, 0].interactable = false;
-        levelButtons[1, 1].interactable = false;
+        levelButtons[0, 1].interactable = true;
+        levelButtons[0, 2].interactable = true;
+        levelButtons[1, 0].interactable = true;
+        levelButtons[1, 1].interactable = true;
         levelButtons[1, 2].interactable = false;
         levelButtons[2, 0].interactable = false;
         levelButtons[2, 1].interactable = false;
