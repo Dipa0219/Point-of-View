@@ -4659,6 +4659,7 @@ GameObject:
   - component: {fileID: 1974577192}
   - component: {fileID: 1974577193}
   - component: {fileID: 1974577194}
+  - component: {fileID: 1974577195}
   m_Layer: 5
   m_Name: Prova
   m_TagString: Untagged
@@ -4781,7 +4782,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974577186}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 846e61b8cc6197c49b04b28f6cf585e1, type: 3}
   m_Name: 
@@ -4857,6 +4858,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backButton: {fileID: 424839266}
+--- !u!114 &1974577195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974577186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c7a78929f141e1a3b4447c0083a31b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  b1: {fileID: 1388243941}
+  b2: {fileID: 215771097}
+  b3: {fileID: 1097409890}
+  b4: {fileID: 830406518}
+  b5: {fileID: 2134338955}
+  stars_1:
+  - {fileID: 1142611478}
+  - {fileID: 1951777173}
+  - {fileID: 964983706}
+  stars_2:
+  - {fileID: 1472424171}
+  - {fileID: 2226118}
+  - {fileID: 1314691864}
+  stars_3:
+  - {fileID: 1838542950}
+  - {fileID: 736754464}
+  - {fileID: 1004416682}
+  stars_4:
+  - {fileID: 1858373081}
+  - {fileID: 522041811}
+  - {fileID: 187884877}
+  stars_5:
+  - {fileID: 1368219850}
+  - {fileID: 944594130}
+  - {fileID: 12868873}
 --- !u!1 &1977741084
 GameObject:
   m_ObjectHideFlags: 0
