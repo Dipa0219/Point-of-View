@@ -137,7 +137,7 @@ public class MainMenu_December : MonoBehaviour
         levelButtons[0, 1].onClick.AddListener(() => LoadLevel("0-2"));
         levelButtons[0, 2].onClick.AddListener(() => LoadLevel("0-3"));
         
-        levelButtons[1, 0].onClick.AddListener(() => LoadLevel("Level_EndgameTest"));
+        levelButtons[1, 0].onClick.AddListener(() => LoadLevel("1-1"));
         levelButtons[1, 1].onClick.AddListener(() => LoadLevel("Level_EndgameTest"));
         
         /*
