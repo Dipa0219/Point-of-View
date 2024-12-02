@@ -15,6 +15,7 @@ namespace Game.Scripts
         [SerializeField] private Transform[] waypoints;
         [SerializeField] private float speed;
         [SerializeField] private FinalBehaviour finalBehaviour;
+        [SerializeField] private bool continuousMovement;
         
         private List<Transform> _children;
         private BoxCollider[] _colliders;
@@ -90,11 +91,6 @@ namespace Game.Scripts
 
             if (transform.position != waypoints[_nextWaypoint].position) return;
 
-            _move = false;
-            
-            foreach (BoxCollider boxCollider in _colliders)
-                boxCollider.enabled = false;
-            
             switch (finalBehaviour) {
                 case FinalBehaviour.Stop:
                     if (_nextWaypoint == waypoints.Length - 1)
@@ -134,6 +130,15 @@ namespace Game.Scripts
                     _stop = true;
                     break;
             }
+            
+            if (continuousMovement) return;
+            
+            _move = false;
+            
+            foreach (BoxCollider boxCollider in _colliders)
+                boxCollider.enabled = false;
+            
+            
         }
     }
 }
