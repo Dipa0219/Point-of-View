@@ -19,6 +19,10 @@ public class EndLevelMenu : MonoBehaviour
     private string finalTime;
     [SerializeField] private TMP_Text text;
 
+    [SerializeField] private AudioClip soundEffect_scroll; // Assegna il suono dal tuo progetto.
+    private AudioSource _audioSource_scroll;
+    [SerializeField] private AudioClip soundEffect_select; // Assegna il suono dal tuo progetto.
+    private AudioSource _audioSource_select;
     private void Start()
     {
         // Hide the menu initially
@@ -31,6 +35,13 @@ public class EndLevelMenu : MonoBehaviour
         nextLevelButton.onClick.AddListener(NextLevel);
         reloadLevelButton.onClick.AddListener(ReloadLevel);
         mainMenuButton.onClick.AddListener(BackToMainMenu);
+        
+        //sound scroll
+        _audioSource_scroll = gameObject.AddComponent<AudioSource>();
+        _audioSource_scroll.clip = soundEffect_scroll;
+        //sound select
+        _audioSource_select = gameObject.AddComponent<AudioSource>();
+        _audioSource_select.clip = soundEffect_select;
     }
 
     private void Update()
@@ -106,11 +117,13 @@ public class EndLevelMenu : MonoBehaviour
         // Keyboard navigation
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
+            _audioSource_scroll.Play();
             selectedButtonIndex = (selectedButtonIndex - 1 + buttons.Length) % buttons.Length;
             buttons[selectedButtonIndex].Select();
         }
         else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
+            _audioSource_scroll.Play();
             selectedButtonIndex = (selectedButtonIndex + 1) % buttons.Length;
             buttons[selectedButtonIndex].Select();
         }
@@ -118,6 +131,9 @@ public class EndLevelMenu : MonoBehaviour
         // Activate selected button on Enter or Spacebar
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
         {
+            DontDestroyOnLoad(_audioSource_select.gameObject);
+            _audioSource_select.Play(); 
+            Destroy(_audioSource_select.gameObject, soundEffect_select.length);
             buttons[selectedButtonIndex].onClick.Invoke();
         }
     }

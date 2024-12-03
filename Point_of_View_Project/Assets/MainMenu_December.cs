@@ -23,9 +23,14 @@ public class MainMenu_December : MonoBehaviour
     [SerializeField] private GameObject[] stars_4;
     [SerializeField] private GameObject[] stars_5;
 
+    [SerializeField] private AudioClip soundEffect_scroll; // Assegna il suono dal tuo progetto.
+    private AudioSource _audioSource_scroll;
+    [SerializeField] private AudioClip soundEffect_select; // Assegna il suono dal tuo progetto.
+    private AudioSource _audioSource_select;
+    
         
     public Button[,] levelButtons;
-    public const int rows = 3;
+    public const int rows = 2;
     public const int columns = 3;
 
     private int selectedRow = 0;
@@ -61,6 +66,13 @@ public class MainMenu_December : MonoBehaviour
         //InitializeStars();
 
         SelectButton(selectedRow, selectedCol);
+        
+        //sound scroll
+        _audioSource_scroll = gameObject.AddComponent<AudioSource>();
+        _audioSource_scroll.clip = soundEffect_scroll;
+        //sound select
+        _audioSource_select = gameObject.AddComponent<AudioSource>();
+        _audioSource_select.clip = soundEffect_select;
     }
 
     private void SetButtonInteractivity()
@@ -171,6 +183,7 @@ public class MainMenu_December : MonoBehaviour
     
     private void LoadLevel(string sceneName)
     {
+        _audioSource_select.Play();
         SceneManager.LoadScene(sceneName);
     }
 
@@ -209,13 +222,14 @@ public class MainMenu_December : MonoBehaviour
 
     private void Navigate(int colChange, int rowChange)
     {
+        _audioSource_scroll.Play();
         int newRow = Mathf.Clamp(selectedRow + rowChange, 0, rows - 1);
         int newCol = (selectedCol + colChange + columns) % columns;
 
         if (newRow == 1 && newCol == 2)
-            newCol = 1;
+            newCol = 0;
 
-        if (newRow == 1)
+        if (newRow == 2)
             newRow = 0;
             
         

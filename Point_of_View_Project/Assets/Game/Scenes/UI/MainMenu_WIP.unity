@@ -2603,6 +2603,8 @@ MonoBehaviour:
   LeaderboardButton: {fileID: 220072308}
   SettingsButton: {fileID: 215771097}
   QuitButton: {fileID: 1406893939}
+  soundEffect_scroll: {fileID: 8300000, guid: 0c3e5f940eeb06d408414360078be872, type: 3}
+  soundEffect_select: {fileID: 8300000, guid: 25a9527746196af45b6b760326b519c7, type: 3}
 --- !u!1 &2012221485
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,6 +20,9 @@ public class CameraSwitcher : MonoBehaviour
     
     private bool _isActive = true;
     private bool _isActiveCommandsUI = false;
+    
+    [SerializeField] private AudioClip soundEffect; // Assegna il suono dal tuo progetto.
+    private AudioSource _audioSource;
 
     
     [SerializeField] private CanvasGroup commandsUICanvasGroup;
@@ -44,6 +47,10 @@ public class CameraSwitcher : MonoBehaviour
         {
             commandsUICanvasGroup = commandsUI.gameObject.AddComponent<CanvasGroup>();
         }
+        
+        //sound
+        _audioSource = gameObject.AddComponent<AudioSource>();
+        _audioSource.clip = soundEffect;
     }
     
     public void SwitchCameras()
@@ -86,6 +93,8 @@ public class CameraSwitcher : MonoBehaviour
         // Switch cameras when the "C" key is pressed
         if (Input.GetKeyDown(KeyCode.C) && _isActive)
         {
+            //sound
+            _audioSource.Play();
             // Toggle the active camera
             if (camera1.enabled)
             {
