@@ -35,6 +35,11 @@ namespace Game.Scripts.GameManager
             {
                 GoToNextWaypoint();
             }
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                StartLevel();
+            }
         }
     
         void GoToNextWaypoint()
@@ -72,7 +77,7 @@ namespace Game.Scripts.GameManager
                 transform.rotation = Quaternion.Slerp(startRotation, endRotation, time);
                 yield return null;
             }
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.3f);
             isRotating = false;
     
             // Move to the next waypoint if not at the last
