@@ -96,35 +96,30 @@ namespace Game.Scripts
                 case FinalBehaviour.Stop:
                     if (_nextWaypoint == waypoints.Length - 1)
                         _stop = true;
-                    else { 
+                    else
                         _nextWaypoint++;
-                    }
                     break;
                 case FinalBehaviour.Loop:
-                    if (_nextWaypoint == waypoints.Length - 1) {
+                    if (_nextWaypoint == waypoints.Length - 1)
                         _nextWaypoint = 0;
-                    }
-                    else {
+                    else
                          _nextWaypoint++;
-                    }
                     break;
                 case FinalBehaviour.Reverse:
                     if (_forward)
                         if (_nextWaypoint == waypoints.Length - 1) {
-                            _forward = false; _nextWaypoint--;
+                            _forward = false;
+                            _nextWaypoint--;
                         }
-                        else {
+                        else
                              _nextWaypoint++;
-                        }
-                    else {
+                    else
                         if (_nextWaypoint == waypoints.Length - 1) {
                             _forward = false; 
                             _nextWaypoint--;
                         }
-                        else { 
+                        else
                             _nextWaypoint++;
-                        }
-                    }
                     break;
                 
                 default:
