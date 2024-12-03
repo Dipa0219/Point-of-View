@@ -151,7 +151,7 @@ public class EndLevelMenu : MonoBehaviour
             world++;
         }
         
-        if (world >=3)
+        if (world == 1 && levelC == 1)//(world >=3)
         {
             return ("MainMenu_WIP");
         }
