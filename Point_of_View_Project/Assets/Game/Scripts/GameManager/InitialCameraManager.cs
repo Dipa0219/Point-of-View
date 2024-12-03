@@ -4,20 +4,18 @@ using UnityEngine;
 
 namespace Game.Scripts.GameManager
 
-
-
-{ 
-    
-    
-    
-    
-    
-    
+{
     
     public class CameraWaypoint : MonoBehaviour
     {
-        [SerializeField] private Transform[] waypoints;  // Array of waypoints
-        [SerializeField] private float[] rotation;
+        [System.Serializable] struct Waypoints
+        {
+            public Transform Position;  // Array of waypoints
+            public float Rotation;
+        
+        }
+
+        [SerializeField] private Waypoints[] _waypoints;
         public float rotateSpeed = 1f; // Speed for rotation
         public float rotationAngle = 60f; // Rotation angle at waypoint
         private int currentWaypoint = 0;
@@ -33,7 +31,7 @@ namespace Game.Scripts.GameManager
     
         void Update()
         {
-            if (!isRotating && !hasStopped && waypoints.Length > 0)
+            if (!isRotating && !hasStopped && _waypoints.Length > 0)
             {
                 GoToNextWaypoint();
             }
@@ -41,7 +39,7 @@ namespace Game.Scripts.GameManager
     
         void GoToNextWaypoint()
         {
-            if (currentWaypoint >= waypoints.Length)
+            if (currentWaypoint >= _waypoints.Length)
             {
                 hasStopped = true;
                 StartLevel(); // Stop when the last waypoint is reached
@@ -49,11 +47,11 @@ namespace Game.Scripts.GameManager
             }
     
             // Directly translate the camera to the next waypoint
-            Transform target = waypoints[currentWaypoint];
+            Transform target = _waypoints[currentWaypoint].Position;
             Vector3 direction = target.position - transform.position;
     
             // Translate instantly to the position of the next waypoint
-            transform.Rotate(Vector3.up, rotation[currentWaypoint], Space.World);
+            transform.Rotate(Vector3.up, _waypoints[currentWaypoint].Rotation, Space.World);
             transform.Translate(direction, Space.World);
             
             // Start rotating at the waypoint
