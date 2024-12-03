@@ -16,15 +16,16 @@ namespace Game.Scripts
         [SerializeField] private float speed;
         [SerializeField] private FinalBehaviour finalBehaviour;
         [SerializeField] private bool continuousMovement;
+        [SerializeField] private bool isDouble;
         
         private List<Transform> _children;
         private BoxCollider[] _colliders;
         private Transform _playerTransform;
-        private int _currentWaypoint;
         private int _nextWaypoint = 1;
         private bool _move;
         private bool _stop;
         private bool _forward = true;
+        private int _numPlayer;
         
         private void Awake()
         {
@@ -49,10 +50,15 @@ namespace Game.Scripts
         {
             if (!other.CompareTag("Player")) return;
             
+            if(_numPlayer==0 && isDouble)
+            {
+                _numPlayer++;
+                return;
+            }
             // Take transform of the player
             //_playerTransform = other.transform;
             //_playerTransform.SetParent(transform);
-            
+            _numPlayer++;
             // Activate colliders
             foreach (BoxCollider boxCollider in _colliders)
                 boxCollider.enabled = true;
@@ -61,12 +67,12 @@ namespace Game.Scripts
             GoToNextWaypoint();
         }
         
-        // private void OnTriggerExit(Collider other)
-        // {
-        //     if (!other.CompareTag("Player")) return;
-        //     
-        //     _playerTransform.SetParent(null);
-        // }
+         private void OnTriggerExit(Collider other)
+         {
+             if (!other.CompareTag("Player")) return;
+
+             _numPlayer--;
+         }
 
         private void GoToNextWaypoint()
         {
@@ -80,7 +86,7 @@ namespace Game.Scripts
                 foreach (BoxCollider boxCollider in _colliders)
                     boxCollider.enabled = false;
             
-            if (_stop || !_move || _currentWaypoint >= waypoints.Length) return;
+            if (_stop || !_move) return;
             
             transform.position = Vector3.MoveTowards(transform.position, waypoints[_nextWaypoint].position, speed * Time.deltaTime);
 
@@ -90,33 +96,33 @@ namespace Game.Scripts
                 case FinalBehaviour.Stop:
                     if (_nextWaypoint == waypoints.Length - 1)
                         _stop = true;
-                    else {
-                        _currentWaypoint++; _nextWaypoint++;
+                    else { 
+                        _nextWaypoint++;
                     }
                     break;
                 case FinalBehaviour.Loop:
-                    if (_nextWaypoint == waypoints.Length - 1)
+                    if (_nextWaypoint == waypoints.Length - 1) {
                         _nextWaypoint = 0;
+                    }
                     else {
-                        _currentWaypoint++; _nextWaypoint++;
+                         _nextWaypoint++;
                     }
                     break;
                 case FinalBehaviour.Reverse:
                     if (_forward)
                         if (_nextWaypoint == waypoints.Length - 1) {
-                            _forward = false;
-                            _currentWaypoint++; _nextWaypoint--;
+                            _forward = false; _nextWaypoint--;
                         }
                         else {
-                            _currentWaypoint++; _nextWaypoint++;
+                             _nextWaypoint++;
                         }
                     else {
                         if (_nextWaypoint == waypoints.Length - 1) {
-                            _forward = false;
-                            _currentWaypoint++; _nextWaypoint--;
+                            _forward = false; 
+                            _nextWaypoint--;
                         }
-                        else {
-                            _currentWaypoint++; _nextWaypoint++;
+                        else { 
+                            _nextWaypoint++;
                         }
                     }
                     break;
