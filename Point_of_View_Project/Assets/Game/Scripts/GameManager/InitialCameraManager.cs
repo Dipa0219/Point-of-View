@@ -72,7 +72,7 @@ namespace Game.Scripts.GameManager
                 transform.rotation = Quaternion.Slerp(startRotation, endRotation, time);
                 yield return null;
             }
-    
+            yield return new WaitForSeconds(1);
             isRotating = false;
     
             // Move to the next waypoint if not at the last
