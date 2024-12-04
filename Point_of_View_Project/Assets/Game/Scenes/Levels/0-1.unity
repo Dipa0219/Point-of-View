@@ -7728,7 +7728,7 @@ MonoBehaviour:
   initialCamera: {fileID: 257692167}
   timerUI: {fileID: 482900884}
   commandsUI: {fileID: 1320575058}
-  soundEffect: {fileID: 8300000, guid: 9d9ff2f809bb850409378cf1af0918bc, type: 3}
+  soundEffect: {fileID: 8300000, guid: 7c5177cc350c3284d918a7fa4c3cf775, type: 3}
   commandsUICanvasGroup: {fileID: 0}
 --- !u!114 &951260980
 MonoBehaviour:
