@@ -15473,7 +15473,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5306809480622072499, guid: 62fc7fc139f0f8c47b10f95c73250f82, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1320575059}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62fc7fc139f0f8c47b10f95c73250f82, type: 3}
 --- !u!114 &482900884 stripped
@@ -15487,6 +15490,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ebc0084bbb743f4b322eb0a34bb72ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &482900885 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5306809480622072499, guid: 62fc7fc139f0f8c47b10f95c73250f82, type: 3}
+  m_PrefabInstance: {fileID: 482900883}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &483675611
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36231,6 +36239,7 @@ MonoBehaviour:
   initialCamera: {fileID: 1336627094}
   timerUI: {fileID: 482900884}
   commandsUI: {fileID: 1320575058}
+  soundEffect: {fileID: 0}
   commandsUICanvasGroup: {fileID: 0}
 --- !u!114 &951260980
 MonoBehaviour:
@@ -36272,6 +36281,8 @@ MonoBehaviour:
   - {fileID: 1377668445}
   - {fileID: 1377668444}
   text: {fileID: 1218402193}
+  soundEffect_scroll: {fileID: 0}
+  soundEffect_select: {fileID: 0}
 --- !u!4 &952854870 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9079743121380348565, guid: ab69daf48f5bdc74fa067080f34bd815, type: 3}
@@ -47736,7 +47747,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 482900885}
     m_Modifications:
     - target: {fileID: 2439623199034612275, guid: 5f7513a772b991f4aa9b86f27495b930, type: 3}
       propertyPath: m_Name
@@ -47796,15 +47807,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4426060933139633593, guid: 5f7513a772b991f4aa9b86f27495b930, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4426060933139633593, guid: 5f7513a772b991f4aa9b86f27495b930, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4426060933139633593, guid: 5f7513a772b991f4aa9b86f27495b930, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4426060933139633593, guid: 5f7513a772b991f4aa9b86f27495b930, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -47834,6 +47845,11 @@ PrefabInstance:
 --- !u!223 &1320575058 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 1254148140082409995, guid: 5f7513a772b991f4aa9b86f27495b930, type: 3}
+  m_PrefabInstance: {fileID: 1320575057}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1320575059 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4426060933139633593, guid: 5f7513a772b991f4aa9b86f27495b930, type: 3}
   m_PrefabInstance: {fileID: 1320575057}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1324164239
@@ -96393,7 +96409,6 @@ SceneRoots:
   - {fileID: 1959572489}
   - {fileID: 1377668441}
   - {fileID: 711112137}
-  - {fileID: 1320575057}
   - {fileID: 482900883}
   - {fileID: 1594832447}
   - {fileID: 1889688013}
