@@ -40075,7 +40075,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 189573732559672700, guid: 19f0d42096e5e9c479270315f9475dcf, type: 3}
       propertyPath: m_Name
-      value: Elevator
+      value: Elevator 2
       objectReference: {fileID: 0}
     - target: {fileID: 3465902672328358193, guid: 19f0d42096e5e9c479270315f9475dcf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -40207,7 +40207,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 189573732559672700, guid: 19f0d42096e5e9c479270315f9475dcf, type: 3}
       propertyPath: m_Name
-      value: Elevator
+      value: Elevator 0
       objectReference: {fileID: 0}
     - target: {fileID: 3465902672328358193, guid: 19f0d42096e5e9c479270315f9475dcf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -65466,7 +65466,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 189573732559672700, guid: 19f0d42096e5e9c479270315f9475dcf, type: 3}
       propertyPath: m_Name
-      value: Elevator
+      value: Elevator 1
       objectReference: {fileID: 0}
     - target: {fileID: 3465902672328358193, guid: 19f0d42096e5e9c479270315f9475dcf, type: 3}
       propertyPath: m_LocalPosition.x
