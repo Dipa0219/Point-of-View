@@ -17,13 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game/Scenes/UI/LevelSelection_WIP_BETA.unity
     guid: ab37246ba8d35b14588719dd78a0d5e0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Game/Scenes/Levels/Old/0-1 (old).unity
     guid: 78b8ccddfd34dcd4a96beaa9ea379c4a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Game/Scenes/Levels/Old/0-2 (old).unity
     guid: c778ce83e21a15a40b500b023ff23b49
-  - enabled: 1
+  - enabled: 0
     path: Assets/Game/Scenes/Levels/Old/0-3 (old).unity
     guid: 525326fef101e214cbc2d520f7cfbc4d
   - enabled: 1
@@ -41,7 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game/Scenes/Levels/0-3.unity
     guid: 4e91b5cd99b888f438a4180c8688510f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Game/Scenes/Levels/Extra/0-3.unity
     guid: ab19862d6a0e4e64c922c8e1a188d31c
   - enabled: 1
