@@ -21,6 +21,7 @@ namespace Game.Scripts.GameManager
         private int currentWaypoint = 0;
     
         private bool isRotating = false;
+        private bool isFirst = true;
         private bool hasStopped = false;
         
         [SerializeField] private GameObject[] playerLight;
@@ -33,7 +34,14 @@ namespace Game.Scripts.GameManager
         {
             if (!isRotating && !hasStopped && _waypoints.Length > 0)
             {
+                if (!isFirst)
+                {
+                    cameraSwitcher.PlaySwitchSound();
+                }else{
+                    isFirst = false;
+                }
                 GoToNextWaypoint();
+                
             }
 
             if (Input.GetKeyDown(KeyCode.Space))

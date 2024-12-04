@@ -94,7 +94,7 @@ public class CameraSwitcher : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.C) && _isActive)
         {
             //sound
-            _audioSource.Play();
+            PlaySwitchSound();//_audioSource.Play();
             // Toggle the active camera
             if (camera1.enabled)
             {
@@ -149,4 +149,9 @@ public class CameraSwitcher : MonoBehaviour
         _isActiveCommandsUI = false;
     }
     
+    
+    public void PlaySwitchSound()
+    {
+        _audioSource.Play();
+    }    
 }
