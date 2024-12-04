@@ -33,13 +33,14 @@ public class MainMenuScript : MonoBehaviour
         }*/
         
         
-        buttons = new Button[] { levelsButton, LeaderboardButton, SettingsButton, CreditsButton, QuitButton };
+        //buttons = new Button[] { levelsButton, LeaderboardButton, SettingsButton, CreditsButton, QuitButton };
+        buttons = new Button[] { levelsButton, LeaderboardButton, CreditsButton, QuitButton };
 
         
         levelsButton.onClick.AddListener(LoadLevel("LevelSelection_WIP"));
         CreditsButton.onClick.AddListener(LoadLevel("Credits"));
         LeaderboardButton.onClick.AddListener(LoadLevel("Leaderboard"));
-        SettingsButton.onClick.AddListener(LoadLevel("Settings"));
+        //SettingsButton.onClick.AddListener(LoadLevel("Settings"));
         QuitButton.onClick.AddListener(Quit);
         
         LeaderboardButton.interactable = false;
@@ -59,7 +60,6 @@ public class MainMenuScript : MonoBehaviour
         return () => SceneManager.LoadScene(s);
     }
 
-    // Update is called once per frame
     void Update()
     {
         HandleNavigation();
@@ -84,7 +84,6 @@ public class MainMenuScript : MonoBehaviour
         // Activate selected button on Enter or Spacebar
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
         {
-            
             if (buttons[selectedButtonIndex].interactable)
             {
                 DontDestroyOnLoad(_audioSource_select.gameObject);
@@ -92,18 +91,10 @@ public class MainMenuScript : MonoBehaviour
                 Destroy(_audioSource_select.gameObject, soundEffect_select.length);
                 buttons[selectedButtonIndex].onClick.Invoke();
             }
-                
-                
-            /*
-            levelsButton.onClick.Invoke();
-            LeaderboardButton.onClick.Invoke();
-            SettingsButton.onClick.Invoke();
-            QuitButton.onClick.Invoke();
-            CreditsButton.onClick.Invoke();
-            */
         }
     }
 
+    
     private void Quit()
     {
         Application.Quit();

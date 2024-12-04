@@ -89,7 +89,7 @@ public class EndLevelMenu : MonoBehaviour
         if (buttons != null && buttons.Length > 0 && selectedButtonIndex >= 0 && selectedButtonIndex < buttons.Length)
             buttons[selectedButtonIndex].Select(); // Select the first button
         
-        print("active scene: "+ SceneManager.GetActiveScene().name);
+        //print("active scene: "+ SceneManager.GetActiveScene().name);
         // TODO
         // RIMETTERE QUANDO CI SARÀ IL SISTEMA DI SALVATAGGIO 
         //SaveSystem.UpdateLevel(SceneManager.GetActiveScene().name, true, starsEarned, finalTime);
@@ -141,11 +141,11 @@ public class EndLevelMenu : MonoBehaviour
     // Button functions
     private void NextLevel()
     {
-        print("Arrivato");
+        //print("Arrivato");
         // Load the next level (assuming level indexing in build settings)
         string sceneName = SceneManager.GetActiveScene().name;
         sceneName = FindNext(sceneName);
-        print("Next level: " + sceneName);
+        //print("Next level: " + sceneName);
         SceneManager.LoadScene(sceneName);
 
         
@@ -177,13 +177,11 @@ public class EndLevelMenu : MonoBehaviour
     
     private void ReloadLevel()
     {
-        // Reload current level
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void BackToMainMenu()
     {
-        // Load Main Menu Scene (replace "MainMenu" with your main menu scene name)
         SceneManager.LoadScene("MainMenu_WIP");
     }
     
