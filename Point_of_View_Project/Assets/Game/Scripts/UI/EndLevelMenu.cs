@@ -163,11 +163,11 @@ public class EndLevelMenu : MonoBehaviour
         levelC++;
         if (levelC >=4)
         {
-            levelC = 0;
+            levelC = 1;
             world++;
         }
         
-        if (world == 1 && levelC == 1)//(world >=3)
+        if (world == 1 && levelC == 2)//(world >=3)
         {
             return ("MainMenu_WIP");
         }
