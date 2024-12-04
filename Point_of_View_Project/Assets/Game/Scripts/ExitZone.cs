@@ -8,7 +8,14 @@ namespace Game.Scripts
         
         private List<Transform> _children;
         private bool _active;
+        [SerializeField] private AudioClip soundEffect; // Assegna il suono dal tuo progetto.
+        private AudioSource _audioSource;
 
+        private void Start()
+        {
+            _audioSource = gameObject.AddComponent<AudioSource>();
+            _audioSource.clip = soundEffect;
+        }
         private void Awake()
         {
             _children = new List<Transform>();
@@ -31,6 +38,7 @@ namespace Game.Scripts
         {
             if (!other.CompareTag("Player")) return;
             Debug.Log("ENTER");
+            _audioSource.Play();
             _children[0].transform.localScale = new Vector3(1, 1.6f, 1);
             //_children[0].GetComponent<Renderer>().material.color = Color.green;
             //_children[0].GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.red);

@@ -3,7 +3,14 @@ guid: a8e95c612bd818245a9f4dc68a4d774b
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - levelsButton: {instanceID: 0}
+  - CreditsButton: {instanceID: 0}
+  - LeaderboardButton: {instanceID: 0}
+  - SettingsButton: {instanceID: 0}
+  - QuitButton: {instanceID: 0}
+  - soundEffect_scroll: {fileID: 8300000, guid: 0c3e5f940eeb06d408414360078be872, type: 3}
+  - soundEffect_select: {fileID: 8300000, guid: 25a9527746196af45b6b760326b519c7, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

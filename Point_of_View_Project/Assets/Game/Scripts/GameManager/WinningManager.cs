@@ -16,6 +16,15 @@ namespace Game.Scripts.GameManager
         [SerializeField] private FallZone fallZone;
         [SerializeField] private FailedLevel failedLevelUIManager;
         
+        [SerializeField] private AudioClip soundEffect; // Assegna il suono dal tuo progetto.
+        private AudioSource _audioSource;
+        
+        
+        private void Start()
+        {
+            _audioSource = gameObject.AddComponent<AudioSource>();
+            _audioSource.clip = soundEffect;
+        }
         void Update()
         {
             if(fallZone.IsActive())
@@ -28,6 +37,7 @@ namespace Game.Scripts.GameManager
             if (!manager1.IsActive() || !manager2.IsActive()) return;
             if (_isFinished) return;
             
+            _audioSource.Play();
             print("YOU WON");
             _isFinished = true;
             cameraSwitcher.DisableSwitcher();

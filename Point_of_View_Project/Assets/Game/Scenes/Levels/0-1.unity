@@ -5477,6 +5477,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1737141355916272245, guid: 3edf98a8046daef438f748b51842ebdb, type: 3}
+      propertyPath: soundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: dd342b2b57ae7284689c1bc29a05c0cb, type: 3}
     - target: {fileID: 6470757252897593332, guid: 3edf98a8046daef438f748b51842ebdb, type: 3}
       propertyPath: m_Name
       value: Exit zone 1
@@ -7745,6 +7749,7 @@ MonoBehaviour:
   timerUI: {fileID: 482900884}
   fallZone: {fileID: 353996004}
   failedLevelUIManager: {fileID: 353996003}
+  soundEffect: {fileID: 8300000, guid: 5d872ff05c41340478ba5836fae87bcf, type: 3}
 --- !u!114 &951260981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7766,6 +7771,8 @@ MonoBehaviour:
   - {fileID: 1377668445}
   - {fileID: 1377668444}
   text: {fileID: 1218402193}
+  soundEffect_scroll: {fileID: 8300000, guid: 0c3e5f940eeb06d408414360078be872, type: 3}
+  soundEffect_select: {fileID: 8300000, guid: 25a9527746196af45b6b760326b519c7, type: 3}
 --- !u!4 &952854870 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9079743121380348565, guid: ab69daf48f5bdc74fa067080f34bd815, type: 3}
@@ -10868,6 +10875,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1737141355916272245, guid: 3edf98a8046daef438f748b51842ebdb, type: 3}
+      propertyPath: soundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: dd342b2b57ae7284689c1bc29a05c0cb, type: 3}
     - target: {fileID: 6470757252897593332, guid: 3edf98a8046daef438f748b51842ebdb, type: 3}
       propertyPath: m_Name
       value: Exit zone 2
