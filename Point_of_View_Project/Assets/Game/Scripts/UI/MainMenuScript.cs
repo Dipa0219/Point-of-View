@@ -1,9 +1,11 @@
 using System;
+using System.Collections;
 using SaveManager;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+//using static UnityEngine.SceneManagement.SceneManager;
 
 
 public class MainMenuScript : MonoBehaviour
@@ -37,9 +39,22 @@ public class MainMenuScript : MonoBehaviour
         buttons = new Button[] { levelsButton, LeaderboardButton, CreditsButton, QuitButton };
 
         
-        levelsButton.onClick.AddListener(LoadLevel("LevelSelection_WIP"));
-        CreditsButton.onClick.AddListener(LoadLevel("Credits"));
-        LeaderboardButton.onClick.AddListener(LoadLevel("Leaderboard"));
+        //levelsButton.onClick.AddListener(LoadLevel("LevelSelection_WIP"));
+        levelsButton.onClick.AddListener(() =>
+        {
+            _audioSource_select.Play();
+            StartCoroutine(WaitAndLoadScene(_audioSource_select.clip.length + 0.1f, "LevelSelection_WIP"));
+        });
+        CreditsButton.onClick.AddListener(() =>
+        {
+            _audioSource_select.Play();
+            StartCoroutine(WaitAndLoadScene(_audioSource_select.clip.length + 0.1f, "Credits"));
+        });
+        LeaderboardButton.onClick.AddListener(() =>
+        {
+            _audioSource_select.Play();
+            StartCoroutine(WaitAndLoadScene(_audioSource_select.clip.length + 0.1f, "Leaderboard"));
+        });
         //SettingsButton.onClick.AddListener(LoadLevel("Settings"));
         QuitButton.onClick.AddListener(Quit);
         
@@ -54,10 +69,20 @@ public class MainMenuScript : MonoBehaviour
         _audioSource_select = gameObject.AddComponent<AudioSource>();
         _audioSource_select.clip = soundEffect_select;
     }
+    
+    private IEnumerator WaitAndLoadScene(float waitTime, string sceneName)
+    {
+        yield return new WaitForSeconds(waitTime);
+        SceneManager.LoadScene(sceneName);
+    }
 
     private UnityAction LoadLevel(string s)
     {
-        return () => SceneManager.LoadScene(s);
+        return () =>
+        {
+        _audioSource_select.Play();
+        SceneManager.LoadScene(s);
+        };
     }
 
     void Update()
@@ -84,19 +109,22 @@ public class MainMenuScript : MonoBehaviour
         // Activate selected button on Enter or Spacebar
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
         {
-            if (buttons[selectedButtonIndex].interactable)
+           /* if (buttons[selectedButtonIndex].interactable)
             {
                 DontDestroyOnLoad(_audioSource_select.gameObject);
                 _audioSource_select.Play(); 
                 Destroy(_audioSource_select.gameObject, soundEffect_select.length);
                 buttons[selectedButtonIndex].onClick.Invoke();
-            }
+            }*/
+
         }
     }
+
 
     
     private void Quit()
     {
+        _audioSource_select.Play();
         Application.Quit();
     }
 }
