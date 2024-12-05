@@ -10407,7 +10407,6 @@ MonoBehaviour:
   waypoints:
   - {fileID: 282378257}
   speed: 3
-  initialDelay: 0
 --- !u!135 &486337050
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -32115,7 +32114,6 @@ MonoBehaviour:
   waypoints:
   - {fileID: 1881959814}
   speed: 3
-  initialDelay: 0
 --- !u!135 &1415478681
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -32156,7 +32154,6 @@ MonoBehaviour:
   - {fileID: 1595966063}
   - {fileID: 1274974020}
   speed: 3
-  initialDelay: 0
 --- !u!114 &1415478683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32186,7 +32183,6 @@ MonoBehaviour:
   waypoints:
   - {fileID: 1516251847}
   speed: 3
-  initialDelay: 3000
 --- !u!1001 &1417731849
 PrefabInstance:
   m_ObjectHideFlags: 0
