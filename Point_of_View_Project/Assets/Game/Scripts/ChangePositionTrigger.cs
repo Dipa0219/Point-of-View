@@ -2,14 +2,14 @@ using UnityEngine;
 
 namespace Game.Scripts
 {
-    public class ButtonTrigger : MonoBehaviour
+    public class ChangePositionTrigger : MonoBehaviour
     {
     
         [SerializeField] private Transform objectToMove;
         [SerializeField] private Transform[] waypoints;
         [SerializeField] private float speed;
 
-        private int _nextWaypoint = 1;
+        private int _nextWaypoint;
         private bool _start;
         private bool _stop;
 
@@ -22,13 +22,12 @@ namespace Game.Scripts
          private void Update()
          {
              if (!_start || _stop) return;
-
+             
              if (objectToMove.position == waypoints[^1].position) {
                  _stop = true;
                  return;
              }
              
-
              if(objectToMove.position == waypoints[_nextWaypoint].position)
                  _nextWaypoint++;
              
