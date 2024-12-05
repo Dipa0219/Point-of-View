@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 
 namespace Game.Scripts
 {
@@ -23,10 +22,13 @@ namespace Game.Scripts
          private void Update()
          {
              if (!_start || _stop) return;
-             
-             if(objectToMove.position == waypoints[waypoints.Length - 1].position)
+
+             if (objectToMove.position == waypoints[^1].position) {
                  _stop = true;
+                 return;
+             }
              
+
              if(objectToMove.position == waypoints[_nextWaypoint].position)
                  _nextWaypoint++;
              
