@@ -18,12 +18,23 @@ public class FullScreenToggle : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.F4) || Input.GetKeyDown(KeyCode.F11))
         {
+            //print("Toggle Fullscreen");
             Screen.fullScreen = !Screen.fullScreen;
         }
         
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKey(KeyCode.LeftAlt) || Input.GetKey(KeyCode.RightAlt))
+        {
+            if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
+            {
+                //print("Toggle Fullscreen");
+                Screen.fullScreen = !Screen.fullScreen;
+            }
+        }
+
+        
+        if (Input.GetKeyDown(KeyCode.M) || Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene("MainMenu_WIP");
         }        

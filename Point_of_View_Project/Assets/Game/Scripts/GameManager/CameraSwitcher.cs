@@ -91,7 +91,7 @@ public class CameraSwitcher : MonoBehaviour
             }*/
         }
         // Switch cameras when the "C" key is pressed
-        if (Input.GetKeyDown(KeyCode.C) && _isActive)
+        if ( (Input.GetKeyDown(KeyCode.C) && _isActive) || (Input.GetKeyDown(KeyCode.Space) && _isActive) )
         {
             //sound
             PlaySwitchSound();//_audioSource.Play();
