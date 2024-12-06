@@ -28,8 +28,15 @@ namespace Game.Scripts.GameManager
         [SerializeField] private GameObject[] ambientLight;
         
         [SerializeField] private CameraSwitcher cameraSwitcher;
+        
+        [SerializeField] private GameObject skipButton;
 
     
+        void Start()
+        {
+            skipButton.SetActive(true);
+        }
+        
         void Update()
         {
             if (!isRotating && !hasStopped && _waypoints.Length > 0)
@@ -46,7 +53,9 @@ namespace Game.Scripts.GameManager
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                skipButton.SetActive(false);
                 StartLevel();
+                
             }
         }
     
@@ -55,6 +64,7 @@ namespace Game.Scripts.GameManager
             if (currentWaypoint >= _waypoints.Length)
             {
                 hasStopped = true;
+                skipButton.SetActive(false);
                 StartLevel(); // Stop when the last waypoint is reached
                 return;
             }
