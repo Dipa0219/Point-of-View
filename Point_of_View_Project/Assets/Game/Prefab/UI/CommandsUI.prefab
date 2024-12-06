@@ -243,8 +243,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Press WASD / arrowkeys to move\n           C to switch cam\n          
-    R to reload"
+  m_text: "Press WASD/ Arrow keys to move\r\n          Space                    
+    to switch cam\r\n          R \t\t\t to restart the level\r\n          Esc \t\t\t
+    to go to Main menu\r\n          L               \t\t to go to level selection\t"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
