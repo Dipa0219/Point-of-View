@@ -10,6 +10,8 @@ namespace Game.Scripts
         [SerializeField] private float jumpHeight = 3f;
         // [SerializeField] private AudioClip footStepSound;
         // [SerializeField] private float footStepDelay;
+        [SerializeField] private AudioClip soundEffect_collision; 
+        private AudioSource _audioSource_collision;
         private CharacterController _characterController;
         private Vector3 _velocity;
         private bool _isGrounded;
@@ -35,6 +37,8 @@ namespace Game.Scripts
                 Debug.Log("CharacterController not found.");
             }
             */
+            _audioSource_collision = gameObject.AddComponent<AudioSource>();
+            _audioSource_collision.clip = soundEffect_collision;
         }
 
         private void Update() {
@@ -98,6 +102,14 @@ namespace Game.Scripts
         public void SetActive(bool active)
         {
             _isActive = active;
+        }
+        
+        private void OnControllerColliderHit(ControllerColliderHit hit)
+        {
+            if (hit.gameObject.CompareTag("Player") && hit.gameObject.name == "Black Bot")
+            {
+                _audioSource_collision.Play();
+            }
         }
 
     }

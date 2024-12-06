@@ -18,6 +18,9 @@ namespace Game.Scripts
         [SerializeField] private bool continuousMovement;
         [SerializeField] private bool isDouble;
         
+        [SerializeField] private AudioClip soundEffect;
+        private AudioSource _audioSource;
+        
         private List<Transform> _children;
         private BoxCollider[] _colliders;
         private Transform _playerTransform;
@@ -26,6 +29,12 @@ namespace Game.Scripts
         private bool _stop;
         private bool _forward = true;
         private int _numPlayer;
+        
+        private void Start()
+        {
+            _audioSource = gameObject.AddComponent<AudioSource>();
+            _audioSource.clip = soundEffect;
+        }
         
         private void Awake()
         {
@@ -76,6 +85,7 @@ namespace Game.Scripts
 
         private void GoToNextWaypoint()
         {
+            _audioSource.Play();
             _move = true;
         }
 
@@ -95,8 +105,10 @@ namespace Game.Scripts
             switch (finalBehaviour) {
                 case FinalBehaviour.Stop:
                     if (_nextWaypoint == waypoints.Length - 1)
+                    {
                         _stop = true;
-                    else
+                        _audioSource.Stop();
+                    }else
                         _nextWaypoint++;
                     break;
                 case FinalBehaviour.Loop:

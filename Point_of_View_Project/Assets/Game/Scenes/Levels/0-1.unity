@@ -3127,6 +3127,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FailZone
       objectReference: {fileID: 0}
+    - target: {fileID: 3900791193405486718, guid: 9f3db9e46f9535a4c882ce27e208efd5, type: 3}
+      propertyPath: soundEffect_box
+      value: 
+      objectReference: {fileID: 8300000, guid: a31b8c28c556e99428fe7ac432b880c0, type: 3}
+    - target: {fileID: 3900791193405486718, guid: 9f3db9e46f9535a4c882ce27e208efd5, type: 3}
+      propertyPath: soundEffect_game_over
+      value: 
+      objectReference: {fileID: 8300000, guid: 5100410867b467d4cb0b16af7c300560, type: 3}
     - target: {fileID: 6425252673949118952, guid: 9f3db9e46f9535a4c882ce27e208efd5, type: 3}
       propertyPath: mainMenuButton
       value: 
@@ -35404,6 +35412,7 @@ MonoBehaviour:
   speed: 6
   gravity: -9.81
   jumpHeight: 0
+  soundEffect_collision: {fileID: 8300000, guid: ba3fc6188f4ec194193cb2e52cb689ca, type: 3}
 --- !u!4 &6283336761198155776
 Transform:
   m_ObjectHideFlags: 0
@@ -35483,6 +35492,7 @@ MonoBehaviour:
   speed: 6
   gravity: -9.81
   jumpHeight: 0
+  soundEffect_collision: {fileID: 8300000, guid: ba3fc6188f4ec194193cb2e52cb689ca, type: 3}
 --- !u!114 &6873319705099361909
 MonoBehaviour:
   m_ObjectHideFlags: 0

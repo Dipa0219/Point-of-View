@@ -6,13 +6,17 @@ namespace Game.Scripts.Environment_element
     {
         private bool _active;
 
-        [SerializeField] private AudioClip soundEffect_game_over; // Assegna il suono dal tuo progetto.
+        [SerializeField] private AudioClip soundEffect_game_over; 
         private AudioSource _audioSource_game_over;
+        [SerializeField] private AudioClip soundEffect_box; 
+        private AudioSource _audioSource_box;
         
         private void Start()
         {
             _audioSource_game_over = gameObject.AddComponent<AudioSource>();
             _audioSource_game_over.clip = soundEffect_game_over;
+            _audioSource_box = gameObject.AddComponent<AudioSource>();
+            _audioSource_box.clip = soundEffect_box;
         }
         private void OnTriggerEnter(Collider other)
         {
@@ -23,6 +27,8 @@ namespace Game.Scripts.Environment_element
                 // Debug.Log("Collided with Player");
                 _audioSource_game_over.Play();
                 _active = true;
+            }else if (other.gameObject.CompareTag("Pushable")) {
+                _audioSource_box.Play();
             }
         }
       

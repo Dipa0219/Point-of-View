@@ -3899,6 +3899,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1737141355916272245, guid: 3edf98a8046daef438f748b51842ebdb, type: 3}
+      propertyPath: soundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: dd342b2b57ae7284689c1bc29a05c0cb, type: 3}
     - target: {fileID: 6470757252897593332, guid: 3edf98a8046daef438f748b51842ebdb, type: 3}
       propertyPath: m_Name
       value: Exit zone 1
@@ -6899,6 +6903,10 @@ PrefabInstance:
       value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 7509541813634776844, guid: 56bc84515852be743a6e09c11ccb9ab9, type: 3}
+      propertyPath: soundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: 0c9ad530b5e33e845a205cc05e3e234b, type: 3}
+    - target: {fileID: 7509541813634776844, guid: 56bc84515852be743a6e09c11ccb9ab9, type: 3}
       propertyPath: finalBehaviour
       value: 0
       objectReference: {fileID: 0}
@@ -8210,6 +8218,10 @@ PrefabInstance:
       value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 7509541813634776844, guid: 56bc84515852be743a6e09c11ccb9ab9, type: 3}
+      propertyPath: soundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: 0c9ad530b5e33e845a205cc05e3e234b, type: 3}
+    - target: {fileID: 7509541813634776844, guid: 56bc84515852be743a6e09c11ccb9ab9, type: 3}
       propertyPath: finalBehaviour
       value: 0
       objectReference: {fileID: 0}
@@ -8876,6 +8888,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FailZone
       objectReference: {fileID: 0}
+    - target: {fileID: 3900791193405486718, guid: 9f3db9e46f9535a4c882ce27e208efd5, type: 3}
+      propertyPath: soundEffect_box
+      value: 
+      objectReference: {fileID: 8300000, guid: a31b8c28c556e99428fe7ac432b880c0, type: 3}
+    - target: {fileID: 3900791193405486718, guid: 9f3db9e46f9535a4c882ce27e208efd5, type: 3}
+      propertyPath: soundEffect_game_over
+      value: 
+      objectReference: {fileID: 8300000, guid: 5100410867b467d4cb0b16af7c300560, type: 3}
     - target: {fileID: 6425252673949118952, guid: 9f3db9e46f9535a4c882ce27e208efd5, type: 3}
       propertyPath: mainMenuButton
       value: 
@@ -8888,6 +8908,14 @@ PrefabInstance:
       propertyPath: reloadLevelButton
       value: 
       objectReference: {fileID: 711112140}
+    - target: {fileID: 6425252673949118952, guid: 9f3db9e46f9535a4c882ce27e208efd5, type: 3}
+      propertyPath: soundEffect_scroll
+      value: 
+      objectReference: {fileID: 8300000, guid: 0c3e5f940eeb06d408414360078be872, type: 3}
+    - target: {fileID: 6425252673949118952, guid: 9f3db9e46f9535a4c882ce27e208efd5, type: 3}
+      propertyPath: soundEffect_select
+      value: 
+      objectReference: {fileID: 8300000, guid: 25a9527746196af45b6b760326b519c7, type: 3}
     - target: {fileID: 6461072221666689393, guid: 9f3db9e46f9535a4c882ce27e208efd5, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -12573,7 +12601,7 @@ MonoBehaviour:
   initialCamera: {fileID: 1266558615}
   timerUI: {fileID: 482900884}
   commandsUI: {fileID: 1320575058}
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 7c5177cc350c3284d918a7fa4c3cf775, type: 3}
   commandsUICanvasGroup: {fileID: 0}
 --- !u!114 &951260980
 MonoBehaviour:
@@ -12594,7 +12622,7 @@ MonoBehaviour:
   timerUI: {fileID: 482900884}
   fallZone: {fileID: 1514584293}
   failedLevelUIManager: {fileID: 1514584294}
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 5d872ff05c41340478ba5836fae87bcf, type: 3}
 --- !u!114 &951260981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12616,8 +12644,8 @@ MonoBehaviour:
   - {fileID: 1377668445}
   - {fileID: 1377668444}
   text: {fileID: 1218402193}
-  soundEffect_scroll: {fileID: 0}
-  soundEffect_select: {fileID: 0}
+  soundEffect_scroll: {fileID: 8300000, guid: 0c3e5f940eeb06d408414360078be872, type: 3}
+  soundEffect_select: {fileID: 8300000, guid: 25a9527746196af45b6b760326b519c7, type: 3}
 --- !u!1001 &952469018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14966,6 +14994,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1737141355916272245, guid: 3edf98a8046daef438f748b51842ebdb, type: 3}
+      propertyPath: soundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: dd342b2b57ae7284689c1bc29a05c0cb, type: 3}
     - target: {fileID: 6470757252897593332, guid: 3edf98a8046daef438f748b51842ebdb, type: 3}
       propertyPath: m_Name
       value: Exit zone 2
@@ -33690,6 +33722,7 @@ MonoBehaviour:
   speed: 6
   gravity: -9.81
   jumpHeight: 0
+  soundEffect_collision: {fileID: 8300000, guid: ba3fc6188f4ec194193cb2e52cb689ca, type: 3}
 --- !u!114 &2728134432175326640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33706,6 +33739,7 @@ MonoBehaviour:
   speed: 6
   gravity: -9.81
   jumpHeight: 0
+  soundEffect_collision: {fileID: 8300000, guid: ba3fc6188f4ec194193cb2e52cb689ca, type: 3}
 --- !u!33 &2813606376306810547
 MeshFilter:
   m_ObjectHideFlags: 0
