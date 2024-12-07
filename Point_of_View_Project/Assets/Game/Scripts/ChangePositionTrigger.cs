@@ -8,20 +8,37 @@ namespace Game.Scripts
         [SerializeField] private Transform objectToMove;
         [SerializeField] private Transform[] waypoints;
         [SerializeField] private float speed;
+        
+        [SerializeField] private AudioClip soundEffect;
+        private AudioSource _audioSource;
 
         private int _nextWaypoint;
         private bool _start;
         private bool _stop;
 
+        private void Start()
+        {
+            _audioSource = gameObject.AddComponent<AudioSource>();
+            _audioSource.clip = soundEffect;
+        }
+        
         private void OnTriggerEnter(Collider other)
         {
             if (!other.CompareTag("Player")) return;
-            _start = true;
+            //_start = true;
+            if (!_start)
+            {
+                _audioSource.Play();
+                _start = true;
+            }
         }
 
          private void Update()
          {
-             if (!_start || _stop) return;
+             if (!_start || _stop){
+                 _audioSource.Stop();
+                 return;
+             }
              
              if (objectToMove.position == waypoints[^1].position) {
                  _stop = true;

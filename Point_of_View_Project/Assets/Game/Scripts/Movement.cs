@@ -147,5 +147,22 @@ namespace Game.Scripts
         //    _alreadyCollide = false;
         //}
         
+        
+        //private void OnTriggerEnter(Collider other)
+        //{
+        //    if (other.CompareTag("Player") && !_alreadyCollide)
+        //    {
+        //         _alreadyCollide = true;
+        //         _audioSource_collision.Play();
+        //    }
+        //}
+        //
+        //private void OnTriggerExit(Collider other)
+        //{
+        //    if (other.CompareTag("Player"))
+        //    {
+        //        _alreadyCollide = false;
+        //    }
+        //}
     }
 }

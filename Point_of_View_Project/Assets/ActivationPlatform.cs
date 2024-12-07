@@ -7,10 +7,14 @@ public class ActivationPlatform : MonoBehaviour
     
     private bool _activePlatform;
     [SerializeField] private GameObject door;
+    [SerializeField] private AudioClip soundEffect;
+    private AudioSource _audioSource;
     // Start is called before the first frame update
     void Start()
     {
         _activePlatform = false;
+        _audioSource = gameObject.AddComponent<AudioSource>();
+        _audioSource.clip = soundEffect;
     }
 
     // Update is called once per frame
@@ -25,6 +29,7 @@ public class ActivationPlatform : MonoBehaviour
         Debug.Log("BOOM");
         if (!_activePlatform)
         {
+            _audioSource.Play();
             _activePlatform = true;
             if (door.activeSelf)
             {

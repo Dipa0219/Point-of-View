@@ -47151,6 +47151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 1584768416}
+  soundEffect: {fileID: 8300000, guid: 2dbd7b01a5db26a42b45e5839517e28f, type: 3}
 --- !u!65 &2060357509
 BoxCollider:
   m_ObjectHideFlags: 0
