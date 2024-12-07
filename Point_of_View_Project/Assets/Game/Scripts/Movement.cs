@@ -15,7 +15,7 @@ namespace Game.Scripts
         [SerializeField] private AudioClip soundEffect_collision; 
         private AudioSource _audioSource_collision;
         private bool _alreadyCollide = false;
-        //private int _old = 0;
+        private bool _firsthit = false;
         
         private CharacterController _characterController;
         private Vector3 _velocity;
@@ -103,12 +103,6 @@ namespace Game.Scripts
             // Vertical speed
             controller.Move(_velocity * Time.deltaTime);
 
-            //_old++;
-            //if (_old == _alreadyCollide)
-            //{
-            //    _old = 0;
-            //    _alreadyCollide = 2;
-            //}
             
         }
 
@@ -119,14 +113,14 @@ namespace Game.Scripts
         
         private void OnControllerColliderHit(ControllerColliderHit hit)
         {
-            if (hit.gameObject.CompareTag("Player") && !_alreadyCollide )
+            if (hit.gameObject.CompareTag("Player") && !_alreadyCollide)
             {
                 _alreadyCollide = true;
+                //_firsthit = true;
                 _audioSource_collision.Play();
                 
             }
             
-            //_alreadyCollide++;
         }
         
 
