@@ -97,11 +97,54 @@ public class EndLevelMenu : MonoBehaviour
 
     private int CalculateStars(string s)
     {
+        
+        string sceneName = SceneManager.GetActiveScene().name;
+        int level = int.Parse(sceneName.Substring(2));
+        int world = int.Parse(sceneName.Substring(0,1));
+        
+        //print("Level: "+level);
+        //print("World: "+world);
+        
         string[] timeParts = s.Split(':');
         int minutes = int.Parse(timeParts[0]);
         int seconds = int.Parse(timeParts[1]);
         
         int secondsCalc = seconds + minutes * 60;
+        
+        if( world == 0 && level == 1)
+            return 3;
+        if( world == 0 && level == 2)
+        {
+            if (secondsCalc > 80)
+                return 1;
+            if (secondsCalc > 40)  
+                return 2; 
+            return 3;
+        }
+        if( world == 0 && level == 3)
+        {
+            if (secondsCalc > 90)
+                return 1;
+            if (secondsCalc > 45)  
+                return 2; 
+            return 3;            
+        }
+        if( world == 1 && level == 1)
+        {
+            if (secondsCalc > 150)
+                return 1;
+            if (secondsCalc > 75)  
+                return 2; 
+            return 3;            
+        }
+        if(world == 1 && level == 2)
+        {
+             if (secondsCalc > 140)
+                 return 1;
+             if (secondsCalc > 70)  
+                 return 2; 
+             return 3;             
+        }
         
         if (secondsCalc > 180)
             return 0;
