@@ -85,17 +85,25 @@ namespace Game.Scripts
 
         private void GoToNextWaypoint()
         {
-            _audioSource.Play();
-            _move = true;
+            if (!_move)
+            {
+                _audioSource.Play();
+                _move = true;
+            }
+            
         }
 
         private void Update()
         {
             if (_stop)
+            {
                 // Deactivate colliders
                 foreach (BoxCollider boxCollider in _colliders)
                     boxCollider.enabled = false;
-            
+                _audioSource.Stop();
+            }
+                
+                
             if (_stop || !_move) return;
             
             transform.position = Vector3.MoveTowards(transform.position, waypoints[_nextWaypoint].position, speed * Time.deltaTime);
@@ -107,7 +115,7 @@ namespace Game.Scripts
                     if (_nextWaypoint == waypoints.Length - 1)
                     {
                         _stop = true;
-                        _audioSource.Stop();
+                        
                     }else
                         _nextWaypoint++;
                     break;
