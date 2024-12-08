@@ -48,7 +48,7 @@ public class MainMenu_December : MonoBehaviour
         {
             //SceneManager.LoadScene("InsertName_WIP");
             SaveManager.SaveSystem.SaveName("Player1");
-            return;
+            //return;
         }
         
         gameData = ScriptableObject.CreateInstance<GameData>();
