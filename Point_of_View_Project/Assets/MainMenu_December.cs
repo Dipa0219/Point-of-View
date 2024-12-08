@@ -44,15 +44,16 @@ public class MainMenu_December : MonoBehaviour
     void Start()
     {
         
-        /*if (!SaveSystem.CheckIfDataExists())
+        if (!SaveSystem.CheckIfDataExists())
         {
-            SceneManager.LoadScene("InsertName_WIP");
+            //SceneManager.LoadScene("InsertName_WIP");
+            SaveManager.SaveSystem.SaveName("Player1");
             return;
         }
         
         gameData = ScriptableObject.CreateInstance<GameData>();
         gameData = SaveSystem.LoadGameData();
-        */
+        
         
                 
         levelButtons = new Button[2, 3]
@@ -63,7 +64,7 @@ public class MainMenu_December : MonoBehaviour
 
         SetButtonInteractivity();
         AssignLevelListeners();
-        //InitializeStars();
+        InitializeStars();
 
         SelectButton(selectedRow, selectedCol);
         

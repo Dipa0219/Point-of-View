@@ -92,7 +92,7 @@ public class EndLevelMenu : MonoBehaviour
         //print("active scene: "+ SceneManager.GetActiveScene().name);
         // TODO
         // RIMETTERE QUANDO CI SARÀ IL SISTEMA DI SALVATAGGIO 
-        //SaveSystem.UpdateLevel(SceneManager.GetActiveScene().name, true, starsEarned, finalTime);
+        SaveSystem.UpdateLevel(SceneManager.GetActiveScene().name, true, starsEarned, finalTime);
     }
 
     private int CalculateStars(string s)
