@@ -12,10 +12,10 @@ namespace Game.Scripts
         [SerializeField] private float jumpHeight = 3f;
         // [SerializeField] private AudioClip footStepSound;
         // [SerializeField] private float footStepDelay;
-        [SerializeField] private AudioClip soundEffect_collision; 
-        private AudioSource _audioSource_collision;
-        private bool _alreadyCollide = false;
-        private bool _firsthit = false;
+        //[SerializeField] private AudioClip soundEffect_collision; 
+        //private AudioSource _audioSource_collision;
+        //private bool _alreadyCollide = false;
+        
         
         private CharacterController _characterController;
         private Vector3 _velocity;
@@ -42,8 +42,8 @@ namespace Game.Scripts
                 Debug.Log("CharacterController not found.");
             }
             */
-            _audioSource_collision = gameObject.AddComponent<AudioSource>();
-            _audioSource_collision.clip = soundEffect_collision;
+            //_audioSource_collision = gameObject.AddComponent<AudioSource>();
+            //_audioSource_collision.clip = soundEffect_collision;
         }
 
         private void Update() {
@@ -111,35 +111,38 @@ namespace Game.Scripts
             _isActive = active;
         }
         
-        private void OnControllerColliderHit(ControllerColliderHit hit)
-        {
-            if (hit.gameObject.CompareTag("Player") && !_alreadyCollide)
-            {
-                _alreadyCollide = true;
-                //_firsthit = true;
-                _audioSource_collision.Play();
-                
-            }
-            
-        }
+        //private void OnControllerColliderHit(ControllerColliderHit hit)
+        //{
+        //    if (hit.gameObject.CompareTag("Player") && !_alreadyCollide)
+        //    {
+        //        _alreadyCollide = true;
+        //        //_firsthit = true;
+        //        _audioSource_collision.Play();
+        //        
+        //    }
+        //}
         
 
-        //private void OnCollisionEnter(Collision collision)
-        //{
-        //    if (collision.gameObject.CompareTag("Player") && collision.gameObject.name == "Black Bot" && !_alreadyCollide)
-        //        {
-        //            _alreadyCollide = true;
-        //            _audioSource_collision.Play();
-        //            
-        //        }
-        //}
+        
+       //private void OnCollisionEnter(Collision collision)
+       //{
+       //    if (collision.gameObject.CompareTag("Player") && !_alreadyCollide && && collision.gameObject.name == "Black Bot")
+       //        {
+       //            Debug.Log("puzziiiiiii");
+       //            _alreadyCollide = true;
+       //            _audioSource_collision.Play();
+       //            
+       //        }
+       //}
 
-        //private void OnCollisionExit(Collision other)
-        //{
-        //    if(other.gameObject.CompareTag("Player"))
-        //        Debug.Log("ciaoooooo");
-        //    _alreadyCollide = false;
-        //}
+       //rivate void OnCollisionExit(Collision other)
+       //
+       //   if(other.gameObject.CompareTag("Player")){
+       //       Debug.Log("ciaoooooo");
+       //       _alreadyCollide = false;
+       //   }
+       //       
+       //
         
         
         //private void OnTriggerEnter(Collider other)
