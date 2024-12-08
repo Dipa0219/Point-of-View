@@ -18,29 +18,41 @@ public class Credits : MonoBehaviour
 
     void Start()
     {
-        backButton.onClick.AddListener(LoadLevel("MainMenu_WIP"));
+        _audioSource_select = gameObject.AddComponent<AudioSource>();
+        _audioSource_select.clip = soundEffect_select;
+        
+        backButton.onClick.AddListener(() =>
+        {
+            _audioSource_select.Play();
+            StartCoroutine(WaitAndLoadScene(_audioSource_select.clip.length + 0.1f, "MainMenu_WIP"));
+        });
+        //backButton.onClick.AddListener(LoadLevel("MainMenu_WIP"));
         
         backButton.Select();
         
         //sound select
-        _audioSource_select = gameObject.AddComponent<AudioSource>();
-        _audioSource_select.clip = soundEffect_select;
+
     }
 
     void Update()
     {
             if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
             {
-                DontDestroyOnLoad(_audioSource_select.gameObject);
-                _audioSource_select.Play(); 
-                Destroy(_audioSource_select.gameObject, soundEffect_select.length);
+                //DontDestroyOnLoad(_audioSource_select.gameObject);
+                //_audioSource_select.Play(); 
+                //Destroy(_audioSource_select.gameObject, soundEffect_select.length);
                 backButton.onClick.Invoke();
             }
     }
     
-    
-        private UnityAction LoadLevel(string s)
-        {
-            return () => SceneManager.LoadScene(s);
-        }
+    private IEnumerator WaitAndLoadScene(float waitTime, string sceneName)
+    {
+        yield return new WaitForSeconds(waitTime);
+        SceneManager.LoadScene(sceneName);
+    }
+
+    private UnityAction LoadLevel(string s)
+    {
+        return () => SceneManager.LoadScene(s);
+    }
 }

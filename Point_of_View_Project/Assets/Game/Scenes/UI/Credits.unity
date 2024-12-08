@@ -330,6 +330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backButton: {fileID: 1921151789}
+  soundEffect_select: {fileID: 8300000, guid: 25a9527746196af45b6b760326b519c7, type: 3}
 --- !u!1 &492465784
 GameObject:
   m_ObjectHideFlags: 0
