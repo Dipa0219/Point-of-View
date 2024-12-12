@@ -39,7 +39,7 @@ EditorBuildSettings:
     path: Assets/Game/Scenes/UI/Settings.unity
     guid: 134881de8e3eb6c4bbc1a9aca647638c
   - enabled: 1
-    path: Assets/Game/Scenes/Levels/0-3.unity
+    path: Assets/Game/Scenes/Levels/1-2.unity
     guid: 4e91b5cd99b888f438a4180c8688510f
   - enabled: 0
     path: Assets/Game/Scenes/Levels/Extra/0-3.unity
@@ -51,12 +51,12 @@ EditorBuildSettings:
     path: Assets/Game/Scenes/UI/LevelSelection_WIP.unity
     guid: 7265c0cde42ff2243a6c31de3e306588
   - enabled: 1
-    path: Assets/Game/Scenes/Levels/2-2.unity
+    path: Assets/Game/Scenes/Levels/0-3.unity
     guid: 732f6dee9978eda4f8116d94c54a00d6
   - enabled: 1
     path: Assets/Game/Scenes/Levels/1-1.unity
     guid: 5c80bbd6d04c5504499fa86a0417c4d8
   - enabled: 1
-    path: Assets/Game/Scenes/Levels/1-2.unity
+    path: Assets/Game/Scenes/Levels/1-1.unity
     guid: 9ed5fea12cf7a15449b0948da2fe7c47
   m_configObjects: {}
