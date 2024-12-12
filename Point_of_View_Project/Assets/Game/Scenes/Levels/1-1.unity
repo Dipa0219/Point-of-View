@@ -23999,11 +23999,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 146051800375507658, guid: c20f329e76b7ca446835d8a8f924ef03, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 35.56
+      value: 35.99
       objectReference: {fileID: 0}
     - target: {fileID: 146051800375507658, guid: c20f329e76b7ca446835d8a8f924ef03, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -22.44
+      value: -20.44
       objectReference: {fileID: 0}
     - target: {fileID: 180554963182735187, guid: c20f329e76b7ca446835d8a8f924ef03, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24147,7 +24147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3016159527200279691, guid: c20f329e76b7ca446835d8a8f924ef03, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6
+      value: 6.7
       objectReference: {fileID: 0}
     - target: {fileID: 3016159527200279691, guid: c20f329e76b7ca446835d8a8f924ef03, type: 3}
       propertyPath: m_LocalPosition.y
@@ -75541,7 +75541,6 @@ MonoBehaviour:
   speed: 6
   gravity: -9.81
   jumpHeight: 0
-  soundEffect_collision: {fileID: 8300000, guid: ba3fc6188f4ec194193cb2e52cb689ca, type: 3}
 --- !u!64 &5503400697741922392
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77967,7 +77966,6 @@ MonoBehaviour:
   speed: 6
   gravity: -9.81
   jumpHeight: 0
-  soundEffect_collision: {fileID: 8300000, guid: ba3fc6188f4ec194193cb2e52cb689ca, type: 3}
 --- !u!114 &8291002931661354197
 MonoBehaviour:
   m_ObjectHideFlags: 0

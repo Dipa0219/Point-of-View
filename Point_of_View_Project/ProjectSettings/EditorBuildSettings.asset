@@ -48,6 +48,9 @@ EditorBuildSettings:
     path: Assets/Game/Scenes/Levels/0-1.unity
     guid: 9e250b147a142bd4da9d6d4704cd8c85
   - enabled: 1
+    path: Assets/Game/Scenes/Levels/0-2.unity
+    guid: eec9864292b14cd4f90a985bf52146dc
+  - enabled: 1
     path: Assets/Game/Scenes/UI/LevelSelection_WIP.unity
     guid: 7265c0cde42ff2243a6c31de3e306588
   - enabled: 1
