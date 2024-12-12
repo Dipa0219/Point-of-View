@@ -3702,7 +3702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 304966801}
   m_Layer: 0
-  m_Name: ---EventManager-------------------------------------------------------------------------------------------------------
+  m_Name: ---Event Manager-------------------------------------------------------------------------------------------------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5999,7 +5999,7 @@ GameObject:
   m_Component:
   - component: {fileID: 537595391}
   m_Layer: 0
-  m_Name: ---Ambiental object------------------------------------------------------------------------------------------------------
+  m_Name: ---Ambiental Objects------------------------------------------------------------------------------------------------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15215,7 +15215,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1309304797}
   m_Layer: 0
-  m_Name: ---Light--------------------------------------------------------------------------------------------------------------
+  m_Name: ---Lights--------------------------------------------------------------------------------------------------------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42721,7 +42721,6 @@ MonoBehaviour:
   speed: 6
   gravity: -9.81
   jumpHeight: 0
-  soundEffect_collision: {fileID: 8300000, guid: ba3fc6188f4ec194193cb2e52cb689ca, type: 3}
 --- !u!1 &5553021913603222323
 GameObject:
   m_ObjectHideFlags: 0
@@ -43731,7 +43730,6 @@ MonoBehaviour:
   speed: 6
   gravity: -9.81
   jumpHeight: 0
-  soundEffect_collision: {fileID: 8300000, guid: ba3fc6188f4ec194193cb2e52cb689ca, type: 3}
 --- !u!114 &8291002931661354197
 MonoBehaviour:
   m_ObjectHideFlags: 0
