@@ -17663,17 +17663,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 5576773747100644521, guid: 56bc84515852be743a6e09c11ccb9ab9, type: 3}
+      propertyPath: m_Radius
+      value: 2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576773747100644521, guid: 56bc84515852be743a6e09c11ccb9ab9, type: 3}
+      propertyPath: m_Center.x
+      value: 2.75788
+      objectReference: {fileID: 0}
     - target: {fileID: 6697804511484726328, guid: 56bc84515852be743a6e09c11ccb9ab9, type: 3}
       propertyPath: m_Name
       value: Moving Platform
       objectReference: {fileID: 0}
     - target: {fileID: 7509541813634776844, guid: 56bc84515852be743a6e09c11ccb9ab9, type: 3}
       propertyPath: speed
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7509541813634776844, guid: 56bc84515852be743a6e09c11ccb9ab9, type: 3}
       propertyPath: isDouble
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7509541813634776844, guid: 56bc84515852be743a6e09c11ccb9ab9, type: 3}
       propertyPath: soundEffect
@@ -17681,11 +17689,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 0c9ad530b5e33e845a205cc05e3e234b, type: 3}
     - target: {fileID: 7509541813634776844, guid: 56bc84515852be743a6e09c11ccb9ab9, type: 3}
       propertyPath: finalBehaviour
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7509541813634776844, guid: 56bc84515852be743a6e09c11ccb9ab9, type: 3}
       propertyPath: continuousMovement
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7509541813634776844, guid: 56bc84515852be743a6e09c11ccb9ab9, type: 3}
       propertyPath: waypoints.Array.size
