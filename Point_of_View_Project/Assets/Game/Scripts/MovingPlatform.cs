@@ -59,9 +59,17 @@ namespace Game.Scripts
         {
             if (!other.CompareTag("Player")) return;
             
-            if(_numPlayer==0 && isDouble)
+            //if(_numPlayer==0 && isDouble)
+            if(isDouble)
             {
+                if (_numPlayer == 0)
+                {
+                    _numPlayer++;
+                    return;
+                }
+                
                 _numPlayer++;
+                GoToNextWaypoint();
                 return;
             }
             // Take transform of the player
