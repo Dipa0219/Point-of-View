@@ -12276,6 +12276,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4993354982381622402, guid: 1bafedca4a407954c9cb4e992a37b8ef, type: 3}
   m_PrefabInstance: {fileID: 417426393}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &420158902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 420158903}
+  m_Layer: 0
+  m_Name: Box_way_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &420158903
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420158902}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -33.74, y: 0, z: 15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &424015684
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34724,6 +34755,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6280768956213996451, guid: ff6a92ea0f812464daee16bf72c32545, type: 3}
   m_PrefabInstance: {fileID: 1189217834}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1189756225 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2786338854811193807, guid: e5beb954a028a9a4c9fdb76c12ee8986, type: 3}
+  m_PrefabInstance: {fileID: 1097443729}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1193535831
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43028,6 +43064,7 @@ GameObject:
   - component: {fileID: 1415478678}
   - component: {fileID: 1415478681}
   - component: {fileID: 1415478684}
+  - component: {fileID: 1415478685}
   - component: {fileID: 1415478683}
   m_Layer: 0
   m_Name: Red Button 1
@@ -43168,6 +43205,23 @@ MonoBehaviour:
   - {fileID: 700585443}
   speed: 3
   soundEffect: {fileID: 8300000, guid: e3f605d15bee39847984a5732d976832, type: 3}
+--- !u!114 &1415478685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415478677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d25e404b54a9bbd4d810b267e113cc7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToMove: {fileID: 1189756225}
+  waypoints:
+  - {fileID: 420158903}
+  speed: 3
+  soundEffect: {fileID: 8300000, guid: e11a3f731847f0448845ec6c60b679ba, type: 3}
 --- !u!1001 &1417731849
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46175,7 +46229,7 @@ Transform:
   m_GameObject: {fileID: 1524278402}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.55, y: 6.47, z: 31.2}
+  m_LocalPosition: {x: -32.55, y: 30, z: 31.2}
   m_LocalScale: {x: 0.025, y: 3.5, z: 0.025}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -92545,3 +92599,4 @@ SceneRoots:
   - {fileID: 1575842803}
   - {fileID: 25508287}
   - {fileID: 994485086}
+  - {fileID: 420158903}

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Game.Scripts
 {
-    public class ChangePositionTrigger : MonoBehaviour
+    public class ChangePositionBoxTrigger : MonoBehaviour
     {
     
         [SerializeField] private Transform objectToMove;
@@ -40,7 +40,9 @@ namespace Game.Scripts
                  return;
              }
              
-             if(objectToMove.position == waypoints[^1].position) {
+             int len = waypoints.Length;
+             if (Vector3.Distance(objectToMove.position, waypoints[len-1].position) < 0.5f) {///if(objectToMove.position == waypoints[len-1].position - ) {
+                 Debug.Log("Stop");
                  _stop = true;
                  return;
              }
@@ -48,7 +50,8 @@ namespace Game.Scripts
              
              if(objectToMove.position == waypoints[_nextWaypoint].position)
                 _nextWaypoint++;
-             objectToMove.position = Vector3.MoveTowards(objectToMove.position, waypoints[_nextWaypoint].position, Time.deltaTime * speed);
+             if (_start || !_stop)
+                 objectToMove.position = Vector3.MoveTowards(objectToMove.position, waypoints[_nextWaypoint].position, Time.deltaTime * speed);
          }
     }
 }
