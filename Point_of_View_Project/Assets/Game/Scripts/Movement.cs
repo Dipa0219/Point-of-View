@@ -25,6 +25,10 @@ namespace Game.Scripts
         private bool _isActive;
         // private AudioSource _audioSource;
 
+        private Vector3 _platformDeltaMovement;
+        private Transform _platform;
+
+        
         private void Start() {
             _characterController = GetComponent<CharacterController>();
             // _audioSource = GetComponent<AudioSource>();
@@ -103,7 +107,7 @@ namespace Game.Scripts
             // Vertical speed
             controller.Move(_velocity * Time.deltaTime);
 
-            
+            _platformDeltaMovement = Vector3.zero;
         }
 
         public void SetActive(bool active)
@@ -161,5 +165,24 @@ namespace Game.Scripts
         //        _alreadyCollide = false;
         //    }
         //}
+        
+        
+        public void SetPlatform(Transform platform)
+        {
+            _platform = platform;
+        }
+
+        public void UpdatePlatformDelta(Vector3 deltaMovement)
+        {
+            if (_isGrounded && _platform != null)
+            {
+                controller.Move(deltaMovement);
+            }
+        }
+
+        public void ClearPlatform()
+        {
+            _platform = null;
+        }
     }
 }

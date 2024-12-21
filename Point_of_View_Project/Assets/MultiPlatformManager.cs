@@ -77,7 +77,7 @@ public class MultiPlatformManager : MonoBehaviour
         {
             case Phase.P1:
                 
-                Platform_A.GetComponent<MovingPlatformUnbound>().startMoving();
+                Platform_A.GetComponent<MovingPlatformUnbound>().StartMoving();
                 //Platform_A.GetComponent()
                 /*
                 Platform_A.SetActive(true);

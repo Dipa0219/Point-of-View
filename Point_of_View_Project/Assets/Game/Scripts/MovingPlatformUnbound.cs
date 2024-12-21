@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Game.Scripts
@@ -13,253 +13,155 @@ namespace Game.Scripts
             Reverse
         }
 
-        [SerializeField] private Transform[] waypoints;
-        [SerializeField] private float speed;
-
+        [SerializeField] private Transform[] waypoints;   // Waypoints for platform movement
+        [SerializeField] private float speed = 3f;       // Platform speed
         [SerializeField] private FinalBehaviour finalBehaviour;
-        [SerializeField] private bool continuousMovement;
-        //[SerializeField] private bool isDouble;
+        [SerializeField] private bool continuousMovement = false; // Whether the platform stops at waypoints
+        [SerializeField] private float delay = 2f;       // Delay at waypoints
+        [SerializeField] private float detachDistance = 1.5f; // Max distance for player to remain attached
+        [SerializeField] private AudioClip soundEffect;  // Sound effect for movement
 
-        [SerializeField] private AudioClip soundEffect;
         private AudioSource _audioSource;
-
-        private List<Transform> _children;
-        
-        private List<Transform> attachedObjects = new List<Transform>();
-
-
-        //private BoxCollider[] _colliders;
-        private Transform _playerTransform;
-        private int _nextWaypoint = 1;
-        private bool _move;
-        private bool _stop;
+        private Transform currentAttachedPlayer = null;  // Player currently on the platform
+        private Vector3 playerOffset;                   // Offset of the player relative to the platform
+        private int _nextWaypoint = 1;                  // Next waypoint index
+        private bool _isMoving = false;
+        private bool _isWaiting = false;
         private bool _forward = true;
-        private int _numPlayer;
-
-        private bool isWaiting;
-        [SerializeField] private float delay = 2f;
-        
-        private GameObject _player;
 
         private void Start()
         {
-            _move = false;
-            _stop = true;
-            
             _audioSource = gameObject.AddComponent<AudioSource>();
             _audioSource.clip = soundEffect;
         }
 
-        private void Awake()
+        private void OnTriggerEnter(Collider other)
         {
-            _children = new List<Transform>();
-            //GetRecursiveChildren(transform);
-            //_colliders = _children[0].GetComponents<BoxCollider>();
-        }
-
-        private void GetRecursiveChildren(Transform parentTransform)
-        {
-            foreach (Transform child in parentTransform)
+            if (currentAttachedPlayer == null && other.CompareTag("Player"))
             {
-                _children.Add(child.transform);
-                if (child.transform.childCount > 0)
+                currentAttachedPlayer = other.transform;
+
+                // Calculate initial offset
+                playerOffset = currentAttachedPlayer.position - transform.position;
+
+                // Notify player's movement script about the platform
+                var playerMovement = currentAttachedPlayer.GetComponent<Movement>();
+                if (playerMovement != null)
                 {
-                    GetRecursiveChildren(child);
+                    playerMovement.SetPlatform(transform);
                 }
+
+                Debug.Log("Player attached to platform.");
             }
-        }
-
-
-        public void startMoving()
-        {
-            GoToNextWaypoint();
-        }
-
-        public void stopMoving()
-        {
-            _stop = true;
-            _move = false;
-
-        }
-
-        public void resetPlatform()
-        {
-            stopMoving();
-            transform.position = waypoints[0].position;
         }
 
         private void OnTriggerExit(Collider other)
-        //private void OnCollisionExit(Collision other)
         {
-            //if (!other.transform.CompareTag("Player")) return;
-            if (!other.CompareTag("Player")) return;
-            //other.transform.SetParent(null);
-            attachedObjects.Remove(other.transform);
-            _player=null;
-            print("Removed player");
-        }
-
-        private void OnTriggerEnter(Collider other)
-        //private void OnCollisionEnter(Collision other)
-        {
-            //if (!other.transform.CompareTag("Player")) return;
-            if (!other.CompareTag("Player")) return;
-            //other.transform.SetParent(transform);
-            //other.transform.isKinematic = true;
-            _player=other.gameObject;
-            attachedObjects.Add(other.transform);
-            print("Added player");
-            //other.attachedRigidbody.isKinematic = true;
-            //print("Kinematic");
-        }
-
-        private void GoToNextWaypoint()
-        {
-            if (!_move)
+            if (currentAttachedPlayer == other.transform)
             {
-                _audioSource.Play();
-                _move = true;
-                _stop = false;
+                DetachPlayer();
             }
         }
 
+        private void DetachPlayer()
+        {
+            if (currentAttachedPlayer != null)
+            {
+                // Notify the player's movement script about detachment
+                var playerMovement = currentAttachedPlayer.GetComponent<Movement>();
+                if (playerMovement != null)
+                {
+                    playerMovement.ClearPlatform();
+                }
+
+                currentAttachedPlayer = null;
+                Debug.Log("Player detached from platform.");
+            }
+        }
 
         private void Update()
         {
-            if (_stop)
-            {
-                // Deactivate colliders
-                //foreach (BoxCollider boxCollider in _colliders)
-                //   boxCollider.enabled = false;
-                _audioSource.Stop();
-            }
-            
-            if (_stop || !_move) return;
-            
+            if (_isWaiting || !_isMoving) return;
+
             Vector3 previousPosition = transform.position;
-            
-            transform.position = Vector3.MoveTowards(transform.position, waypoints[_nextWaypoint].position,
-                speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, waypoints[_nextWaypoint].position, speed * Time.deltaTime);
 
-            //if (_player != null) _player.transform.position += transform.position - previousPosition;
-            
-            Vector3 movementDelta = transform.position - previousPosition;
-            foreach (var obj in attachedObjects)
+            // Calculate platform delta movement
+            Vector3 deltaMovement = transform.position - previousPosition;
+
+            // Update attached player's position based on delta
+            if (currentAttachedPlayer != null)
             {
-                obj.position += movementDelta;
-            }
-            
-            if (transform.position != waypoints[_nextWaypoint].position) return;
+                var playerMovement = currentAttachedPlayer.GetComponent<Movement>();
+                if (playerMovement != null)
+                {
+                    playerMovement.UpdatePlatformDelta(deltaMovement);
+                }
 
-            if (!isWaiting)
+                // Check detach distance
+                float distanceFromCenter = Vector3.Distance(currentAttachedPlayer.position, transform.position);
+                if (distanceFromCenter > detachDistance)
+                {
+                    DetachPlayer();
+                }
+            }
+
+            // Handle waypoint arrival
+            if (transform.position == waypoints[_nextWaypoint].position)
+            {
                 StartCoroutine(WaitAtWaypoint());
-
-            /*
-            switch (finalBehaviour)
-            {
-                case FinalBehaviour.Stop:
-                    if (_nextWaypoint == waypoints.Length - 1)
-                    {
-                        _stop = true;
-
-                    }
-                    else
-                        _nextWaypoint++;
-
-                    break;
-                case FinalBehaviour.Loop:
-                    if (_nextWaypoint == waypoints.Length - 1)
-                        _nextWaypoint = 0;
-                    else
-                        _nextWaypoint++;
-                    break;
-                case FinalBehaviour.Reverse:
-                    if (_forward)
-                        if (_nextWaypoint == waypoints.Length - 1)
-                        {
-                            _forward = false;
-                            _nextWaypoint--;
-                        }
-                        else
-                            _nextWaypoint++;
-                    else if (_nextWaypoint == waypoints.Length - 1)
-                    {
-                        _forward = false;
-                        _nextWaypoint--;
-                    }
-                    else
-                        _nextWaypoint++;
-
-                    break;
-
-                default:
-                    _stop = true;
-                    break;
             }
-
-            if (continuousMovement) return;
-
-            _move = false;
-            */
-            
-            
-            //foreach (BoxCollider boxCollider in _colliders)
-            //    boxCollider.enabled = false;
         }
 
-        IEnumerator WaitAtWaypoint()
+        public void StartMoving()
         {
-            isWaiting = true; // Stop movement
-            yield return new WaitForSeconds(delay); // Wait for the delay duration
-            
-            isWaiting = false; // Resume movement
-            
+            if (!_isMoving)
+            {
+                _isMoving = true;
+                _audioSource.Play();
+            }
+        }
+
+        public void StopMoving()
+        {
+            _isMoving = false;
+            _audioSource.Stop();
+        }
+
+        private IEnumerator WaitAtWaypoint()
+        {
+            _isWaiting = true;
+            yield return new WaitForSeconds(delay);
+
+            // Decide next waypoint
             switch (finalBehaviour)
             {
                 case FinalBehaviour.Stop:
-                    if (_nextWaypoint == waypoints.Length - 1)
-                    {
-                        _stop = true;
-
-                    }
-                    else
-                        _nextWaypoint++;
-
+                    if (_nextWaypoint == waypoints.Length - 1) StopMoving();
+                    else _nextWaypoint++;
                     break;
+
                 case FinalBehaviour.Loop:
-                    if (_nextWaypoint == waypoints.Length - 1)
-                        _nextWaypoint = 0;
-                    else
-                        _nextWaypoint++;
+                    _nextWaypoint = (_nextWaypoint + 1) % waypoints.Length;
                     break;
+
                 case FinalBehaviour.Reverse:
                     if (_forward)
-                        if (_nextWaypoint == waypoints.Length - 1)
-                        {
-                            _forward = false;
-                            _nextWaypoint--;
-                        }
-                        else
-                            _nextWaypoint++;
-                    else if (_nextWaypoint == waypoints.Length - 1)
                     {
-                        _forward = false;
-                        _nextWaypoint--;
+                        if (_nextWaypoint == waypoints.Length - 1) _forward = false;
+                        else _nextWaypoint++;
                     }
                     else
-                        _nextWaypoint++;
-
-                    break;
-
-                default:
-                    _stop = true;
+                    {
+                        if (_nextWaypoint == 0) _forward = true;
+                        else _nextWaypoint--;
+                    }
                     break;
             }
 
-            //if (continuousMovement) return;
-            if (continuousMovement) yield break;
+            _isWaiting = false;
 
-            _move = false;
+            if (continuousMovement) _isMoving = true;
         }
     }
 }
