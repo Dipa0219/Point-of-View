@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MultiPlatformManager : MonoBehaviour
 {
-    private enum Phase
+    public enum Phase
     {
         P1,
         P2,
@@ -59,9 +59,9 @@ public class MultiPlatformManager : MonoBehaviour
             changePhase(Phase.P4);
         }
     }
-    
-    
-    private void changePhase(Phase newPhase)
+
+
+    public void changePhase(Phase newPhase)
     {
         if (currentPhase == newPhase)
         {
