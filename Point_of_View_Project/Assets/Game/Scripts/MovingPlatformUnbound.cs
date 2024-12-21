@@ -105,9 +105,12 @@ namespace Game.Scripts
             //if (!other.transform.CompareTag("Player")) return;
             if (!other.CompareTag("Player")) return;
             //other.transform.SetParent(transform);
+            //other.transform.isKinematic = true;
             _player=other.gameObject;
             attachedObjects.Add(other.transform);
             print("Added player");
+            //other.attachedRigidbody.isKinematic = true;
+            //print("Kinematic");
         }
 
         private void GoToNextWaypoint()
@@ -138,13 +141,13 @@ namespace Game.Scripts
             transform.position = Vector3.MoveTowards(transform.position, waypoints[_nextWaypoint].position,
                 speed * Time.deltaTime);
 
-            if (_player != null)  _player.transform.position += transform.position - previousPosition;
+            //if (_player != null) _player.transform.position += transform.position - previousPosition;
             
-            /*Vector3 movementDelta = transform.position - previousPosition;
+            Vector3 movementDelta = transform.position - previousPosition;
             foreach (var obj in attachedObjects)
             {
                 obj.position += movementDelta;
-            }*/
+            }
             
             if (transform.position != waypoints[_nextWaypoint].position) return;
 
