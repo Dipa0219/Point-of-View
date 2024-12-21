@@ -12356,7 +12356,11 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[3]
       value: 
       objectReference: {fileID: 1907442867}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8842171144790117345, guid: 56bc84515852be743a6e09c11ccb9ab9, type: 3}
+    - {fileID: 6788820298334968973, guid: 56bc84515852be743a6e09c11ccb9ab9, type: 3}
+    - {fileID: 6794341534004704252, guid: 56bc84515852be743a6e09c11ccb9ab9, type: 3}
+    - {fileID: 8964216139792138486, guid: 56bc84515852be743a6e09c11ccb9ab9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

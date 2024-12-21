@@ -24,6 +24,9 @@ namespace Game.Scripts
         private AudioSource _audioSource;
 
         private List<Transform> _children;
+        
+        private List<Transform> attachedObjects = new List<Transform>();
+
 
         //private BoxCollider[] _colliders;
         private Transform _playerTransform;
@@ -35,6 +38,8 @@ namespace Game.Scripts
 
         private bool isWaiting;
         [SerializeField] private float delay = 2f;
+        
+        private GameObject _player;
 
         private void Start()
         {
@@ -83,20 +88,26 @@ namespace Game.Scripts
             transform.position = waypoints[0].position;
         }
 
-        //private void OnTriggerExit(Collider other)
-        private void OnCollisionExit(Collision other)
+        private void OnTriggerExit(Collider other)
+        //private void OnCollisionExit(Collision other)
         {
-            if (!other.transform.CompareTag("Player")) return;
-            //if (!other.CompareTag("Player")) return;
-            other.transform.SetParent(null);
+            //if (!other.transform.CompareTag("Player")) return;
+            if (!other.CompareTag("Player")) return;
+            //other.transform.SetParent(null);
+            attachedObjects.Remove(other.transform);
+            _player=null;
+            print("Removed player");
         }
 
-        //private void OnTriggerEnter(Collider other)
-        private void OnCollisionEnter(Collision other)
+        private void OnTriggerEnter(Collider other)
+        //private void OnCollisionEnter(Collision other)
         {
-            if (!other.transform.CompareTag("Player")) return;
-            //if (!other.CompareTag("Player")) return;
-            other.transform.SetParent(transform);
+            //if (!other.transform.CompareTag("Player")) return;
+            if (!other.CompareTag("Player")) return;
+            //other.transform.SetParent(transform);
+            _player=other.gameObject;
+            attachedObjects.Add(other.transform);
+            print("Added player");
         }
 
         private void GoToNextWaypoint()
@@ -122,9 +133,19 @@ namespace Game.Scripts
             
             if (_stop || !_move) return;
             
+            Vector3 previousPosition = transform.position;
+            
             transform.position = Vector3.MoveTowards(transform.position, waypoints[_nextWaypoint].position,
                 speed * Time.deltaTime);
 
+            if (_player != null)  _player.transform.position += transform.position - previousPosition;
+            
+            /*Vector3 movementDelta = transform.position - previousPosition;
+            foreach (var obj in attachedObjects)
+            {
+                obj.position += movementDelta;
+            }*/
+            
             if (transform.position != waypoints[_nextWaypoint].position) return;
 
             if (!isWaiting)
