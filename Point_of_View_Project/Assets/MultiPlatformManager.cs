@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Game.Scripts;
 using UnityEngine;
 
 public class MultiPlatformManager : MonoBehaviour
@@ -36,6 +37,7 @@ public class MultiPlatformManager : MonoBehaviour
     void Start()
     {
         currentPhase = Phase.P1;
+        changePhase(Phase.P1);
         
     }
 
@@ -61,18 +63,22 @@ public class MultiPlatformManager : MonoBehaviour
     }
 
 
+    // ReSharper disable Unity.PerformanceAnalysis
     public void changePhase(Phase newPhase)
     {
-        if (currentPhase == newPhase)
+        /*if (currentPhase == newPhase)
         {
             return;
-        }
+        }*/
         
         currentPhase = newPhase;
         print("Phase: " + newPhase);
         switch (newPhase)
         {
             case Phase.P1:
+                
+                Platform_A.GetComponent<MovingPlatformUnbound>().startMoving();
+                //Platform_A.GetComponent()
                 /*
                 Platform_A.SetActive(true);
                 Platform_B.SetActive(true);
