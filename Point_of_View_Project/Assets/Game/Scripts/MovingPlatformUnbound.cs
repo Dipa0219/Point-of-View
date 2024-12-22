@@ -59,6 +59,7 @@ namespace Game.Scripts
         {
             if (currentAttachedPlayer == other.transform)
             {
+                print("exit");
                 DetachPlayer();
             }
         }

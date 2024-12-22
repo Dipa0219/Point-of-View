@@ -1,9 +1,8 @@
-using Unity.VisualScripting;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Game.Scripts
 {
-    public class Movement : MonoBehaviour
+    public class Movement_Edit : MonoBehaviour
     {
         [SerializeField] private CharacterController controller;
         [SerializeField] private float speed = 8f;
@@ -17,11 +16,6 @@ namespace Game.Scripts
         private Transform _platform;
         private Vector3 _platformDeltaMovement;
 
-        private void Start()
-        {
-            //controller = GetComponent<CharacterController>();
-            _platformDeltaMovement = Vector3.zero;
-        }
         private void Update()
         {
             _isGrounded = controller.isGrounded;
@@ -42,10 +36,6 @@ namespace Game.Scripts
             {
                 // Apply horizontal movement
                 controller.Move((motion * (speed * Time.deltaTime)) + _platformDeltaMovement);
-            }
-            else
-            {
-                controller.Move(_platformDeltaMovement);
             }
 
             // Jump
