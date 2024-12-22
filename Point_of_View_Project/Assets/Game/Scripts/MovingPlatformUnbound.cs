@@ -127,6 +127,21 @@ namespace Game.Scripts
             _isMoving = false;
             _audioSource.Stop();
         }
+        
+        
+        public void SwitchWaypoints(Transform[] waypointsToBeRemoved, Transform[] waypointsToBeAdded)
+        {
+            List<Transform> updatedWaypoints = new List<Transform>(waypointsToBeAdded);
+            foreach (var waypoint in waypoints)
+            {
+                if (!((IList<Transform>)waypointsToBeRemoved).Contains(waypoint))
+                {
+                    updatedWaypoints.Add(waypoint);
+                }
+            }
+            waypoints = updatedWaypoints.ToArray();
+        }
+        
 
         private IEnumerator WaitAtWaypoint()
         {

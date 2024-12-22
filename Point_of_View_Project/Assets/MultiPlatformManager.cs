@@ -71,6 +71,12 @@ public class MultiPlatformManager : MonoBehaviour
             return;
         }*/
         
+        //1 A B C U1
+        //2 A D G U1
+        //3 D' E U2
+        //4 D' H U2
+        
+        
         currentPhase = newPhase;
         print("Phase: " + newPhase);
         switch (newPhase)
@@ -78,6 +84,16 @@ public class MultiPlatformManager : MonoBehaviour
             case Phase.P1:
                 
                 Platform_A.GetComponent<MovingPlatformUnbound>().StartMoving();
+                Platform_B.GetComponent<MovingPlatformUnbound>().StartMoving();
+                Platform_C.GetComponent<MovingPlatformUnbound>().StartMoving();
+                Platform_Useless_1.GetComponent<MovingPlatformUnbound>().StartMoving();
+                
+                Platform_D.GetComponent<MovingPlatformUnbound>().StopMoving();
+                Platform_E.GetComponent<MovingPlatformUnbound>().StopMoving();
+                Platform_G.GetComponent<MovingPlatformUnbound>().StopMoving();
+                Platform_H.GetComponent<MovingPlatformUnbound>().StopMoving();
+                Platform_Useless_2.GetComponent<MovingPlatformUnbound>().StopMoving();
+
                 //Platform_A.GetComponent()
                 /*
                 Platform_A.SetActive(true);
@@ -92,6 +108,16 @@ public class MultiPlatformManager : MonoBehaviour
                 */
                 break;
             case Phase.P2:
+                Platform_A.GetComponent<MovingPlatformUnbound>().StartMoving();
+                Platform_D.GetComponent<MovingPlatformUnbound>().StartMoving();
+                Platform_G.GetComponent<MovingPlatformUnbound>().StartMoving();
+                Platform_Useless_1.GetComponent<MovingPlatformUnbound>().StartMoving();
+                
+                Platform_B.GetComponent<MovingPlatformUnbound>().StopMoving();
+                Platform_C.GetComponent<MovingPlatformUnbound>().StopMoving();
+                Platform_E.GetComponent<MovingPlatformUnbound>().StopMoving();
+                Platform_H.GetComponent<MovingPlatformUnbound>().StopMoving();
+                Platform_Useless_2.GetComponent<MovingPlatformUnbound>().StopMoving();
                 /*
                 Platform_A.SetActive(false);
                 Platform_B.SetActive(false);
@@ -105,6 +131,19 @@ public class MultiPlatformManager : MonoBehaviour
                 */
                 break;
             case Phase.P3:
+
+                Platform_D.GetComponent<MovingPlatformUnbound>().SwitchWaypoints(waypoints_to_be_substituted, alternative_waypoints);
+                
+                Platform_D.GetComponent<MovingPlatformUnbound>().StartMoving();
+                Platform_E.GetComponent<MovingPlatformUnbound>().StartMoving();
+                Platform_Useless_2.GetComponent<MovingPlatformUnbound>().StartMoving();
+                
+                Platform_A.GetComponent<MovingPlatformUnbound>().StopMoving();
+                Platform_B.GetComponent<MovingPlatformUnbound>().StopMoving();
+                Platform_C.GetComponent<MovingPlatformUnbound>().StopMoving();
+                Platform_G.GetComponent<MovingPlatformUnbound>().StopMoving();
+                Platform_H.GetComponent<MovingPlatformUnbound>().StopMoving();
+                Platform_Useless_1.GetComponent<MovingPlatformUnbound>().StopMoving();
                 /*
                 Platform_A.SetActive(true);
                 Platform_B.SetActive(true);
@@ -118,6 +157,18 @@ public class MultiPlatformManager : MonoBehaviour
                 */
                 break;
             case Phase.P4:
+
+                Platform_D.GetComponent<MovingPlatformUnbound>().StartMoving();
+                Platform_H.GetComponent<MovingPlatformUnbound>().StartMoving();
+                Platform_Useless_2.GetComponent<MovingPlatformUnbound>().StartMoving();
+                
+                Platform_A.GetComponent<MovingPlatformUnbound>().StopMoving();
+                Platform_B.GetComponent<MovingPlatformUnbound>().StopMoving();
+                Platform_C.GetComponent<MovingPlatformUnbound>().StopMoving();
+                Platform_E.GetComponent<MovingPlatformUnbound>().StopMoving();
+                Platform_G.GetComponent<MovingPlatformUnbound>().StopMoving();
+                Platform_Useless_1.GetComponent<MovingPlatformUnbound>().StopMoving();
+                
                 /*
                 Platform_A.SetActive(false);
                 Platform_B.SetActive(false);
