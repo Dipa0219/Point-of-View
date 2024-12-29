@@ -2249,7 +2249,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 29
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 8
+  m_SortingOrder: 9
   m_TargetDisplay: 0
 --- !u!224 &197294401
 RectTransform:
@@ -43996,7 +43996,7 @@ MonoBehaviour:
   arrowPrefab: {fileID: 7272271456456754287, guid: 4177b6a2f2405484fad30633b439e33b, type: 3}
   otherBotCamera: {fileID: 3330467382600793675}
   canvasRect: {fileID: 1828980495}
-  otherBotRenderer: {fileID: 0}
+  otherBotRenderer: {fileID: 3805558445342263784}
 --- !u!1 &8371722996054153159
 GameObject:
   m_ObjectHideFlags: 0
@@ -44064,10 +44064,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b089310195b99dc48aa63cdacb553aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowPrefab: {fileID: 7272271456456754287, guid: 4177b6a2f2405484fad30633b439e33b, type: 3}
+  arrowPrefab: {fileID: 7272271456456754287, guid: 44f2f027aafcb694f80bf9e8d8cfa3d4, type: 3}
   otherBotCamera: {fileID: 1234984497517507938}
   canvasRect: {fileID: 197294401}
-  otherBotRenderer: {fileID: 0}
+  otherBotRenderer: {fileID: 849973707446796993}
 --- !u!1 &8440321245487772710
 GameObject:
   m_ObjectHideFlags: 0

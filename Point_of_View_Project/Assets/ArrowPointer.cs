@@ -7,6 +7,7 @@ public class ArrowPointer : MonoBehaviour
     [SerializeField] private Camera otherBotCamera;         // Reference to the main camera
     [SerializeField] private RectTransform canvasRect;  // Reference to the UI Canvas RectTransform
     [SerializeField] private Renderer otherBotRenderer;   // The Renderer for the player object
+    [SerializeField] private Transform target;           // The target object to point the arrow at
 
     private GameObject _arrowInstance;
     private bool _isArrowVisible = false;
@@ -48,7 +49,11 @@ public class ArrowPointer : MonoBehaviour
         }
         else
         {
-            print("Player is not visible");
+            if (!notOccluded)
+            {
+                print("occluded");
+            }else
+                print("Player is not visible");
             if (!_isArrowVisible)
             {
                 if (_arrowInstance == null)
@@ -72,11 +77,15 @@ public class ArrowPointer : MonoBehaviour
 
     bool IsOccluded()
     {
-        Vector3 direction = (transform.position - otherBotCamera.transform.position).normalized;
-        float distance = Vector3.Distance(transform.position, otherBotCamera.transform.position);
+        //Vector3 direction = (transform.position - otherBotCamera.transform.position).normalized;
+        Vector3 direction = (target.position - otherBotCamera.transform.position);//.normalized;
+        float distance = Vector3.Distance(target.position, otherBotCamera.transform.position);
 
         // Perform a raycast to check for obstacles
-        if (Physics.Raycast(otherBotCamera.transform.position, direction, out RaycastHit hit, distance))
+        //if (Physics.Raycast(otherBotCamera.transform.position, direction, out RaycastHit hit, distance))
+        LayerMask occlusionMask = LayerMask.GetMask("Default");
+
+        if (Physics.Raycast(otherBotCamera.transform.position, direction, out RaycastHit hit, distance, occlusionMask))
         {
             // Check if the hit object is not the player
             return hit.transform != transform;
@@ -93,12 +102,13 @@ public class ArrowPointer : MonoBehaviour
         // Clamp the arrow within the screen boundaries
         //screenPoint.x = Mathf.Clamp(screenPoint.x, 10, Screen.width-10);
         //screenPoint.y = Mathf.Clamp(screenPoint.y, 10, Screen.height-10);
-        print("pos" + transform.position.x);
-        print("point: " + screenPoint.x);
-        print("size: " + Screen.width);
+        
+        //print("pos" + transform.position.x);
+        //print("point: " + screenPoint.x);
+        //print("size: " + Screen.width);
         screenPoint.x = Mathf.Clamp(screenPoint.x, 0, Screen.width);// + Screen.width/2;
         screenPoint.y = Mathf.Clamp(screenPoint.y, 0, Screen.height);// + Screen.height/2;
-        print("point_after: " + screenPoint.x);
+        //print("point_after: " + screenPoint.x);
 
         if (screenPoint.z < 0) // Handle case where object is behind the camera
         {
