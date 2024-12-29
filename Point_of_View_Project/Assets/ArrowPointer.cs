@@ -109,11 +109,25 @@ public class ArrowPointer : MonoBehaviour
             else if (screenPoint.x < Screen.width / 2)
             {
                 screenPoint.x = screenPoint.x + 2 * ( (Screen.width / 2)- screenPoint.x);
-            }
-            screenPoint.x -= Screen.width;
+            }/*
+            screenPoint.x -= Screen.width;*/
             //screenPoint.x = Mathf.Clamp(screenPoint.x, 10, Screen.width-10);
+            
+            
         }
+        
+        //screenPoint.x = Mathf.Clamp(screenPoint.x, 15, Screen.width-15);// + Screen.width/2;
+        //screenPoint.y = Mathf.Clamp(screenPoint.y, 15, Screen.height-15);// + Screen.height/2;
+        if (screenPoint.x > Screen.width / 2)
+            screenPoint.x = screenPoint.x - 20;
+        else if (screenPoint.x < Screen.width / 2)
+            screenPoint.x = screenPoint.x + 20;
 
+        if(screenPoint.y > Screen.height / 2)
+            screenPoint.y = screenPoint.y - 20;
+        else if (screenPoint.y < Screen.height / 2)
+            screenPoint.y = screenPoint.y + 20;
+        
         Vector2 canvasPos;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, screenPoint, null, out canvasPos);
 
