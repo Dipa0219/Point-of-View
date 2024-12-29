@@ -2188,6 +2188,7 @@ MonoBehaviour:
   otherBotCamera: {fileID: 0}
   canvasRect: {fileID: 197294401}
   otherBotRenderer: {fileID: 0}
+  target: {fileID: 0}
 --- !u!114 &197294398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22762,6 +22763,7 @@ MonoBehaviour:
   otherBotCamera: {fileID: 0}
   canvasRect: {fileID: 1828980495}
   otherBotRenderer: {fileID: 0}
+  target: {fileID: 0}
 --- !u!114 &1828980492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43997,6 +43999,7 @@ MonoBehaviour:
   otherBotCamera: {fileID: 3330467382600793675}
   canvasRect: {fileID: 1828980495}
   otherBotRenderer: {fileID: 3805558445342263784}
+  target: {fileID: 2794782168496118033}
 --- !u!1 &8371722996054153159
 GameObject:
   m_ObjectHideFlags: 0
@@ -44068,6 +44071,7 @@ MonoBehaviour:
   otherBotCamera: {fileID: 1234984497517507938}
   canvasRect: {fileID: 197294401}
   otherBotRenderer: {fileID: 849973707446796993}
+  target: {fileID: 1860749947819414072}
 --- !u!1 &8440321245487772710
 GameObject:
   m_ObjectHideFlags: 0
