@@ -9,6 +9,11 @@ public class ArrowPointer : MonoBehaviour
     [SerializeField] private Renderer otherBotRenderer;   // The Renderer for the player object
     [SerializeField] private Transform target;           // The target object to point the arrow at
 
+    [SerializeField] private Camera whiteBotCamera;
+    [SerializeField] private Camera blackBotCamera;
+    [SerializeField] private Transform whiteBot;
+    [SerializeField] private Transform blackBot;
+    
     private GameObject _arrowInstance;
     private bool _isArrowVisible = false;
 
@@ -77,6 +82,13 @@ public class ArrowPointer : MonoBehaviour
 
     bool IsOccluded()
     {
+        if (gameObject.name == "White Bot")
+        {
+            print("white bot");
+        }else
+            print("black bot");
+        
+        /*
         //Vector3 direction = (transform.position - otherBotCamera.transform.position).normalized;
         Vector3 direction = (target.position - otherBotCamera.transform.position);//.normalized;
         float distance = Vector3.Distance(target.position, otherBotCamera.transform.position);
@@ -92,6 +104,29 @@ public class ArrowPointer : MonoBehaviour
         }
 
         return false; // No obstacles found
+        */
+        
+        
+        Vector3 direction = (blackBot.position - whiteBotCamera.transform.position);//.normalized;
+        float distance = Vector3.Distance(blackBot.position, whiteBotCamera.transform.position);
+
+        
+        LayerMask occlusionMask = LayerMask.GetMask("Default");
+        if (Physics.Raycast(whiteBotCamera.transform.position, direction, out RaycastHit hit, distance, occlusionMask))
+        {
+            if (gameObject.name == "White Bot")
+                return hit.transform != blackBot;
+            return hit.transform != whiteBot;
+                
+            
+            
+        }
+
+        return false; // No obstacles found
+
+        
+        
+        //blackBot
     }
 
     void UpdateArrowPosition()
