@@ -1,22 +1,23 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class ArrowPointer : MonoBehaviour
 {
-    public GameObject arrowPrefab;    // Prefab for the arrow UI element
-    public Camera mainCamera;         // Reference to the main camera
-    public RectTransform canvasRect;  // Reference to the UI Canvas RectTransform
-    public Renderer targetRenderer;   // The Renderer for the player object
+    [SerializeField] private GameObject arrowPrefab;    // Prefab for the arrow UI element
+    [SerializeField] private Camera otherBotCamera;         // Reference to the main camera
+    [SerializeField] private RectTransform canvasRect;  // Reference to the UI Canvas RectTransform
+    [SerializeField] private Renderer otherBotRenderer;   // The Renderer for the player object
 
     private GameObject _arrowInstance;
     private bool _isArrowVisible = false;
 
     void Start()
     {
-        if (targetRenderer == null)
+        if (otherBotRenderer == null)
         {
             // Try to find the Renderer on this GameObject or its children
-            targetRenderer = GetComponentInChildren<Renderer>();
-            if (targetRenderer == null)
+            otherBotRenderer = GetComponentInChildren<Renderer>();
+            if (otherBotRenderer == null)
             {
                 Debug.LogError("No Renderer found on the player or its children. Please assign one manually!");
                 enabled = false; // Disable script if no Renderer is found
@@ -26,14 +27,14 @@ public class ArrowPointer : MonoBehaviour
 
     void Update()
     {
-        if( mainCamera.enabled == false)
+        if( otherBotCamera.enabled == false)
         {
             _arrowInstance.SetActive(false);
             _isArrowVisible = false;
             return;
         }
         // Check visibility based on frustum and occlusion
-        bool visibleInFrustum = IsVisibleFromCamera(targetRenderer, mainCamera);
+        bool visibleInFrustum = IsVisibleFromCamera(otherBotRenderer, otherBotCamera);
         bool notOccluded = !IsOccluded();
 
         if (visibleInFrustum && notOccluded)
@@ -71,11 +72,11 @@ public class ArrowPointer : MonoBehaviour
 
     bool IsOccluded()
     {
-        Vector3 direction = (transform.position - mainCamera.transform.position).normalized;
-        float distance = Vector3.Distance(transform.position, mainCamera.transform.position);
+        Vector3 direction = (transform.position - otherBotCamera.transform.position).normalized;
+        float distance = Vector3.Distance(transform.position, otherBotCamera.transform.position);
 
         // Perform a raycast to check for obstacles
-        if (Physics.Raycast(mainCamera.transform.position, direction, out RaycastHit hit, distance))
+        if (Physics.Raycast(otherBotCamera.transform.position, direction, out RaycastHit hit, distance))
         {
             // Check if the hit object is not the player
             return hit.transform != transform;
@@ -86,7 +87,7 @@ public class ArrowPointer : MonoBehaviour
 
     void UpdateArrowPosition()
     {
-        Vector3 screenPoint = mainCamera.WorldToScreenPoint(transform.position);
+        Vector3 screenPoint = otherBotCamera.WorldToScreenPoint(transform.position);
         //Vector3 objectWorldPosition = targetRenderer.bounds.center;
         //Vector3 screenPoint = mainCamera.WorldToViewportPoint(objectWorldPosition);
         // Clamp the arrow within the screen boundaries
@@ -135,7 +136,7 @@ public class ArrowPointer : MonoBehaviour
         _arrowInstance.GetComponent<RectTransform>().localPosition = canvasPos;
 
         // Rotate the arrow to point toward the object
-        Vector3 direction = (transform.position - mainCamera.transform.position).normalized;
+        Vector3 direction = (transform.position - otherBotCamera.transform.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         _arrowInstance.GetComponent<RectTransform>().rotation = Quaternion.Euler(0, 0, angle);
     }
