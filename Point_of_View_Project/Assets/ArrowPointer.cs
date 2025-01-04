@@ -16,9 +16,20 @@ public class ArrowPointer : MonoBehaviour
     
     private GameObject _arrowInstance;
     private bool _isArrowVisible = false;
+    
+    private bool _isEasyModeOn = true;
 
     void Start()
     {
+        
+        // check if in the settins the easy mode is on
+            // if so update the boolean
+        
+        if (isEasyModeOn == false)
+        {
+            return;
+        }
+        
         if (otherBotRenderer == null)
         {
             // Try to find the Renderer on this GameObject or its children
@@ -33,6 +44,11 @@ public class ArrowPointer : MonoBehaviour
 
     void Update()
     {
+        if (isEasyModeOn == false)
+        {
+            return;
+        }
+        
         if( otherBotCamera.enabled == false)
         {
             _arrowInstance.SetActive(false);
