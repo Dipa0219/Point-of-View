@@ -20748,8 +20748,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowPrefab: {fileID: 7272271456456754287, guid: 4177b6a2f2405484fad30633b439e33b, type: 3}
-  mainCamera: {fileID: 3330467382600793675}
+  otherBotCamera: {fileID: 0}
   canvasRect: {fileID: 1169348971}
+  otherBotRenderer: {fileID: 0}
+  target: {fileID: 0}
+  whiteBotCamera: {fileID: 0}
+  blackBotCamera: {fileID: 0}
+  whiteBot: {fileID: 0}
+  blackBot: {fileID: 0}
 --- !u!114 &1169348968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35487,6 +35493,10 @@ PrefabInstance:
     - target: {fileID: 2439623199034612275, guid: 5f7513a772b991f4aa9b86f27495b930, type: 3}
       propertyPath: m_Name
       value: CommandsUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 2439623199034612275, guid: 5f7513a772b991f4aa9b86f27495b930, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4426060933139633593, guid: 5f7513a772b991f4aa9b86f27495b930, type: 3}
       propertyPath: m_Pivot.x

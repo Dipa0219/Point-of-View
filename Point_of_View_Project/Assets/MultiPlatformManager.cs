@@ -44,6 +44,7 @@ public class MultiPlatformManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (Input.GetKeyDown(KeyCode.P))
         {
             changePhase(Phase.P1);
@@ -60,6 +61,7 @@ public class MultiPlatformManager : MonoBehaviour
         {
             changePhase(Phase.P4);
         }
+        */
     }
 
 
