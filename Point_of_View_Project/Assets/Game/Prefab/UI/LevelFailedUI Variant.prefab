@@ -356,7 +356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4635274657988881364, guid: c654e115b6cec874a8731340a23d2c88, type: 3}
       propertyPath: m_text
-      value: Level Failed :(
+      value: Level Failed
       objectReference: {fileID: 0}
     - target: {fileID: 4635274657988881364, guid: c654e115b6cec874a8731340a23d2c88, type: 3}
       propertyPath: m_fontAsset

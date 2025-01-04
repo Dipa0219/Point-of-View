@@ -165,15 +165,24 @@ public class ArrowPointer : MonoBehaviour
         //screenPoint.x = Mathf.Clamp(screenPoint.x, 15, Screen.width-15);// + Screen.width/2;
         //screenPoint.y = Mathf.Clamp(screenPoint.y, 15, Screen.height-15);// + Screen.height/2;
         if (screenPoint.x > Screen.width / 2)
-            screenPoint.x = screenPoint.x - 20;
+            if (gameObject.name == "White Bot") screenPoint.x = screenPoint.x - 30;
+                else screenPoint.x = screenPoint.x -90;
         else if (screenPoint.x < Screen.width / 2)
-            screenPoint.x = screenPoint.x + 20;
+            if (gameObject.name == "White Bot") screenPoint.x = screenPoint.x + 30;
+            else screenPoint.x = screenPoint.x + 90;
 
+            
         if(screenPoint.y > Screen.height / 2)
-            screenPoint.y = screenPoint.y - 20;
+            if (gameObject.name == "White Bot") screenPoint.y = screenPoint.y - 30;
         else if (screenPoint.y < Screen.height / 2)
-            screenPoint.y = screenPoint.y + 20;
+            if (gameObject.name == "White Bot") screenPoint.y = screenPoint.y + 30;
+            //else if (gameObject.name == "Black Bot") screenPoint.y = screenPoint.y - 30;
         
+        
+        screenPoint.x = Mathf.Clamp(screenPoint.x, 150, Screen.width-100);// + Screen.width/2;
+        screenPoint.y = Mathf.Clamp(screenPoint.y, 70, Screen.height-25);
+                
+                
         Vector2 canvasPos;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, screenPoint, null, out canvasPos);
 
