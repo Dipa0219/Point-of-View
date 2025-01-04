@@ -46,9 +46,24 @@ namespace Game.Scripts.GameManager
                     cameraSwitcher.PlaySwitchSound();
                 }else{
                     isFirst = false;
+                    GoToNextWaypoint();
                 }
-                GoToNextWaypoint();
-                
+                if(Input.GetKeyDown(KeyCode.RightArrow))
+                {
+                    // Move to the next waypoint if not at the last
+                    currentWaypoint++;
+                    GoToNextWaypoint();
+                }   
+                if(Input.GetKeyDown(KeyCode.LeftArrow) && currentWaypoint>0)
+                {
+                    // Move to the previous waypoint if not at the first
+                    currentWaypoint--;
+                    GoToNextWaypoint(1);
+                }
+                if(Input.GetKeyDown(KeyCode.UpArrow))
+                {
+                    GoToNextWaypoint(2);
+                }   
             }
 
             if (Input.GetKeyDown(KeyCode.Space))
@@ -59,8 +74,10 @@ namespace Game.Scripts.GameManager
             }
         }
     
-        void GoToNextWaypoint()
+        void GoToNextWaypoint(int forward = 0)
         {
+            //print("Traslazione :" + transform.position);
+            //print("Rotazione :" + transform.rotation);
             if (currentWaypoint >= _waypoints.Length)
             {
                 hasStopped = true;
@@ -74,7 +91,18 @@ namespace Game.Scripts.GameManager
             Vector3 direction = target.position - transform.position;
     
             // Translate instantly to the position of the next waypoint
-            transform.Rotate(Vector3.up, _waypoints[currentWaypoint].Rotation, Space.World);
+            if(forward==0)
+            {
+                transform.Rotate(Vector3.up, _waypoints[currentWaypoint].Rotation, Space.World);
+            }
+            else if (forward==1)
+            {
+                transform.Rotate(Vector3.up, -(_waypoints[currentWaypoint+1].Rotation+2*rotationAngle), Space.World);
+            }
+            else
+            {
+                transform.Rotate(Vector3.up, -(rotationAngle), Space.World);
+            }
             transform.Translate(direction, Space.World);
             
             // Start rotating at the waypoint
@@ -98,8 +126,7 @@ namespace Game.Scripts.GameManager
             yield return new WaitForSeconds(0.3f);
             isRotating = false;
     
-            // Move to the next waypoint if not at the last
-            currentWaypoint++;
+            
         }
         
         
