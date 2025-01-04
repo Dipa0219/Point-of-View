@@ -23,6 +23,7 @@ namespace Game.Scripts.GameManager
         private bool isRotating = false;
         private bool isFirst = true;
         private bool hasStopped = false;
+        private bool start = true;
         
         [SerializeField] private GameObject[] playerLight;
         [SerializeField] private GameObject[] ambientLight;
@@ -51,19 +52,22 @@ namespace Game.Scripts.GameManager
                 if(Input.GetKeyDown(KeyCode.RightArrow))
                 {
                     // Move to the next waypoint if not at the last
-                    currentWaypoint++;
+                    if(!start)
+                        currentWaypoint++;
                     GoToNextWaypoint();
                 }   
-                if(Input.GetKeyDown(KeyCode.LeftArrow) && currentWaypoint>0)
+                if(Input.GetKeyDown(KeyCode.LeftArrow) )
                 {
-                    // Move to the previous waypoint if not at the first
-                    currentWaypoint--;
-                    GoToNextWaypoint(1);
-                }
-                if(Input.GetKeyDown(KeyCode.UpArrow))
-                {
-                    GoToNextWaypoint(2);
-                }   
+                    if (currentWaypoint>0 || !start){
+                        // Move to the previous waypoint if not at the first
+                        if (start)
+                        {
+                            currentWaypoint--;
+                        }
+
+                        GoToNextWaypoint(1);
+                    }
+                } 
             }
 
             if (Input.GetKeyDown(KeyCode.Space))
@@ -91,23 +95,29 @@ namespace Game.Scripts.GameManager
             Vector3 direction = target.position - transform.position;
     
             // Translate instantly to the position of the next waypoint
-            if(forward==0)
+            if(forward==0 && !start)
             {
                 transform.Rotate(Vector3.up, _waypoints[currentWaypoint].Rotation, Space.World);
             }
-            else if (forward==1)
+            else if (forward==1 && start)
             {
-                transform.Rotate(Vector3.up, -(_waypoints[currentWaypoint+1].Rotation+2*rotationAngle), Space.World);
+                transform.Rotate(Vector3.up, -_waypoints[currentWaypoint+1].Rotation, Space.World);
             }
-            else
-            {
-                transform.Rotate(Vector3.up, -(rotationAngle), Space.World);
-            }
+            
             transform.Translate(direction, Space.World);
             
             // Start rotating at the waypoint
             isRotating = true;
-            StartCoroutine(RotateAtWaypoint());
+            if(forward==1)
+            {
+                StartCoroutine(BackRotateAtWaypoint());
+                start = true;
+            }
+            else
+            {
+                StartCoroutine(RotateAtWaypoint());
+                start = false;
+            }
         }
     
         
@@ -125,11 +135,26 @@ namespace Game.Scripts.GameManager
             }
             yield return new WaitForSeconds(0.3f);
             isRotating = false;
-    
             
         }
         
-        
+        System.Collections.IEnumerator BackRotateAtWaypoint()
+        {
+            Quaternion startRotation = transform.rotation;
+            Quaternion endRotation = Quaternion.Euler(transform.eulerAngles + new Vector3(0, -rotationAngle, 0));
+            float time = 0;
+    
+            while (time < 1)
+            {
+                time += Time.deltaTime * rotateSpeed;
+                transform.rotation = Quaternion.Slerp(startRotation, endRotation, time);
+                yield return null;
+            }
+            yield return new WaitForSeconds(0.3f);
+            isRotating = false;
+
+            
+        }
         
         void StartLevel(){
             cameraSwitcher.SwitchCameras();
