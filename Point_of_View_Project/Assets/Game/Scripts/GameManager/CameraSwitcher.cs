@@ -24,6 +24,7 @@ public class CameraSwitcher : MonoBehaviour
     [SerializeField] private AudioClip soundEffect; // Assegna il suono dal tuo progetto.
     private AudioSource _audioSource;
 
+    private float initialAlpha;
     
     [SerializeField] private CanvasGroup commandsUICanvasGroup;
       
@@ -71,7 +72,7 @@ public class CameraSwitcher : MonoBehaviour
 
     private void Update()
     {
-        if (Input.anyKeyDown || Input.GetMouseButtonDown(0))
+        if ((Input.anyKeyDown && !Input.GetKeyDown(KeyCode.H)) || Input.GetMouseButtonDown(0))
         {
             if (_isActiveCommandsUI)
             {
@@ -89,6 +90,14 @@ public class CameraSwitcher : MonoBehaviour
                 commandsUI.GameObject().SetActive(false);
                 _isActiveCommandsUI = false;
             }*/
+        }
+        
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            //print("H key was pressed");
+            commandsUI.GameObject().SetActive(true);
+            _isActiveCommandsUI = true;
+            commandsUICanvasGroup.alpha = initialAlpha;
         }
         // Switch cameras when the "C" key is pressed
         if ( (Input.GetKeyDown(KeyCode.C) && _isActive) || (Input.GetKeyDown(KeyCode.Space) && _isActive) )
@@ -135,6 +144,7 @@ public class CameraSwitcher : MonoBehaviour
     {
         float duration = 1f; 
         float startAlpha = commandsUICanvasGroup.alpha;
+        initialAlpha = startAlpha;
         float time = 0;
     
         while (time < duration)
