@@ -25,7 +25,7 @@ public class ArrowPointer : MonoBehaviour
         // check if in the settins the easy mode is on
             // if so update the boolean
         
-        if (isEasyModeOn == false)
+        if (_isEasyModeOn == false)
         {
             return;
         }
@@ -44,7 +44,7 @@ public class ArrowPointer : MonoBehaviour
 
     void Update()
     {
-        if (isEasyModeOn == false)
+        if (_isEasyModeOn == false)
         {
             return;
         }
