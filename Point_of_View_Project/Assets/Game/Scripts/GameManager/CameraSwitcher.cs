@@ -48,6 +48,7 @@ public class CameraSwitcher : MonoBehaviour
         {
             commandsUICanvasGroup = commandsUI.gameObject.AddComponent<CanvasGroup>();
         }
+        initialAlpha = commandsUICanvasGroup.alpha;
         
         //sound
         _audioSource = gameObject.AddComponent<AudioSource>();
@@ -66,8 +67,13 @@ public class CameraSwitcher : MonoBehaviour
         cube2.SetActive(true);
         timerUI.ShowTimerUI();
         
-        commandsUI.GameObject().SetActive(true);
-        _isActiveCommandsUI = true;
+        if(isFirstLevel())
+        {
+            commandsUI.GameObject().SetActive(true);
+            _isActiveCommandsUI = true;
+        }
+        //commandsUI.GameObject().SetActive(true);
+        //_isActiveCommandsUI = true;
     }
 
     private void Update()
@@ -164,4 +170,9 @@ public class CameraSwitcher : MonoBehaviour
     {
         _audioSource.Play();
     }    
+    
+    private bool isFirstLevel()
+    {
+        return UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "0-1";
+    }
 }

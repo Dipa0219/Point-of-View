@@ -31251,10 +31251,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CommandsUI
       objectReference: {fileID: 0}
-    - target: {fileID: 2439623199034612275, guid: 5f7513a772b991f4aa9b86f27495b930, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4426060933139633593, guid: 5f7513a772b991f4aa9b86f27495b930, type: 3}
       propertyPath: m_Pivot.x
       value: 0
