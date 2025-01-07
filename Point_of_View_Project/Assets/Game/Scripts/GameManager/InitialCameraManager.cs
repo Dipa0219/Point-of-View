@@ -84,9 +84,10 @@ namespace Game.Scripts.GameManager
             //print("Rotazione :" + transform.rotation);
             if (currentWaypoint >= _waypoints.Length)
             {
-                hasStopped = true;
-                skipButton.SetActive(false);
-                StartLevel(); // Stop when the last waypoint is reached
+                //hasStopped = true;
+                //skipButton.SetActive(false);
+                //StartLevel(); // Stop when the last waypoint is reached
+                currentWaypoint = _waypoints.Length - 1; 
                 return;
             }
     

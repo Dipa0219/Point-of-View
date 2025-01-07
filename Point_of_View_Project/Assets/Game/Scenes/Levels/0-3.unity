@@ -2747,11 +2747,9 @@ MonoBehaviour:
   m_text: '
 
 
-    Right: Next
+    Right: Go ahead
 
-    Left: Prevoius
-
-    Up: Replay
+    Left: Go back
 
 
 '
@@ -4070,7 +4068,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'PRESS SPACE
 
-    TO SKIP'
+    TO START'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 96a3890e3afca9540919c56d25c371c4, type: 2}
   m_sharedMaterial: {fileID: -3116744382851310647, guid: 96a3890e3afca9540919c56d25c371c4, type: 2}
