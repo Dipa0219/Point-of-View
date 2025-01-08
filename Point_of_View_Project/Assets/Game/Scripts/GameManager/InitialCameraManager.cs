@@ -56,8 +56,11 @@ namespace Game.Scripts.GameManager
                     {
                         currentWaypoint++;
                         cameraSwitcher.PlaySwitchSound();
+                        GoToNextWaypoint(0,false);
+                        start=true;
                     }
-                    GoToNextWaypoint();
+                    else
+                        GoToNextWaypoint();
                 }   
                 if(Input.GetKeyDown(KeyCode.LeftArrow) )
                 {
@@ -67,9 +70,11 @@ namespace Game.Scripts.GameManager
                         {
                             currentWaypoint--;
                             cameraSwitcher.PlaySwitchSound();
+                            GoToNextWaypoint(1,false);
+                            start = false;
                         }
-
-                        GoToNextWaypoint(1);
+                        else
+                            GoToNextWaypoint(1);
                     }
                 } 
             }
@@ -82,7 +87,7 @@ namespace Game.Scripts.GameManager
             }
         }
     
-        void GoToNextWaypoint(int forward = 0)
+        void GoToNextWaypoint(int forward = 0, bool rotate=true)
         {
             //print("Traslazione :" + transform.position);
             //print("Rotazione :" + transform.rotation);
@@ -112,16 +117,19 @@ namespace Game.Scripts.GameManager
             transform.Translate(direction, Space.World);
             
             // Start rotating at the waypoint
-            isRotating = true;
-            if(forward==1)
-            {
-                StartCoroutine(BackRotateAtWaypoint());
-                start = true;
-            }
-            else
-            {
-                StartCoroutine(RotateAtWaypoint());
-                start = false;
+            
+            if (rotate){
+                isRotating = true;
+                if (forward == 1)
+                {
+                    StartCoroutine(BackRotateAtWaypoint());
+                    start = true;
+                }
+                else
+                {
+                    StartCoroutine(RotateAtWaypoint());
+                    start = false;
+                }
             }
         }
     
