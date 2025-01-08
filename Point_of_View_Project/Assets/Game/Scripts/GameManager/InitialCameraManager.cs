@@ -44,7 +44,7 @@ namespace Game.Scripts.GameManager
             {
                 if (!isFirst)
                 {
-                    cameraSwitcher.PlaySwitchSound();
+                    
                 }else{
                     isFirst = false;
                     GoToNextWaypoint();
@@ -53,7 +53,10 @@ namespace Game.Scripts.GameManager
                 {
                     // Move to the next waypoint if not at the last
                     if(!start)
+                    {
                         currentWaypoint++;
+                        cameraSwitcher.PlaySwitchSound();
+                    }
                     GoToNextWaypoint();
                 }   
                 if(Input.GetKeyDown(KeyCode.LeftArrow) )
@@ -63,6 +66,7 @@ namespace Game.Scripts.GameManager
                         if (start)
                         {
                             currentWaypoint--;
+                            cameraSwitcher.PlaySwitchSound();
                         }
 
                         GoToNextWaypoint(1);
