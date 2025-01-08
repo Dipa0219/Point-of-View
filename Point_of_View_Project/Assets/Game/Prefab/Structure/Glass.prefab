@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6808608003201732196}
   - component: {fileID: 4189312765863077674}
   - component: {fileID: 633664172034449126}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 7130452596040877195}
   - component: {fileID: 8150494542305154364}
   - component: {fileID: 2362181368163327230}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Short
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 7597371317884612715}
   - component: {fileID: 3236559309785108447}
   - component: {fileID: 4684400666289059445}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Long
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 649429540079441246}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Lines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
