@@ -28026,10 +28026,6 @@ PrefabInstance:
       value: Glass Double
       objectReference: {fileID: 0}
     - target: {fileID: 4060249668687801600, guid: 351af49d653060747abfb7c3f3505cd6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4060249668687801600, guid: 351af49d653060747abfb7c3f3505cd6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.5
       objectReference: {fileID: 0}
