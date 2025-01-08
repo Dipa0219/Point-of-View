@@ -29,7 +29,7 @@ public class ArrowPointer : MonoBehaviour
         {
             return;
         }
-        
+        _arrowInstance = Instantiate(arrowPrefab, canvasRect);
         if (otherBotRenderer == null)
         {
             // Try to find the Renderer on this GameObject or its children

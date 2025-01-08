@@ -55488,7 +55488,7 @@ MonoBehaviour:
   arrowPrefab: {fileID: 7272271456456754287, guid: 4177b6a2f2405484fad30633b439e33b, type: 3}
   otherBotCamera: {fileID: 3330467382600793675}
   canvasRect: {fileID: 1486070152}
-  otherBotRenderer: {fileID: 849973707446796993}
+  otherBotRenderer: {fileID: 3805558445342263784}
   target: {fileID: 2794782168496118033}
   whiteBotCamera: {fileID: 1234984497517507938}
   blackBotCamera: {fileID: 3330467382600793675}
@@ -55564,7 +55564,7 @@ MonoBehaviour:
   arrowPrefab: {fileID: 7272271456456754287, guid: 44f2f027aafcb694f80bf9e8d8cfa3d4, type: 3}
   otherBotCamera: {fileID: 1234984497517507938}
   canvasRect: {fileID: 155219623}
-  otherBotRenderer: {fileID: 3805558445342263784}
+  otherBotRenderer: {fileID: 849973707446796993}
   target: {fileID: 1860749947819414072}
   whiteBotCamera: {fileID: 1234984497517507938}
   blackBotCamera: {fileID: 3330467382600793675}
