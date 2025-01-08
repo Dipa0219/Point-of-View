@@ -18,7 +18,7 @@ public class CameraSwitcher : MonoBehaviour
     [SerializeField] private Canvas commandsUI;
     //[SerializeField] private CommandsUI commandsUI;
     
-    private bool _isActive = true;
+    private bool _isActive = false;
     private bool _isActiveCommandsUI = false;
     
     [SerializeField] private AudioClip soundEffect; // Assegna il suono dal tuo progetto.
@@ -57,6 +57,7 @@ public class CameraSwitcher : MonoBehaviour
     
     public void SwitchCameras()
     {
+        _isActive = true;
         initialCamera.enabled = false;
         initialCamera.GameObject().SetActive(false); 
         camera1.enabled = true;
