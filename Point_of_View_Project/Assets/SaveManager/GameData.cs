@@ -13,10 +13,14 @@
         public LevelState[] world3Levels = new LevelState[NumLevelsPerWorld];
         public Preferences Preferences;
 
+        public bool easyModeOn;
+
         public GameData(string playerName, Preferences preferences)
         {
             this.playerName = playerName;
             this.Preferences = preferences;
+
+            easyModeOn = false;
                         
             this.world1Levels = new LevelState[NumLevelsPerWorld];
             this.world2Levels = new LevelState[NumLevelsPerWorld];
@@ -27,6 +31,7 @@
                 world2Levels[i] = new LevelState(i + 1, false, "99:99", 0, 999);
                 world3Levels[i] = new LevelState(i + 1, false, "99:99", 0, 999);
             }
+            this.easyModeOn = false;
         }        
         
         public GameData(string playerName, Preferences preferences, LevelState[] w1, LevelState[] w2, LevelState[] w3)
@@ -60,6 +65,7 @@
                 world3Levels[i] = new LevelState(i + 1, false, "00:00", 0, 999);
             }
 
+            easyModeOn = false;
             return this;
         }
 
@@ -145,6 +151,16 @@
         public void SetPlayerName(string name)
         {
             playerName = name;
+        }
+        
+        public void setEasyMode(bool easyMode)
+        {
+            easyModeOn = easyMode;
+        }
+        
+        public bool getEasyMode()
+        {
+            return easyModeOn;
         }
 
 
