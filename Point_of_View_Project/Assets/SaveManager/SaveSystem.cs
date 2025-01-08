@@ -10,7 +10,21 @@ namespace SaveManager
         //public GameData gameData;
         private static string _saveFilePath = Path.Combine(Application.persistentDataPath, SaveFileName);
 
+        public static void updateEasyMode(bool easyMode)
+        {
+            GameData gameData = ScriptableObject.CreateInstance<GameData>();
+            gameData = LoadGameData();
+            //gameData.easyModeOn = easyMode;
+            gameData.setEasyMode(easyMode);
+            SaveGameData(gameData);
+        }
         
+        public static bool checkEasyMode()
+        {
+            GameData gameData = ScriptableObject.CreateInstance<GameData>();
+            gameData = LoadGameData();
+            return gameData.getEasyMode();
+        }
         
         public static void SaveGameData(GameData gameData) {
             string json = JsonUtility.ToJson(gameData);
