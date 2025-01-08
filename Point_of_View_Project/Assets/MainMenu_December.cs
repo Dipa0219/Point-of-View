@@ -15,6 +15,11 @@ public class MainMenu_December : MonoBehaviour
     public Button b3;    
     public Button b4;
     public Button b5;
+    
+    public Button b6;
+    public Button b7;
+    public Button b8;
+    public Button b9;
 
     [SerializeField] private GameObject[] stars_1;
     [SerializeField] private GameObject[] stars_2;
@@ -22,6 +27,11 @@ public class MainMenu_December : MonoBehaviour
     
     [SerializeField] private GameObject[] stars_4;
     [SerializeField] private GameObject[] stars_5;
+    
+    [SerializeField] private GameObject[] stars_6;
+    [SerializeField] private GameObject[] stars_7;
+    [SerializeField] private GameObject[] stars_8;
+    [SerializeField] private GameObject[] stars_9;
 
     [SerializeField] private AudioClip soundEffect_scroll; // Assegna il suono dal tuo progetto.
     private AudioSource _audioSource_scroll;
@@ -30,7 +40,7 @@ public class MainMenu_December : MonoBehaviour
     
         
     public Button[,] levelButtons;
-    public const int rows = 2;
+    public const int rows = 3;
     public const int columns = 3;
 
     private int selectedRow = 0;
@@ -56,10 +66,11 @@ public class MainMenu_December : MonoBehaviour
         
         
                 
-        levelButtons = new Button[2, 3]
+        levelButtons = new Button[3, 3]
         {
             { b1, b2, b3 },
-            { b4, b5, null }
+            { b4, b5, b6 },
+            { b7, b8, b9 },
         };
 
         SetButtonInteractivity();
@@ -89,6 +100,10 @@ public class MainMenu_December : MonoBehaviour
         levelButtons[0, 2].interactable = true;
         levelButtons[1, 0].interactable = true;
         levelButtons[1, 1].interactable = true;
+        levelButtons[1, 2].interactable = true;
+        levelButtons[2, 0].interactable = true;
+        levelButtons[2, 1].interactable = true;
+        levelButtons[2, 2].interactable = true;
 
         
         /*      
@@ -152,6 +167,12 @@ public class MainMenu_December : MonoBehaviour
         
         levelButtons[1, 0].onClick.AddListener(() => LoadLevel("1-1"));
         levelButtons[1, 1].onClick.AddListener(() => LoadLevel("1-2"));
+        levelButtons[1, 2].onClick.AddListener(() => LoadLevel("1-3"));
+        
+        levelButtons[2, 0].onClick.AddListener(() => LoadLevel("2-1"));
+        levelButtons[2, 1].onClick.AddListener(() => LoadLevel("2-2"));
+        levelButtons[2, 2].onClick.AddListener(() => LoadLevel("2-3"));
+
         
         /*
             levelButtons[1, 0].onClick.AddListener(() => LoadLevel("1-1"));
@@ -170,6 +191,11 @@ public class MainMenu_December : MonoBehaviour
         
         StarsActive(stars_4, gameData.GetLevel(2, 0).GetStars());
         StarsActive(stars_5, gameData.GetLevel(2, 1).GetStars());
+        StarsActive(stars_6, gameData.GetLevel(2, 2).GetStars());
+        
+        StarsActive(stars_7, gameData.GetLevel(3, 0).GetStars());
+        StarsActive(stars_8, gameData.GetLevel(3, 1).GetStars());
+        StarsActive(stars_9, gameData.GetLevel(3, 2).GetStars());
     }
     
     
@@ -227,12 +253,12 @@ public class MainMenu_December : MonoBehaviour
         int newRow = Mathf.Clamp(selectedRow + rowChange, 0, rows - 1);
         int newCol = (selectedCol + colChange + columns) % columns;
 
-        if (newRow == 1 && newCol == 2)
-            newCol = 0;
+        //if (newRow == 1 && newCol == 2)
+         //   newCol = 0;
 
-        if (newRow == 2)
+        if (newRow == 3)
             newRow = 0;
-            
+    
         
         if (levelButtons[newRow, newCol].interactable)
         {

@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Game/Scenes/UI/Level_EndgameTest.unity
     guid: c2424e3bd6973c54dbfb6316dd64523f
   - enabled: 1
-    path: Assets/Game/Scenes/UI/LevelSelection_WIP_BETA.unity
+    path: Assets/Game/Scenes/UI/LevelSelection_WIP.unity
     guid: ab37246ba8d35b14588719dd78a0d5e0
   - enabled: 0
     path: Assets/Game/Scenes/Levels/Old/0-1 (old).unity
@@ -51,7 +51,7 @@ EditorBuildSettings:
     path: Assets/Game/Scenes/Levels/0-2.unity
     guid: eec9864292b14cd4f90a985bf52146dc
   - enabled: 1
-    path: Assets/Game/Scenes/UI/LevelSelection_WIP.unity
+    path: Assets/Game/Scenes/UI/LevelSelection_WIP_ALPHA.unity
     guid: 7265c0cde42ff2243a6c31de3e306588
   - enabled: 1
     path: Assets/Game/Scenes/Levels/0-3.unity
