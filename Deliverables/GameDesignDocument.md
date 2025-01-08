@@ -2,15 +2,15 @@
 
 ## Overview and vision statement ##
 
-“Point of View” is a level-based puzzle game in which two or more small robots must find a way to exit the 
-room by activating all the buttons in the room simultaneously. Simple, right? Sure, if it weren’t for a 
+“Point of View” is a level-based puzzle game in which two small robots must find a way to exit the 
+room by position on the two white platforms in the room simultaneously. Simple, right? Sure, if it weren’t for a 
 malfunction preventing the two robots from changing their view, making everything outside their field of 
 vision unknown. Therefore, the only way for them to escape is to rely on each other, and cooperation will be 
 the key to their escape
 
 ## Gameplay ##
 
-The gameplay is simple yet engaging: the player will simultaneously control two distinct robots. For one, only a first-person view is available, while for the other, the player can control its movements, with the option to swap roles at any time. The objective of the game is to have the two robots collaborate to reach the end of the level, marked by the simultaneous pressing of two buttons.
+The gameplay is simple yet engaging: the player will simultaneously control two distinct robots. For one, only a first-person view is available, while for the other, the player can control its movements, with the option to swap roles at any time. The objective of the game is to have the two robots collaborate to reach the end of the level, marked by postioning simultaneously over two different platforms.
 
 To move the robots, players can use either the arrow keys or the WASD keys, while the C key allows them to switch between robots. As the levels progress, new mechanics are introduced, such as movable boxes and intermediate buttons to press, gradually increasing the game’s difficulty and making the experience progressively more challenging and engaging.
 
@@ -21,8 +21,8 @@ There's the possibility to add a third evil character only in case we have time 
 
 ## Story ##
 
-For the moment there isn't any story in our game.
-We have discussed some possibilities to eventually add in a second time only if there's enough time:
+We evaluated add a story in the game but in the end we understood that there wasn't enough time to add also that
+In any case this were the idea we found:
 - One evil robot that makes a joke to the main characters and that's the reason why they are blocked and they have to press the buttons to free themselves. In the last level we make a sort of boss fight in which by completing the puzzles you reduce the life of the evil bot.
 - An hacker attacked the laboratory where the robot are and they have to escape that place in order to reach a engineer that can adjust their problem. The button are used to access the following rooms. 
 
@@ -40,7 +40,8 @@ Each world progressively builds on the collaboration mechanics, making the gamep
 
 ## Media list ##
 
-We will update in future when we have pratical idea
+### Sounds 
+- Soundsnap.com 
 
 ## Mechanics ##
 
@@ -158,7 +159,31 @@ Moving platforms
 - Message to show in level and info menu (Francesco Benelle)
 - Fixing end level platforms (Simone Frazzei)
 
-### <ins> Beta submission deadline (December 8 deadline) 
+### Team meeting
+- Discussed last elements for the Alpha
+- Concluded selection of the level to for Alpha
+- Generated executable for windows, Mac and web
 
-### <ins> Prototype submission deadline (January 8 deadline)
+### <ins> Alpha submission deadline (December 8 deadline) 
+
+### Team meeting
+- Discussionc about comments received on alpha
+
+### Post Christmas deadline (December 28 deadline)
+- Level design (Giacomo Ballabio, Francesco Benelle)
+- Fixing textures and lights (Simome Frazzei)
+- Fixing initial camera (Antonio Di Paola)
+
+### Team meeting
+- Discussion about last missing problems
+- Reasoning about levels
+- Last feature to add
+
+### Session startin deadline (January 7 deadline)
+- Added arrow that follows robot (Francesco Benelle)
+- Fixing UI (Giacomo Ballabio)
+- Level design (Simone Frazzei)
+- Finishing GDD and bug checking (Antonio Di Paola)
+ 
+### <ins> Prototype submission deadline (January 12 deadline)
 
