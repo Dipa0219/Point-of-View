@@ -64110,6 +64110,7 @@ GameObject:
   - component: {fileID: 4125893690817042734}
   - component: {fileID: 5436836224640679929}
   - component: {fileID: 8291002931661354197}
+  - component: {fileID: 8291002931661354198}
   m_Layer: 0
   m_Name: White Bot
   m_TagString: Player
@@ -64875,6 +64876,7 @@ GameObject:
   - component: {fileID: 457581385464943111}
   - component: {fileID: 8388020374150460624}
   - component: {fileID: 8388020374150460625}
+  - component: {fileID: 8388020374150460626}
   m_Layer: 0
   m_Name: Black Bot
   m_TagString: Player
@@ -71460,6 +71462,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pushPower: 3
+--- !u!114 &8291002931661354198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603507618934176228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b089310195b99dc48aa63cdacb553aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrowPrefab: {fileID: 7272271456456754287, guid: 4177b6a2f2405484fad30633b439e33b, type: 3}
+  otherBotCamera: {fileID: 3330467382600793675}
+  canvasRect: {fileID: 652189148}
+  otherBotRenderer: {fileID: 849973707446796993}
+  target: {fileID: 2794782168496118033}
+  whiteBotCamera: {fileID: 1234984497517507938}
+  blackBotCamera: {fileID: 3330467382600793675}
+  whiteBot: {fileID: 2794782168496118033}
+  blackBot: {fileID: 1860749947819414072}
 --- !u!1 &8371722996054153159
 GameObject:
   m_ObjectHideFlags: 0
@@ -71515,6 +71538,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pushPower: 3
+--- !u!114 &8388020374150460626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2980103139692180173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b089310195b99dc48aa63cdacb553aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrowPrefab: {fileID: 7272271456456754287, guid: 44f2f027aafcb694f80bf9e8d8cfa3d4, type: 3}
+  otherBotCamera: {fileID: 1234984497517507938}
+  canvasRect: {fileID: 491960191}
+  otherBotRenderer: {fileID: 3805558445342263784}
+  target: {fileID: 1860749947819414072}
+  whiteBotCamera: {fileID: 1234984497517507938}
+  blackBotCamera: {fileID: 3330467382600793675}
+  whiteBot: {fileID: 2794782168496118033}
+  blackBot: {fileID: 1860749947819414072}
 --- !u!1 &8440321245487772710
 GameObject:
   m_ObjectHideFlags: 0
