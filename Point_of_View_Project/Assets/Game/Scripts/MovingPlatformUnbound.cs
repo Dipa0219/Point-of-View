@@ -16,17 +16,16 @@ namespace Game.Scripts
         [SerializeField] private Transform[] waypoints;   // Waypoints for platform movement
         [SerializeField] private float speed = 3f;       // Platform speed
         [SerializeField] private FinalBehaviour finalBehaviour;
-        [SerializeField] private bool continuousMovement = false; // Whether the platform stops at waypoints
+        [SerializeField] private bool continuousMovement; // Whether the platform stops at waypoints
         [SerializeField] private float delay = 2f;       // Delay at waypoints
         [SerializeField] private float detachDistance = 1.5f; // Max distance for player to remain attached
         [SerializeField] private AudioClip soundEffect;  // Sound effect for movement
 
         private AudioSource _audioSource;
-        private Transform currentAttachedPlayer = null;  // Player currently on the platform
-        private Vector3 playerOffset;                   // Offset of the player relative to the platform
+        private Transform _currentAttachedPlayer;  // Player currently on the platform
         private int _nextWaypoint = 1;                  // Next waypoint index
-        private bool _isMoving = false;
-        private bool _isWaiting = false;
+        private bool _isMoving;
+        private bool _isWaiting;
         private bool _forward = true;
 
         private void Start()
@@ -37,15 +36,13 @@ namespace Game.Scripts
 
         private void OnTriggerEnter(Collider other)
         {
-            if (currentAttachedPlayer == null && other.CompareTag("Player"))
+            if (_currentAttachedPlayer == null && other.CompareTag("Player"))
             {
-                currentAttachedPlayer = other.transform;
+                _currentAttachedPlayer = other.transform;
 
-                // Calculate initial offset
-                playerOffset = currentAttachedPlayer.position - transform.position;
 
                 // Notify player's movement script about the platform
-                var playerMovement = currentAttachedPlayer.GetComponent<Movement>();
+                var playerMovement = _currentAttachedPlayer.GetComponent<Movement>();
                 if (playerMovement != null)
                 {
                     playerMovement.SetPlatform(transform);
@@ -57,7 +54,7 @@ namespace Game.Scripts
 
         private void OnTriggerExit(Collider other)
         {
-            if (currentAttachedPlayer == other.transform)
+            if (_currentAttachedPlayer == other.transform)
             {
                 print("exit");
                 DetachPlayer();
@@ -66,16 +63,16 @@ namespace Game.Scripts
 
         private void DetachPlayer()
         {
-            if (currentAttachedPlayer != null)
+            if (_currentAttachedPlayer != null)
             {
                 // Notify the player's movement script about detachment
-                var playerMovement = currentAttachedPlayer.GetComponent<Movement>();
+                var playerMovement = _currentAttachedPlayer.GetComponent<Movement>();
                 if (playerMovement != null)
                 {
                     playerMovement.ClearPlatform();
                 }
 
-                currentAttachedPlayer = null;
+                _currentAttachedPlayer = null;
                 Debug.Log("Player detached from platform.");
             }
         }
@@ -91,16 +88,16 @@ namespace Game.Scripts
             Vector3 deltaMovement = transform.position - previousPosition;
 
             // Update attached player's position based on delta
-            if (currentAttachedPlayer != null)
+            if (_currentAttachedPlayer != null)
             {
-                var playerMovement = currentAttachedPlayer.GetComponent<Movement>();
+                var playerMovement = _currentAttachedPlayer.GetComponent<Movement>();
                 if (playerMovement != null)
                 {
                     playerMovement.UpdatePlatformDelta(deltaMovement);
                 }
 
                 // Check detach distance
-                float distanceFromCenter = Vector3.Distance(currentAttachedPlayer.position, transform.position);
+                float distanceFromCenter = Vector3.Distance(_currentAttachedPlayer.position, transform.position);
                 if (distanceFromCenter > detachDistance)
                 {
                     DetachPlayer();
