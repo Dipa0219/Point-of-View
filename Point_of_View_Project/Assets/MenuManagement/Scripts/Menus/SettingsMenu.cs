@@ -5,90 +5,56 @@ using UnityEngine;
 using UnityEngine.UI;
 using GameManagement.Data;
 using GameManagement.Audio;
+using SaveManager;
 
 namespace MenuManagement
 {
     
     public class SettingsMenu : Menu<SettingsMenu>
     {
-        [SerializeField] private Slider masterVolumeSlider;
-        [SerializeField] private Slider sfxVolumeSlider;
-        [SerializeField] private Slider musicVolumeSlider;
+        private bool easyModeOn;
+        private bool tipsOn;
+        private bool isFullScreen;
 
-        private DataManager _dataManager; 
+        [SerializeField] private Toggle EasyModetoggle; 
+        [SerializeField] private Toggle Tipstoggle; 
+        [SerializeField] private Toggle FullScreentoggle; 
         
-        protected override void Awake()
-        {
-            base.Awake();
-            _dataManager = GameObject.FindObjectOfType<DataManager>();
-        }
-
+        
         private void Start()
         {
-            LoadData();
-        }
-
-        public void OnMasterVolumeChanged(float value)
-        {
-            if (_dataManager != null)
-            {
-                _dataManager.MasterVolume = value;
-                UpdateAudioManager();
-            }
-        }
-
-        public void OnSFXVolumeChanged(float value)
-        {
-            if (_dataManager != null)
-            {
-                _dataManager.SFXVolume = value;
-                UpdateAudioManager();
-            }
-        }
-
-        public void OnMusicVolumeChanged(float value)
-        {
-            if (_dataManager != null)
-            {
-                _dataManager.MusicVolume = value;
-                UpdateAudioManager();
-            }
-        }
-
-        public void LoadData()
-        {
-            if (_dataManager == null || masterVolumeSlider == null ||
-                sfxVolumeSlider == null || musicVolumeSlider == null)
-                return;
+            easyModeOn = SaveSystem.checkEasyMode();
+            tipsOn = SaveSystem.checkTips();
             
-            _dataManager.Load();
+            isFullScreen = Screen.fullScreen;
             
-            masterVolumeSlider.value = _dataManager.MasterVolume;
-            sfxVolumeSlider.value = _dataManager.SFXVolume;
-            musicVolumeSlider.value = _dataManager.MusicVolume;
+            EasyModetoggle.isOn = easyModeOn;
+            Tipstoggle.isOn = tipsOn;
+            FullScreentoggle.isOn = isFullScreen;
+            
+            EasyModetoggle.onValueChanged.AddListener((isChecked) => OnToggleEasyValueChanged(EasyModetoggle, isChecked));
+            Tipstoggle.onValueChanged.AddListener((isChecked) => OnToggleTipsValueChanged(Tipstoggle, isChecked));
+            FullScreentoggle.onValueChanged.AddListener((isChecked) => OnToggleFullValueChanged(FullScreentoggle, isChecked));
+        }
 
-            UpdateAudioManager();
+        private void OnToggleFullValueChanged(Toggle fullScreentoggle, bool isChecked)
+        {
+            Screen.fullScreen = !Screen.fullScreen;
+        }
+
+        
+        private void OnToggleTipsValueChanged(Toggle tipstoggle, bool isChecked)
+        {
+            SaveSystem.updateTips(isChecked);
+        }
+
+        private void OnToggleEasyValueChanged(Toggle easyModetoggle, bool isChecked)
+        {
+            SaveSystem.updateEasyMode(isChecked);
+            
         }
         
-        //public override void OnBackPressed()
-        //{
-         //   base.OnBackPressed();
-            
-            // saves the values to disk
-            // PlayerPrefs.Save();
-          //  _dataManager.Save();
-        //}
 
-        public void UpdateAudioManager()
-        {
-            if (AudioManager.Instance != null)
-            {
-                AudioManager.Instance.SetMasterVolume(masterVolumeSlider.value);
-                AudioManager.Instance.SetMusicVolume(musicVolumeSlider.value);
-                AudioManager.Instance.SetSfxVolume(sfxVolumeSlider.value);
-                _dataManager.Save();
-            }
-        }
     }
 
 }

@@ -15,6 +15,7 @@ public class Credits : MonoBehaviour
     [SerializeField] private AudioClip soundEffect_select; // Assegna il suono dal tuo progetto.
     private AudioSource _audioSource_select;
     
+    
 
     void Start()
     {

@@ -53,12 +53,12 @@ public class MainMenuScript : MonoBehaviour
         LeaderboardButton.onClick.AddListener(() =>
         {
             _audioSource_select.Play();
-            StartCoroutine(WaitAndLoadScene(_audioSource_select.clip.length + 0.1f, "Leaderboard"));
+            StartCoroutine(WaitAndLoadScene(_audioSource_select.clip.length + 0.1f, "Settings"));
         });
         //SettingsButton.onClick.AddListener(LoadLevel("Settings"));
         QuitButton.onClick.AddListener(Quit);
         
-        LeaderboardButton.interactable = false;
+        LeaderboardButton.interactable = true;
         
         buttons[selectedButtonIndex].Select();
         

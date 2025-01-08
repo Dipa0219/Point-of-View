@@ -21,7 +21,12 @@ public class FullScreenToggle : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.F4) || Input.GetKeyDown(KeyCode.F11))
         {
             //print("Toggle Fullscreen");
-            Screen.fullScreen = !Screen.fullScreen;
+            if(SceneManager.GetActiveScene().name != "Settings")
+                Screen.fullScreen = !Screen.fullScreen;
+            else
+            {
+                print("Sei in settings non puoi cambiare fullscreen");
+            }
         }
         
         if (Input.GetKey(KeyCode.LeftAlt) || Input.GetKey(KeyCode.RightAlt))
@@ -29,7 +34,12 @@ public class FullScreenToggle : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
             {
                 //print("Toggle Fullscreen");
-                Screen.fullScreen = !Screen.fullScreen;
+                if(SceneManager.GetActiveScene().name != "Settings")
+                    Screen.fullScreen = !Screen.fullScreen;
+                else
+                {
+                    print("Sei in settings non puoi cambiare fullscreen");
+                }
             }
         }
 
