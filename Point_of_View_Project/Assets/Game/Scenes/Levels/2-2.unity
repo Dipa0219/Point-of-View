@@ -59240,7 +59240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrowPrefab: {fileID: 7272271456456754287, guid: 4177b6a2f2405484fad30633b439e33b, type: 3}
   otherBotCamera: {fileID: 5183717017589515270}
-  canvasRect: {fileID: 502204986}
+  canvasRect: {fileID: 1117151153}
   otherBotRenderer: {fileID: 7062708323202221620}
   target: {fileID: 8077988104154797773}
   whiteBotCamera: {fileID: 5183717018428373694}
