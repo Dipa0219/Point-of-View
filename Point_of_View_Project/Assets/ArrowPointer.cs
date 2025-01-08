@@ -1,3 +1,5 @@
+using System;
+using SaveManager;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -23,7 +25,15 @@ public class ArrowPointer : MonoBehaviour
     {
         
         // check if in the settins the easy mode is on
-            // if so update the boolean
+        // if so update the boolean
+        try
+        {
+            _isEasyModeOn = SaveSystem.checkEasyMode();
+        }
+        catch (Exception ex)
+        {
+            _isEasyModeOn = false;
+        }
         
         if (_isEasyModeOn == false)
         {
