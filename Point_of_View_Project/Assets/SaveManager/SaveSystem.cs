@@ -23,7 +23,9 @@ namespace SaveManager
         {
             GameData gameData = ScriptableObject.CreateInstance<GameData>();
             gameData = LoadGameData();
+            print("easy mode is: " + gameData.getEasyMode());
             return gameData.getEasyMode();
+            
         }
         
         public static void SaveGameData(GameData gameData) {

@@ -29,14 +29,18 @@ public class ArrowPointer : MonoBehaviour
         try
         {
             _isEasyModeOn = SaveSystem.checkEasyMode();
+            _isEasyModeOn = true;
+            print("set to true lo stesso");
         }
         catch (Exception ex)
         {
-            _isEasyModeOn = false;
+            print("easy mode catch exception");
+            _isEasyModeOn = true;
         }
         
         if (_isEasyModeOn == false)
         {
+            print("easy mode detected to false");
             return;
         }
         _arrowInstance = Instantiate(arrowPrefab, canvasRect);
