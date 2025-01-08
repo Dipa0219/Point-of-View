@@ -27,7 +27,25 @@ namespace SaveManager
             return gameData.getEasyMode();
             
         }
+
+        public static void updateTips(bool tips)
+        {
+            GameData gameData = ScriptableObject.CreateInstance<GameData>();
+            gameData = LoadGameData();
+            //gameData.easyModeOn = easyMode;
+            gameData.setTips(tips);
+            SaveGameData(gameData);
+        }
         
+        public static bool checkTips()
+        {
+            GameData gameData = ScriptableObject.CreateInstance<GameData>();
+            gameData = LoadGameData();
+            print("tips mode is: " + gameData.getTips());
+            return gameData.getTips();
+            
+        }
+
         public static void SaveGameData(GameData gameData) {
             string json = JsonUtility.ToJson(gameData);
             File.WriteAllText(Path.Combine(Application.persistentDataPath, SaveFileName), json);
