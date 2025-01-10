@@ -29,7 +29,7 @@ public class ArrowPointer : MonoBehaviour
         try
         {
             _isEasyModeOn = SaveSystem.checkEasyMode();
-            _isEasyModeOn = true;
+            //_isEasyModeOn = true;
             print("set to true lo stesso");
         }
         catch (Exception ex)
