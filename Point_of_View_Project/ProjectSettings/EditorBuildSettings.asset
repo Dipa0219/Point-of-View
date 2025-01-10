@@ -17,15 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game/Scenes/UI/LevelSelection_WIP.unity
     guid: ab37246ba8d35b14588719dd78a0d5e0
-  - enabled: 0
-    path: Assets/Game/Scenes/Levels/Old/0-1 (old).unity
-    guid: 78b8ccddfd34dcd4a96beaa9ea379c4a
-  - enabled: 0
-    path: Assets/Game/Scenes/Levels/Old/0-2 (old).unity
-    guid: c778ce83e21a15a40b500b023ff23b49
-  - enabled: 0
-    path: Assets/Game/Scenes/Levels/Old/0-3 (old).unity
-    guid: 525326fef101e214cbc2d520f7cfbc4d
   - enabled: 1
     path: Assets/Game/Scenes/UI/Credits.unity
     guid: ce1f3b3854841e84ba62d775a62f860e
@@ -39,11 +30,8 @@ EditorBuildSettings:
     path: Assets/Game/Scenes/UI/Settings.unity
     guid: 134881de8e3eb6c4bbc1a9aca647638c
   - enabled: 1
-    path: Assets/Game/Scenes/Levels/1-2.unity
-    guid: 4e91b5cd99b888f438a4180c8688510f
-  - enabled: 0
-    path: Assets/Game/Scenes/Levels/Extra/0-3.unity
-    guid: ab19862d6a0e4e64c922c8e1a188d31c
+    path: Assets/Game/Scenes/UI/LevelSelection_WIP_ALPHA.unity
+    guid: 7265c0cde42ff2243a6c31de3e306588
   - enabled: 1
     path: Assets/Game/Scenes/Levels/0-1.unity
     guid: 9e250b147a142bd4da9d6d4704cd8c85
@@ -51,24 +39,24 @@ EditorBuildSettings:
     path: Assets/Game/Scenes/Levels/0-2.unity
     guid: eec9864292b14cd4f90a985bf52146dc
   - enabled: 1
-    path: Assets/Game/Scenes/UI/LevelSelection_WIP_ALPHA.unity
-    guid: 7265c0cde42ff2243a6c31de3e306588
-  - enabled: 1
     path: Assets/Game/Scenes/Levels/0-3.unity
     guid: 732f6dee9978eda4f8116d94c54a00d6
   - enabled: 1
     path: Assets/Game/Scenes/Levels/1-1.unity
-    guid: 5c80bbd6d04c5504499fa86a0417c4d8
-  - enabled: 1
-    path: Assets/Game/Scenes/Levels/1-1.unity
     guid: 9ed5fea12cf7a15449b0948da2fe7c47
   - enabled: 1
-    path: Assets/Game/Scenes/Levels/2-3.unity
-    guid: 59f288a1967dd364485694261ca1b7b2
+    path: Assets/Game/Scenes/Levels/1-2.unity
+    guid: 4e91b5cd99b888f438a4180c8688510f
+  - enabled: 1
+    path: Assets/Game/Scenes/Levels/1-3.unity
+    guid: 3973e2ced78788b449341414f6df3515
+  - enabled: 1
+    path: Assets/Game/Scenes/Levels/2-1.unity
+    guid: d3ba5d283b8f346439316d187b184594
   - enabled: 1
     path: Assets/Game/Scenes/Levels/2-2.unity
     guid: 622df26b0fa9413418c735cd49f4e03b
   - enabled: 1
-    path: Assets/Game/Scenes/Levels/2-1.unity
-    guid: d3ba5d283b8f346439316d187b184594
+    path: Assets/Game/Scenes/Levels/2-3.unity
+    guid: 59f288a1967dd364485694261ca1b7b2
   m_configObjects: {}
