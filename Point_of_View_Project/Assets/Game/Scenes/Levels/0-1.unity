@@ -35889,6 +35889,7 @@ GameObject:
   - component: {fileID: 6020162606052151666}
   - component: {fileID: 1857304596945140872}
   - component: {fileID: 7779937015723678303}
+  - component: {fileID: 7779937015723678304}
   m_Layer: 0
   m_Name: Black Bot
   m_TagString: Player
@@ -37116,6 +37117,27 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7779937015723678304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3946467655699242050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b089310195b99dc48aa63cdacb553aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrowPrefab: {fileID: 7272271456456754287, guid: 44f2f027aafcb694f80bf9e8d8cfa3d4, type: 3}
+  otherBotCamera: {fileID: 4137461834940536305}
+  canvasRect: {fileID: 1231284697}
+  otherBotRenderer: {fileID: 1464912314689694798}
+  target: {fileID: 454134930885000375}
+  whiteBotCamera: {fileID: 4137461834940536305}
+  blackBotCamera: {fileID: 3578089116825587908}
+  whiteBot: {fileID: 1045314321358682498}
+  blackBot: {fileID: 454134930885000375}
 --- !u!4 &7803533696815383576
 Transform:
   m_ObjectHideFlags: 0

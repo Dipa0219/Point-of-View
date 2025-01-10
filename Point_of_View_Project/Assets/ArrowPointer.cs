@@ -118,7 +118,7 @@ public class ArrowPointer : MonoBehaviour
         }else
             print("black bot");
         
-        /*
+        
         //Vector3 direction = (transform.position - otherBotCamera.transform.position).normalized;
         Vector3 direction = (target.position - otherBotCamera.transform.position);//.normalized;
         float distance = Vector3.Distance(target.position, otherBotCamera.transform.position);
@@ -134,9 +134,9 @@ public class ArrowPointer : MonoBehaviour
         }
 
         return false; // No obstacles found
-        */
         
         
+        /*
         Vector3 direction = (blackBot.position - whiteBotCamera.transform.position);//.normalized;
         float distance = Vector3.Distance(blackBot.position, whiteBotCamera.transform.position);
 
@@ -154,7 +154,7 @@ public class ArrowPointer : MonoBehaviour
 
         return false; // No obstacles found
 
-        
+        */
         
         //blackBot
     }
