@@ -17,13 +17,13 @@ namespace Game.Scripts
         [SerializeField] private FinalBehaviour finalBehaviour;
         [SerializeField] private bool continuousMovement;
         [SerializeField] private bool isDouble;
-        
+        [SerializeField] private float detachDistance = 1.5f;
         [SerializeField] private AudioClip soundEffect;
         private AudioSource _audioSource;
         
         private List<Transform> _children;
         private BoxCollider[] _colliders;
-        private Transform _playerTransform;
+        private Transform _currentAttachedPlayer;
         private int _nextWaypoint = 1;
         private bool _move;
         private bool _stop;
@@ -72,13 +72,21 @@ namespace Game.Scripts
                 GoToNextWaypoint();
                 return;
             }
-            // Take transform of the player
-            //_playerTransform = other.transform;
-            //_playerTransform.SetParent(transform);
-            _numPlayer++;
-            // Activate colliders
-            foreach (BoxCollider boxCollider in _colliders)
-                boxCollider.enabled = true;
+            
+            if (_currentAttachedPlayer == null)
+            {
+                _currentAttachedPlayer = other.transform;
+
+
+                // Notify player's movement script about the platform
+                var playerMovement = _currentAttachedPlayer.GetComponent<Movement>();
+                if (playerMovement != null)
+                {
+                    playerMovement.SetPlatform(transform);
+                }
+
+                Debug.Log("Player attached to platform.");
+            }
             
             // Move
             GoToNextWaypoint();
@@ -100,6 +108,22 @@ namespace Game.Scripts
             }
             
         }
+        
+        private void DetachPlayer()
+        {
+            if (_currentAttachedPlayer != null)
+            {
+                // Notify the player's movement script about detachment
+                var playerMovement = _currentAttachedPlayer.GetComponent<Movement>();
+                if (playerMovement != null)
+                {
+                    playerMovement.ClearPlatform();
+                }
+
+                _currentAttachedPlayer = null;
+                Debug.Log("Player detached from platform.");
+            }
+        }
 
         private void Update()
         {
@@ -113,8 +137,29 @@ namespace Game.Scripts
                 
                 
             if (_stop || !_move) return;
-            
+
+            Vector3 previousPosition = transform.position;
             transform.position = Vector3.MoveTowards(transform.position, waypoints[_nextWaypoint].position, speed * Time.deltaTime);
+
+            // Calculate platform delta movement
+            Vector3 deltaMovement = transform.position - previousPosition;
+
+            // Update attached player's position based on delta
+            if (_currentAttachedPlayer != null)
+            {
+                var playerMovement = _currentAttachedPlayer.GetComponent<Movement>();
+                if (playerMovement != null)
+                {
+                    playerMovement.UpdatePlatformDelta(deltaMovement);
+                }
+
+                // Check detach distance
+                float distanceFromCenter = Vector3.Distance(_currentAttachedPlayer.position, transform.position);
+                if (distanceFromCenter > detachDistance)
+                {
+                    DetachPlayer();
+                }
+            }
 
             if (transform.position != waypoints[_nextWaypoint].position) return;
 
@@ -158,11 +203,6 @@ namespace Game.Scripts
             if (continuousMovement) return;
             
             _move = false;
-            
-            foreach (BoxCollider boxCollider in _colliders)
-                boxCollider.enabled = false;
-            
-            
         }
     }
 }

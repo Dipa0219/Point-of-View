@@ -7694,7 +7694,6 @@ GameObject:
   m_Component:
   - component: {fileID: 542184639}
   - component: {fileID: 542184641}
-  - component: {fileID: 542184640}
   m_Layer: 0
   m_Name: Overhead Light Source (3)
   m_TagString: Untagged
@@ -7717,22 +7716,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 396120322}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &542184640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 542184638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1560e0c42f6e77d429c1440b33c57ccc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maximumDim: 0.2
-  maximumBoost: 0.5
-  speed: 0.1
-  strength: 250
 --- !u!108 &542184641
 Light:
   m_ObjectHideFlags: 0
@@ -7745,8 +7728,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 3
-  m_Range: 15
+  m_Intensity: 1
+  m_Range: 42
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -9014,8 +8997,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 3
-  m_Range: 16.95
+  m_Intensity: 1
+  m_Range: 42
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -9674,6 +9657,10 @@ PrefabInstance:
       propertyPath: soundEffect
       value: 
       objectReference: {fileID: 8300000, guid: 0c9ad530b5e33e845a205cc05e3e234b, type: 3}
+    - target: {fileID: 7509541813634776844, guid: 56bc84515852be743a6e09c11ccb9ab9, type: 3}
+      propertyPath: detachDistance
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 7509541813634776844, guid: 56bc84515852be743a6e09c11ccb9ab9, type: 3}
       propertyPath: finalBehaviour
       value: 0
@@ -13830,8 +13817,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 4
-  m_Range: 16.95
+  m_Intensity: 1
+  m_Range: 42
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -14196,8 +14183,10 @@ MonoBehaviour:
   initialCamera: {fileID: 1266558615}
   timerUI: {fileID: 482900884}
   commandsUI: {fileID: 1320575058}
+  tipsUI: {fileID: 0}
   soundEffect: {fileID: 8300000, guid: 7c5177cc350c3284d918a7fa4c3cf775, type: 3}
   commandsUICanvasGroup: {fileID: 0}
+  tipsUICanvasGroup: {fileID: 0}
 --- !u!114 &951260980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16529,7 +16518,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1100886735}
   - component: {fileID: 1100886737}
-  - component: {fileID: 1100886736}
   m_Layer: 0
   m_Name: Overhead Light Source (4)
   m_TagString: Untagged
@@ -16552,22 +16540,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 396120322}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1100886736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100886734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1560e0c42f6e77d429c1440b33c57ccc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maximumDim: 0.2
-  maximumBoost: 0.5
-  speed: 0.1
-  strength: 250
 --- !u!108 &1100886737
 Light:
   m_ObjectHideFlags: 0
@@ -16580,8 +16552,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 4
-  m_Range: 15
+  m_Intensity: 1
+  m_Range: 42
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -17952,8 +17924,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 3.5
-  m_Range: 16.95
+  m_Intensity: 1
+  m_Range: 42
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -19615,7 +19587,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1351329743}
   - component: {fileID: 1351329745}
-  - component: {fileID: 1351329744}
   m_Layer: 0
   m_Name: Overhead Light Source (1)
   m_TagString: Untagged
@@ -19638,22 +19609,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 396120322}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1351329744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351329742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1560e0c42f6e77d429c1440b33c57ccc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maximumDim: 0.2
-  maximumBoost: 0.5
-  speed: 0.1
-  strength: 250
 --- !u!108 &1351329745
 Light:
   m_ObjectHideFlags: 0
@@ -19666,8 +19621,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 4
-  m_Range: 15
+  m_Intensity: 1
+  m_Range: 42
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -22317,7 +22272,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1494694032}
   - component: {fileID: 1494694034}
-  - component: {fileID: 1494694033}
   m_Layer: 0
   m_Name: Overhead Light Source
   m_TagString: Untagged
@@ -22340,22 +22294,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 396120322}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1494694033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1494694031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1560e0c42f6e77d429c1440b33c57ccc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maximumDim: 0.2
-  maximumBoost: 0.5
-  speed: 0.1
-  strength: 250
 --- !u!108 &1494694034
 Light:
   m_ObjectHideFlags: 0
@@ -22368,8 +22306,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 4
-  m_Range: 15
+  m_Intensity: 1
+  m_Range: 42
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -23492,8 +23430,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 4
-  m_Range: 16.95
+  m_Intensity: 1
+  m_Range: 42
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
