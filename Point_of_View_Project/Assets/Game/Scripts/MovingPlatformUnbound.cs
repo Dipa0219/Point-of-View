@@ -116,7 +116,8 @@ namespace Game.Scripts
             if (!_isMoving)
             {
                 _isMoving = true;
-                _audioSource.Play();
+                if(_audioSource != null)
+                    _audioSource.Play();
             }
         }
 
