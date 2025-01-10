@@ -16121,6 +16121,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7256596613169938858, guid: 422d515f2511b4940a1ff79cc803b13e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.02
+      objectReference: {fileID: 0}
     - target: {fileID: 7731806282824623067, guid: 422d515f2511b4940a1ff79cc803b13e, type: 3}
       propertyPath: m_Name
       value: Pit Single
