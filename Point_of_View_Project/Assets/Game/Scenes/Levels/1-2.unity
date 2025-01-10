@@ -8280,6 +8280,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 0c9ad530b5e33e845a205cc05e3e234b, type: 3}
     - target: {fileID: 7509541813634776844, guid: 56bc84515852be743a6e09c11ccb9ab9, type: 3}
+      propertyPath: detachDistance
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7509541813634776844, guid: 56bc84515852be743a6e09c11ccb9ab9, type: 3}
       propertyPath: finalBehaviour
       value: 0
       objectReference: {fileID: 0}
