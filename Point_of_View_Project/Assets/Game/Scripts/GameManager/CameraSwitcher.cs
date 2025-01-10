@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using Game.Scripts;
+using SaveManager;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -16,10 +17,13 @@ public class CameraSwitcher : MonoBehaviour
     
     
     [SerializeField] private Canvas commandsUI;
+    [SerializeField] private Canvas tipsUI;
+
     //[SerializeField] private CommandsUI commandsUI;
     
     private bool _isActive = false;
     private bool _isActiveCommandsUI = false;
+    private bool _isActiveTipsUI = false;
     
     [SerializeField] private AudioClip soundEffect; // Assegna il suono dal tuo progetto.
     private AudioSource _audioSource;
@@ -27,7 +31,7 @@ public class CameraSwitcher : MonoBehaviour
     private float initialAlpha;
     
     [SerializeField] private CanvasGroup commandsUICanvasGroup;
-      
+    [SerializeField] private CanvasGroup tipsUICanvasGroup;  
       
     private void Start()
     {
@@ -68,10 +72,10 @@ public class CameraSwitcher : MonoBehaviour
         cube2.SetActive(true);
         timerUI.ShowTimerUI();
         
-        if(isFirstLevel())
+        if(SaveSystem.checkTips())
         {
-            commandsUI.GameObject().SetActive(true);
-            _isActiveCommandsUI = true;
+            tipsUI.GameObject().SetActive(true);
+            _isActiveTipsUI = true;
         }
         //commandsUI.GameObject().SetActive(true);
         //_isActiveCommandsUI = true;
@@ -84,6 +88,11 @@ public class CameraSwitcher : MonoBehaviour
             if (_isActiveCommandsUI)
             {
                 StartCoroutine(FadeOutAndDeactivate());
+            }
+            
+            if (_isActiveTipsUI)
+            {
+                StartCoroutine(FadeOutAndDeactivateTips());
             }
         }        
         
@@ -99,7 +108,7 @@ public class CameraSwitcher : MonoBehaviour
             }*/
         }
         
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyDown(KeyCode.H) && !_isActiveTipsUI)
         {
             //print("H key was pressed");
             commandsUI.GameObject().SetActive(true);
@@ -164,6 +173,25 @@ public class CameraSwitcher : MonoBehaviour
         commandsUICanvasGroup.alpha = 0;
         commandsUI.gameObject.SetActive(false);
         _isActiveCommandsUI = false;
+    }
+    
+    private IEnumerator FadeOutAndDeactivateTips()
+    {
+        float duration = 3f; 
+        float startAlpha = tipsUICanvasGroup.alpha;
+        initialAlpha = startAlpha;
+        float time = 0;
+    
+        while (time < duration)
+        {
+            time += Time.deltaTime;
+            tipsUICanvasGroup.alpha = Mathf.Lerp(startAlpha, 0, time / duration);
+            yield return null;
+        }
+    
+        tipsUICanvasGroup.alpha = 0;
+        tipsUI.gameObject.SetActive(false);
+        _isActiveTipsUI = false;
     }
     
     

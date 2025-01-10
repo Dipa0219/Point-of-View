@@ -51,16 +51,19 @@ namespace Game.Scripts.GameManager
                 }
                 if(Input.GetKeyDown(KeyCode.RightArrow))
                 {
-                    // Move to the next waypoint if not at the last
-                    if(!start)
+                    if (currentWaypoint < _waypoints.Length -1 || start)
                     {
-                        currentWaypoint++;
-                        cameraSwitcher.PlaySwitchSound();
-                        GoToNextWaypoint(0,false);
-                        start=true;
+                        // Move to the next waypoint if not at the last
+                        if (!start)
+                        {
+                            currentWaypoint++;
+                            cameraSwitcher.PlaySwitchSound();
+                            GoToNextWaypoint(0, false);
+                            start = true;
+                        }
+                        else
+                            GoToNextWaypoint();
                     }
-                    else
-                        GoToNextWaypoint();
                 }   
                 if(Input.GetKeyDown(KeyCode.LeftArrow) )
                 {
@@ -91,14 +94,6 @@ namespace Game.Scripts.GameManager
         {
             //print("Traslazione :" + transform.position);
             //print("Rotazione :" + transform.rotation);
-            if (currentWaypoint >= _waypoints.Length)
-            {
-                //hasStopped = true;
-                //skipButton.SetActive(false);
-                //StartLevel(); // Stop when the last waypoint is reached
-                currentWaypoint = _waypoints.Length - 1; 
-                return;
-            }
     
             // Directly translate the camera to the next waypoint
             Transform target = _waypoints[currentWaypoint].Position;
