@@ -6,7 +6,7 @@ namespace SaveManager
 {
     public class SaveSystem: MonoBehaviour
     {
-        private const string SaveFileName = "GameData.json";
+        private const string SaveFileName = "GameDataEffective.json";
         //public GameData gameData;
         private static string _saveFilePath = Path.Combine(Application.persistentDataPath, SaveFileName);
 
