@@ -10418,10 +10418,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3738620214003799628, guid: 5f7513a772b991f4aa9b86f27495b930, type: 3}
       propertyPath: m_text
-      value: "TIPS:\nPress WASD/ Arrow keys to move\r\n          Space                    
-        to switch cam\r\n          R \t\t\t to restart the level\r\n          Esc
-        \t\t\t to go to Main menu\r\n          L               \t\t to go to level
-        selection\t\n          H               \t\t to open the commands "
+      value: "Objective: Step on the 2 circle with the 2 robots\nPress WASD/ Arrow
+        keys to move\r\n          Space                     to switch cam\r\n         
+        R \t\t\t to restart the level\r\n          Esc \t\t\t to go to Main menu\r\n         
+        L               \t\t to go to level selection\t\n          H              
+        \t\t to open the commands "
       objectReference: {fileID: 0}
     - target: {fileID: 4426060933139633593, guid: 5f7513a772b991f4aa9b86f27495b930, type: 3}
       propertyPath: m_Pivot.x
