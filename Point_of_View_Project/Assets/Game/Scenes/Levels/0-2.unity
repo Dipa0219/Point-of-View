@@ -17755,10 +17755,10 @@ MonoBehaviour:
   initialCamera: {fileID: 268138341}
   timerUI: {fileID: 482900884}
   commandsUI: {fileID: 392892841}
-  tipsUI: {fileID: 0}
+  tipsUI: {fileID: 1449605552}
   soundEffect: {fileID: 8300000, guid: 7c5177cc350c3284d918a7fa4c3cf775, type: 3}
   commandsUICanvasGroup: {fileID: 715236826}
-  tipsUICanvasGroup: {fileID: 0}
+  tipsUICanvasGroup: {fileID: 1402004467}
 --- !u!114 &951260980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25767,6 +25767,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5beb954a028a9a4c9fdb76c12ee8986, type: 3}
+--- !u!225 &1402004467 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 8204351560704105831, guid: 5f7513a772b991f4aa9b86f27495b930, type: 3}
+  m_PrefabInstance: {fileID: 664003488}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1402408727
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26370,6 +26375,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1554161176115921225, guid: f9e1a0158e9f7a545a16fa7c2aa7be4e, type: 3}
   m_PrefabInstance: {fileID: 1444923951}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &1449605552 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 1254148140082409995, guid: 5f7513a772b991f4aa9b86f27495b930, type: 3}
+  m_PrefabInstance: {fileID: 664003488}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1451328196
 PrefabInstance:
