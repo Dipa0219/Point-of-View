@@ -1,6 +1,7 @@
 using System;
 using SaveManager;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 public class ArrowPointer : MonoBehaviour
@@ -30,7 +31,7 @@ public class ArrowPointer : MonoBehaviour
         {
             _isEasyModeOn = SaveSystem.checkEasyMode();
             //_isEasyModeOn = true;
-            print("set to true lo stesso");
+            //print("set to true lo stesso");
         }
         catch (Exception ex)
         {
@@ -41,6 +42,7 @@ public class ArrowPointer : MonoBehaviour
         if (_isEasyModeOn == false)
         {
             print("easy mode detected to false");
+            //_isEasyModeOn = true; // -------------------------------------> to be removed
             return;
         }
         _arrowInstance = Instantiate(arrowPrefab, canvasRect);
@@ -130,6 +132,7 @@ public class ArrowPointer : MonoBehaviour
         if (Physics.Raycast(otherBotCamera.transform.position, direction, out RaycastHit hit, distance, occlusionMask))
         {
             // Check if the hit object is not the player
+            //print("hit: " + hit.transform.name);
             return hit.transform != transform;
         }
 
@@ -207,21 +210,45 @@ public class ArrowPointer : MonoBehaviour
         else if (screenPoint.y < Screen.height / 2)
             if (gameObject.name == "White Bot") screenPoint.y = screenPoint.y + 30;
             //else if (gameObject.name == "Black Bot") screenPoint.y = screenPoint.y - 30;
-        
-        
+            Vector2 canvasPos;
+            Vector3 direction = (transform.position - otherBotCamera.transform.position).normalized;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            
+            if (SceneManager.GetActiveScene().name == "1-3")
+            {
+                print("sei in 1-3");
+                screenPoint = otherBotCamera.WorldToScreenPoint(transform.position);
+                
+                screenPoint.x = Mathf.Clamp(screenPoint.x, 150, Screen.width-100);// + Screen.width/2;
+                screenPoint.y = Mathf.Clamp(screenPoint.y, 70, Screen.height-25);
+                
+                
+                RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, screenPoint, null, out canvasPos);
+
+                // Position the arrow on the canvas
+                _arrowInstance.GetComponent<RectTransform>().localPosition = canvasPos;
+
+                // Rotate the arrow to point toward the object
+                direction = (transform.position - otherBotCamera.transform.position).normalized;
+                angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                //_arrowInstance.GetComponent<RectTransform>().rotation = Quaternion.Euler(0, 0, angle);
+                _arrowInstance.GetComponent<RectTransform>().rotation = Quaternion.Euler(180, 0, angle);
+                return;
+            }
+            
         screenPoint.x = Mathf.Clamp(screenPoint.x, 150, Screen.width-100);// + Screen.width/2;
         screenPoint.y = Mathf.Clamp(screenPoint.y, 70, Screen.height-25);
                 
                 
-        Vector2 canvasPos;
+        //Vector2 canvasPos;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, screenPoint, null, out canvasPos);
 
         // Position the arrow on the canvas
         _arrowInstance.GetComponent<RectTransform>().localPosition = canvasPos;
 
         // Rotate the arrow to point toward the object
-        Vector3 direction = (transform.position - otherBotCamera.transform.position).normalized;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        direction = (transform.position - otherBotCamera.transform.position).normalized;
+        angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         _arrowInstance.GetComponent<RectTransform>().rotation = Quaternion.Euler(0, 0, angle);
     }
 }

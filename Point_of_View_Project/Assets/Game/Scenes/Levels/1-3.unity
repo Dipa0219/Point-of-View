@@ -336,9 +336,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7673043900129122691, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_Name
       value: Wall Plain (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -583,9 +591,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7673043900129122691, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_Name
       value: Wall Plain (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -922,6 +938,10 @@ PrefabInstance:
     - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
       propertyPath: m_Name
       value: Pillar (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1816,6 +1836,10 @@ PrefabInstance:
       value: Duct Straight
       objectReference: {fileID: 0}
     - target: {fileID: 4328153876794877190, guid: 047cc399d5f561b48902e8632947324a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4328153876794877190, guid: 047cc399d5f561b48902e8632947324a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -2175,6 +2199,10 @@ PrefabInstance:
       value: Ceiling Support
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -2426,6 +2454,10 @@ PrefabInstance:
       value: Pillar (14)
       objectReference: {fileID: 0}
     - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -2550,6 +2582,10 @@ PrefabInstance:
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_Name
       value: Ceiling Support (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2699,6 +2735,10 @@ PrefabInstance:
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_Name
       value: Ceiling Support (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3354,6 +3394,10 @@ PrefabInstance:
       value: Ceiling Support (14)
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -3847,6 +3891,10 @@ PrefabInstance:
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_Name
       value: Ceiling Support (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9113,6 +9161,10 @@ PrefabInstance:
       value: Duct Straight (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4328153876794877190, guid: 047cc399d5f561b48902e8632947324a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4328153876794877190, guid: 047cc399d5f561b48902e8632947324a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -9297,6 +9349,10 @@ PrefabInstance:
     - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
       propertyPath: m_Name
       value: Pillar (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9495,6 +9551,10 @@ PrefabInstance:
       value: Ceiling Support
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -9564,6 +9624,10 @@ PrefabInstance:
       value: Duct Straight (3)
       objectReference: {fileID: 0}
     - target: {fileID: 4328153876794877190, guid: 047cc399d5f561b48902e8632947324a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4328153876794877190, guid: 047cc399d5f561b48902e8632947324a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -9588,6 +9652,10 @@ PrefabInstance:
     - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
       propertyPath: m_Name
       value: Pillar (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10844,6 +10912,10 @@ PrefabInstance:
       value: Pillar (4)
       objectReference: {fileID: 0}
     - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -11863,6 +11935,10 @@ PrefabInstance:
     - target: {fileID: 4328153876794877190, guid: 047cc399d5f561b48902e8632947324a, type: 3}
       propertyPath: m_Name
       value: Duct Straight
+      objectReference: {fileID: 0}
+    - target: {fileID: 4328153876794877190, guid: 047cc399d5f561b48902e8632947324a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4328153876794877190, guid: 047cc399d5f561b48902e8632947324a, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -12943,6 +13019,10 @@ PrefabInstance:
       value: Pillar (18)
       objectReference: {fileID: 0}
     - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -13349,6 +13429,10 @@ PrefabInstance:
       value: Ceiling Support (6)
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -13492,9 +13576,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7673043900129122691, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_Name
       value: Wall Plain (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -14226,9 +14318,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7673043900129122691, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_Name
       value: Wall Plain (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15775,6 +15875,10 @@ PrefabInstance:
       value: Ceiling Support (19)
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -16179,9 +16283,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7673043900129122691, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_Name
       value: Wall Plain (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -16257,9 +16369,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7673043900129122691, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_Name
       value: Wall Plain (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -16335,9 +16455,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7673043900129122691, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_Name
       value: Wall Plain (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -17809,6 +17937,10 @@ PrefabInstance:
       value: Pillar (5)
       objectReference: {fileID: 0}
     - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -18248,6 +18380,10 @@ PrefabInstance:
       value: Ceiling Support (11)
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -18272,6 +18408,10 @@ PrefabInstance:
     - target: {fileID: 1640894175541214445, guid: 9f3db9e46f9535a4c882ce27e208efd5, type: 3}
       propertyPath: m_Name
       value: FailZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640894175541214445, guid: 9f3db9e46f9535a4c882ce27e208efd5, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3900791193405486718, guid: 9f3db9e46f9535a4c882ce27e208efd5, type: 3}
       propertyPath: soundEffect_box
@@ -18789,6 +18929,10 @@ PrefabInstance:
       value: Ceiling Support
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -18808,6 +18952,10 @@ PrefabInstance:
     - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
       propertyPath: m_Name
       value: Pillar (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -19081,6 +19229,10 @@ PrefabInstance:
       value: Ceiling Support
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -19100,6 +19252,10 @@ PrefabInstance:
     - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
       propertyPath: m_Name
       value: Pillar (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -19671,9 +19827,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7673043900129122691, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_Name
       value: Wall Plain (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -20010,6 +20174,10 @@ PrefabInstance:
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_Name
       value: Ceiling Support
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -20454,6 +20622,10 @@ PrefabInstance:
     - target: {fileID: 555181138824525211, guid: 3f8fbe2b2e0fcda49bdf4860e8efd375, type: 3}
       propertyPath: m_Name
       value: Duct Elbow 01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 555181138824525211, guid: 3f8fbe2b2e0fcda49bdf4860e8efd375, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 555181138824525211, guid: 3f8fbe2b2e0fcda49bdf4860e8efd375, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -21040,6 +21212,10 @@ PrefabInstance:
       value: Duct Vent
       objectReference: {fileID: 0}
     - target: {fileID: 2422230953702324436, guid: 573ef1f633878a64f8caef594c1c31d5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2422230953702324436, guid: 573ef1f633878a64f8caef594c1c31d5, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -21247,6 +21423,10 @@ PrefabInstance:
       value: Ceiling Support
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -21314,6 +21494,10 @@ PrefabInstance:
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_Name
       value: Ceiling Support
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -21552,6 +21736,10 @@ PrefabInstance:
     - target: {fileID: 5490853240051046055, guid: fd91a45b9242d2a49b339262053519ef, type: 3}
       propertyPath: m_Name
       value: Duct Tee
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490853240051046055, guid: fd91a45b9242d2a49b339262053519ef, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5490853240051046055, guid: fd91a45b9242d2a49b339262053519ef, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -21902,6 +22090,10 @@ PrefabInstance:
     - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
       propertyPath: m_Name
       value: Pillar (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -22466,6 +22658,10 @@ PrefabInstance:
       value: Ceiling Support (13)
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -22539,9 +22735,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7673043900129122691, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_Name
       value: Wall Plain (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -23047,9 +23251,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7673043900129122691, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_Name
       value: Wall Plain (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -23181,6 +23393,10 @@ PrefabInstance:
     - target: {fileID: 4328153876794877190, guid: 047cc399d5f561b48902e8632947324a, type: 3}
       propertyPath: m_Name
       value: Duct Straight (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4328153876794877190, guid: 047cc399d5f561b48902e8632947324a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4328153876794877190, guid: 047cc399d5f561b48902e8632947324a, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -24663,6 +24879,10 @@ PrefabInstance:
       value: Pillar
       objectReference: {fileID: 0}
     - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -25030,6 +25250,10 @@ PrefabInstance:
       value: Ceiling Support
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -25368,6 +25592,10 @@ PrefabInstance:
       value: Ceiling Support
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -25604,6 +25832,10 @@ PrefabInstance:
       value: Ceiling Support (5)
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -25676,6 +25908,10 @@ PrefabInstance:
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_Name
       value: Ceiling Support (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -25820,6 +26056,10 @@ PrefabInstance:
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_Name
       value: Ceiling Support (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -26589,6 +26829,10 @@ PrefabInstance:
       value: Ceiling Support
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -26786,6 +27030,10 @@ PrefabInstance:
     - target: {fileID: 2422230953702324436, guid: 573ef1f633878a64f8caef594c1c31d5, type: 3}
       propertyPath: m_Name
       value: Duct Vent
+      objectReference: {fileID: 0}
+    - target: {fileID: 2422230953702324436, guid: 573ef1f633878a64f8caef594c1c31d5, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2422230953702324436, guid: 573ef1f633878a64f8caef594c1c31d5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -33678,6 +33926,10 @@ PrefabInstance:
       value: Ceiling Support (9)
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -33929,6 +34181,10 @@ PrefabInstance:
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_Name
       value: Ceiling Support
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -34631,6 +34887,10 @@ PrefabInstance:
       value: Ceiling Support
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -34799,6 +35059,10 @@ PrefabInstance:
       value: Duct Elbow 01
       objectReference: {fileID: 0}
     - target: {fileID: 555181138824525211, guid: 3f8fbe2b2e0fcda49bdf4860e8efd375, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 555181138824525211, guid: 3f8fbe2b2e0fcda49bdf4860e8efd375, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -34945,6 +35209,10 @@ PrefabInstance:
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_Name
       value: Ceiling Support
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -35555,6 +35823,10 @@ PrefabInstance:
       value: Ceiling Support
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -35716,6 +35988,10 @@ PrefabInstance:
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_Name
       value: Ceiling Support (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -36490,6 +36766,10 @@ PrefabInstance:
       value: Ceiling Support
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -36941,6 +37221,10 @@ PrefabInstance:
     - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
       propertyPath: m_Name
       value: Pillar (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -37523,6 +37807,10 @@ PrefabInstance:
       value: Pillar (13)
       objectReference: {fileID: 0}
     - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -37804,6 +38092,10 @@ PrefabInstance:
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_Name
       value: Ceiling Support
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -38157,6 +38449,10 @@ PrefabInstance:
       value: Pillar (15)
       objectReference: {fileID: 0}
     - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -38281,6 +38577,10 @@ PrefabInstance:
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_Name
       value: Ceiling Support
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -39057,6 +39357,10 @@ PrefabInstance:
       value: Ceiling Support
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -39678,9 +39982,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7673043900129122691, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_Name
       value: Wall Plain (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -39761,9 +40073,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7673043900129122691, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_Name
       value: Wall Plain (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -40120,6 +40440,10 @@ PrefabInstance:
       value: Pillar (9)
       objectReference: {fileID: 0}
     - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -40251,6 +40575,10 @@ PrefabInstance:
       value: Ceiling Support
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -40319,9 +40647,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7673043900129122691, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_Name
       value: Wall Plain (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -41010,6 +41346,10 @@ PrefabInstance:
       value: Ceiling Support (8)
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -41653,6 +41993,10 @@ PrefabInstance:
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_Name
       value: Ceiling Support (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -43071,6 +43415,10 @@ PrefabInstance:
       value: Ceiling Support (4)
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -43147,6 +43495,10 @@ PrefabInstance:
     - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
       propertyPath: m_Name
       value: Pillar (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -43409,6 +43761,10 @@ PrefabInstance:
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_Name
       value: Ceiling Support
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -43832,9 +44188,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7673043900129122691, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_Name
       value: Wall Plain (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -43914,6 +44278,10 @@ PrefabInstance:
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_Name
       value: Ceiling Support
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -44279,6 +44647,10 @@ PrefabInstance:
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_Name
       value: Ceiling Support
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -44788,9 +45160,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7673043900129122691, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_Name
       value: Wall Plain (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -44817,6 +45197,10 @@ PrefabInstance:
     - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
       propertyPath: m_Name
       value: Pillar (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6886093935241627624, guid: c18a622bfd4f9d04a9af28fb7a69fbe2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -45265,6 +45649,10 @@ PrefabInstance:
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_Name
       value: Ceiling Support (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -47203,6 +47591,10 @@ PrefabInstance:
       value: Ceiling Support (10)
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -47337,6 +47729,10 @@ PrefabInstance:
     - target: {fileID: 4328153876794877190, guid: 047cc399d5f561b48902e8632947324a, type: 3}
       propertyPath: m_Name
       value: Duct Straight
+      objectReference: {fileID: 0}
+    - target: {fileID: 4328153876794877190, guid: 047cc399d5f561b48902e8632947324a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4328153876794877190, guid: 047cc399d5f561b48902e8632947324a, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -47680,6 +48076,10 @@ PrefabInstance:
       value: Ceiling Support
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -47804,6 +48204,10 @@ PrefabInstance:
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_Name
       value: Ceiling Support (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -48324,6 +48728,10 @@ PrefabInstance:
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_Name
       value: Ceiling Support (04)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -49791,9 +50199,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7673043900129122691, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_Name
       value: Wall Plain (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8730245854331329977, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -49930,6 +50346,10 @@ PrefabInstance:
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_Name
       value: Ceiling Support (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4399637625624050830, guid: 56553c59a52bf504aaac866c7f4030cd, type: 3}
       propertyPath: m_StaticEditorFlags
