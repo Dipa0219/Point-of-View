@@ -115,7 +115,7 @@ public class EndLevelMenu : MonoBehaviour
             return 3;
         if( world == 0 && level == 2)
         {
-            if (secondsCalc > 80)
+            if (secondsCalc > 60)
                 return 1;
             if (secondsCalc > 40)  
                 return 2; 
