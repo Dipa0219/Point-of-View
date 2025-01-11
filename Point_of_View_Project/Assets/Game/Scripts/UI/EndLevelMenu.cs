@@ -123,17 +123,17 @@ public class EndLevelMenu : MonoBehaviour
         }
         if( world == 0 && level == 3)
         {
-            if (secondsCalc > 90)
+            if (secondsCalc > 80)
                 return 1;
-            if (secondsCalc > 45)  
+            if (secondsCalc > 40)  
                 return 2; 
             return 3;            
         }
         if( world == 1 && level == 1)
         {
-            if (secondsCalc > 150)
+            if (secondsCalc > 90)
                 return 1;
-            if (secondsCalc > 75)  
+            if (secondsCalc > 60)  
                 return 2; 
             return 3;            
         }
@@ -145,6 +145,39 @@ public class EndLevelMenu : MonoBehaviour
                  return 2; 
              return 3;             
         }
+        if(world == 1 && level == 3)
+        {
+            if (secondsCalc > 90)
+                return 1;
+            if (secondsCalc > 45)  
+                return 2; 
+            return 3;             
+        }
+        if(world == 2 && level == 1)
+        {
+            if (secondsCalc > 120)
+                return 1;
+            if (secondsCalc > 75)  
+                return 2; 
+            return 3;             
+        }
+        if(world == 2 && level == 2)
+        {
+            if (secondsCalc > 270)
+                return 1;
+            if (secondsCalc > 210)  
+                return 2; 
+            return 3;             
+        }
+        if(world == 2 && level == 3)
+        {
+            if (secondsCalc > 180)
+                return 1;
+            if (secondsCalc > 120)  
+                return 2; 
+            return 3;             
+        }
+        
         
         if (secondsCalc > 180)
             return 0;
