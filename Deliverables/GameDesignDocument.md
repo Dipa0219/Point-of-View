@@ -16,15 +16,16 @@ To move the robots, players can use either the arrow keys or the WASD keys, whil
 
 ## Characters ##
 
-We have only two distinct characters in our game, that are the due robot that you control during the gameplay. 
-There's the possibility to add a third evil character only in case we have time to add a little backstory between the different levels
+We have only two distinct characters in our game, that are the two robots that you control during the gameplay. 
+
 
 ## Story ##
 
 We evaluated add a story in the game but in the end we understood that there wasn't enough time to add also that
 In any case this were the idea we found:
 - One evil robot that makes a joke to the main characters and that's the reason why they are blocked and they have to press the buttons to free themselves. In the last level we make a sort of boss fight in which by completing the puzzles you reduce the life of the evil bot.
-- An hacker attacked the laboratory where the robot are and they have to escape that place in order to reach a engineer that can adjust their problem. The button are used to access the following rooms. 
+- An hacker attacked the laboratory where the robot are and they have to escape that place in order to reach a engineer that can adjust their problem. The button are used to access the following rooms.
+In the end, our final decision was that the storyline wouldn't fit with the kind of game that we proposed, so we cut it off.
 
 ## World ##
 
@@ -44,7 +45,7 @@ Each world progressively builds on the collaboration mechanics, making the gamep
 - [Soundsnap.com](https://www.soundsnap.com/)
 
 ### Assets
-- https://assetstore.unity.com/packages/3d/environments/sci-fi/sci-fi-construction-kit-modular-159280
+- [Unity Asset Store](https://assetstore.unity.com/packages/3d/environments/sci-fi/sci-fi-construction-kit-modular-159280)
 
 ## Mechanics ##
 
@@ -52,25 +53,24 @@ As we anticipated during the section "Worlds" during our gameplay we will focus 
 
 ### Possible uses ###
 
-Button and boxes
-
+Boxes
 - Boxes used to fill an hole to create a pathway for the players
 - Boxes used to keep activated a button
 - Boxes used to block a moving object
 - Boxes can be an obstacle for the view and, because you can't remove it, you have to deal with problem
+
+Buttons
 - Buttons used to open a door
 - Buttons that can control if an object moves
 - Buttons that may create a box
 - Buttons that creates a new pathway
 
 Moving platforms
-
 - Can be used to give the possibility to go over a certain obstacle
 - Can be used to reduce the time to complete the level with the correct speed
 - Can be used to create an obstacle if they move in a opposite direction
 - Can be also an obstacle if they ends in a hole and so the player has to pay attention during his movement
 - Can be used to create a moving view for the player on the moving platform
-- Can rotate the player in order to create to new view and new possible interactions
 - Can add verticality to the level by moving up and down
 
 ## Team ##
@@ -170,7 +170,7 @@ Moving platforms
 ### <ins> Alpha submission deadline (December 8 deadline) 
 
 ### Team meeting
-- Discussionc about comments received on alpha
+- Discussion about comments received on alpha
 
 ### Post Christmas deadline (December 28 deadline)
 - Level design (Giacomo Ballabio, Francesco Benelle)
