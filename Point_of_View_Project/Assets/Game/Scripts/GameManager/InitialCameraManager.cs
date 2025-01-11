@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Game.Scripts.GameManager
 
@@ -31,11 +33,14 @@ namespace Game.Scripts.GameManager
         [SerializeField] private CameraSwitcher cameraSwitcher;
         
         [SerializeField] private GameObject skipButton;
+        [SerializeField] private GameObject cameraShower;
+        [SerializeField] private TextMeshProUGUI cameraText;
 
     
         void Start()
         {
             skipButton.SetActive(true);
+            cameraShower.SetActive(true);
         }
         
         void Update()
@@ -85,6 +90,7 @@ namespace Game.Scripts.GameManager
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 skipButton.SetActive(false);
+                cameraShower.SetActive(false);
                 StartLevel();
                 
             }
@@ -98,7 +104,8 @@ namespace Game.Scripts.GameManager
             // Directly translate the camera to the next waypoint
             Transform target = _waypoints[currentWaypoint].Position;
             Vector3 direction = target.position - transform.position;
-    
+            cameraText.text = "Camera:" + (currentWaypoint+1).ToString() +"/" + _waypoints.Length.ToString();
+            
             // Translate instantly to the position of the next waypoint
             if(forward==0 && !start)
             {
