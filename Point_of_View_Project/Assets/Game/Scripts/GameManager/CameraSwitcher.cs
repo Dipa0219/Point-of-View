@@ -29,6 +29,7 @@ public class CameraSwitcher : MonoBehaviour
     private AudioSource _audioSource;
 
     private float initialAlpha;
+    private float initialAlphaTips;
     
     [SerializeField] private CanvasGroup commandsUICanvasGroup;
     [SerializeField] private CanvasGroup tipsUICanvasGroup;  
@@ -52,7 +53,13 @@ public class CameraSwitcher : MonoBehaviour
         {
             commandsUICanvasGroup = commandsUI.gameObject.AddComponent<CanvasGroup>();
         }
-        initialAlpha = commandsUICanvasGroup.alpha;
+        
+        tipsUICanvasGroup = tipsUI.GetComponent<CanvasGroup>();
+        if (tipsUICanvasGroup == null)
+        {
+            tipsUICanvasGroup = tipsUI.gameObject.AddComponent<CanvasGroup>();
+        }
+        initialAlphaTips = tipsUICanvasGroup.alpha;
         
         //sound
         _audioSource = gameObject.AddComponent<AudioSource>();
@@ -75,6 +82,7 @@ public class CameraSwitcher : MonoBehaviour
         if(SaveSystem.checkTips())
         {
             tipsUI.GameObject().SetActive(true);
+            tipsUICanvasGroup.alpha = initialAlphaTips;
             _isActiveTipsUI = true;
         }
         //commandsUI.GameObject().SetActive(true);
