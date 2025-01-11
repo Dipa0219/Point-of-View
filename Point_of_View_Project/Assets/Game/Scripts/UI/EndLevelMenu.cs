@@ -243,7 +243,7 @@ public class EndLevelMenu : MonoBehaviour
             world++;
         }
         
-        if (world == 2 && levelC == 3)//(world >=3)
+        if (world == 2 && levelC == 4)//(world >=3)
         {
             return ("MainMenu_WIP");
         }
