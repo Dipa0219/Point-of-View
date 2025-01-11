@@ -54,7 +54,7 @@ namespace Game.Scripts.GameManager
                     isFirst = false;
                     GoToNextWaypoint();
                 }
-                if(Input.GetKeyDown(KeyCode.RightArrow))
+                if(Input.GetKeyDown(KeyCode.RightArrow)|| Input.GetKeyDown(KeyCode.D))
                 {
                     if (currentWaypoint < _waypoints.Length -1 || start)
                     {
@@ -70,7 +70,7 @@ namespace Game.Scripts.GameManager
                             GoToNextWaypoint();
                     }
                 }   
-                if(Input.GetKeyDown(KeyCode.LeftArrow) )
+                if(Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A) )
                 {
                     if (currentWaypoint>0 || !start){
                         // Move to the previous waypoint if not at the first
