@@ -187,7 +187,7 @@ public class CameraSwitcher : MonoBehaviour
     {
         float duration = 3f; 
         float startAlpha = tipsUICanvasGroup.alpha;
-        initialAlpha = startAlpha;
+        initialAlphaTips = startAlpha;
         float time = 0;
     
         while (time < duration)
