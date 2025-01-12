@@ -44,7 +44,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.1254902, g: 0.1254902, b: 0.1254902, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -105,16 +105,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba3aa49b9c484bdebd92e79a405cb5ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 80
-  delay: 0.05
-  startingPoint: 0
-  waypoints:
-  - {fileID: 3016159527200279691}
-  - {fileID: 1301570934497888131}
-  - {fileID: 146051800375507658}
-  - {fileID: 4274717921240240775}
-  target: {fileID: 1079019110078648381}
+  _waypoints: []
+  rotateSpeed: 1
+  rotationAngle: 60
+  playerLight: []
+  ambientLight: []
   cameraSwitcher: {fileID: 0}
+  skipButton: {fileID: 0}
+  cameraShower: {fileID: 0}
+  cameraText: {fileID: 0}
 --- !u!1 &3336843639047622189
 GameObject:
   m_ObjectHideFlags: 0
