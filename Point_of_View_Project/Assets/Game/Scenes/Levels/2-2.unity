@@ -17674,7 +17674,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3738620214003799628, guid: 5f7513a772b991f4aa9b86f27495b930, type: 3}
       propertyPath: m_text
-      value: 'Tip: There''s only one correct hole for the box, choose wisely'
+      value: 'Tip: There''s an hidden elevator that works only with two robots on
+        it.'
       objectReference: {fileID: 0}
     - target: {fileID: 4426060933139633593, guid: 5f7513a772b991f4aa9b86f27495b930, type: 3}
       propertyPath: m_Pivot.x
