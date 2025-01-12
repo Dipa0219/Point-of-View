@@ -22,7 +22,7 @@
             this.Preferences = preferences;
 
             easyModeOn = false;
-            tipsOn = false;
+            tipsOn = true;
                         
             this.world1Levels = new LevelState[NumLevelsPerWorld];
             this.world2Levels = new LevelState[NumLevelsPerWorld];
@@ -34,7 +34,7 @@
                 world3Levels[i] = new LevelState(i + 1, false, "99:99", 0, 999);
             }
             this.easyModeOn = false;
-            this.tipsOn = false;
+            this.tipsOn = true;
         }        
         
         public GameData(string playerName, Preferences preferences, LevelState[] w1, LevelState[] w2, LevelState[] w3)
@@ -50,7 +50,7 @@
             Array.Copy(w2, this.world2Levels, w2.Length);
             Array.Copy(w3, this.world3Levels, w3.Length);
             this.easyModeOn = false;
-            this.tipsOn = false;
+            this.tipsOn = true;
         }
         
         
@@ -70,7 +70,7 @@
             }
 
             easyModeOn = false;
-            tipsOn = false;
+            tipsOn = true;
             return this;
         }
 
